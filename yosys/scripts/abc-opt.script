@@ -1,0 +1,46 @@
+# ABC Script mit Lazy Man's Synthesis (LMS) fokussiert auf Area/Congestion Recovery
+print_stats
+strash
+
+rec_start3 src/lazy_man_synth_library.aig
+
+# Alias Definitionen
+# Standard LMS Iteration für Delay
+alias &opt_delay "&st; &if -y -K 6; &syn2; &if -K 6; &st; &b"
+# Area-Recovery Iteration gegen Congestion
+alias &opt_area  "&st; &mfs; &synch2; &st; &b"
+# Mapping Iteration (Area-orientiertes Mapping statt reinem Delay)
+alias &map_iter  "&st; &nf; &ps"
+
+&get -n
+echo "Initiales Netzwerk:"
+&ps
+
+echo "High Effort Delay & Area Balance..."
+&opt_delay; &opt_area; &ps;
+&opt_delay; &opt_area; &ps;
+&opt_delay; &opt_area; &ps;
+&put
+
+&get -n
+echo "Opt + Mapping Schleife (Eindämmen der Congestion)..."
+&opt_delay; &opt_area; &map_iter;
+&opt_delay; &opt_area; &map_iter;
+&opt_delay; &opt_area; &map_iter;
+&opt_delay; &opt_area; &map_iter;
+&put
+
+topo
+stime
+
+echo "Buffering und finales Sizing..."
+buffer -p
+echo "Resizing..."
+# Balance zwischen upsize (Delay) und dnsize (Fläche/Congestion)
+upsize {D}
+dnsize {A}
+upsize {D}
+dnsize {A}
+
+echo "Finales Timing in ABC:"
+stime
