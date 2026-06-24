@@ -55,10 +55,6 @@ module user_domain import user_pkg::*; import croc_pkg::*; #(
   sbr_obi_req_t user_rom_obi_req;
   sbr_obi_rsp_t user_rom_obi_rsp;
 
-  // OBI bus to SHAKE-256 accelerator
-  sbr_obi_req_t user_shake_obi_req;
-  sbr_obi_rsp_t user_shake_obi_rsp;
-
   // OBI bus to AES Encryption accelerator
   sbr_obi_req_t user_en_obi_req;
   sbr_obi_rsp_t user_en_obi_rsp;
@@ -69,12 +65,8 @@ module user_domain import user_pkg::*; import croc_pkg::*; #(
 
 
   // Fanout into more readable signals
-  assign user_error_obi_req               = all_user_sbr_obi_req[UserError];
-  assign all_user_sbr_obi_rsp[UserError]  = user_error_obi_rsp;
   assign user_rom_obi_req                 = all_user_sbr_obi_req[UserRom];
   assign all_user_sbr_obi_rsp[UserRom]    = user_rom_obi_rsp;
-  assign user_shake_obi_req               = all_user_sbr_obi_req[UserShake];
-  assign all_user_sbr_obi_rsp[UserShake]  = user_shake_obi_rsp;
   assign user_en_obi_req                  = all_user_sbr_obi_req[UserAESen];
   assign all_user_sbr_obi_rsp[UserAESen]  = user_en_obi_rsp;
   assign user_de_obi_req                  = all_user_sbr_obi_req[UserAESde];
@@ -136,18 +128,6 @@ module user_domain import user_pkg::*; import croc_pkg::*; #(
     .obi_rsp_o  ( user_rom_obi_rsp )
   );
 
-    // Shake-256 Accelerator
-  user_shake256 #(
-    .ObiCfg      ( SbrObiCfg     ),
-    .obi_req_t   ( sbr_obi_req_t ),
-    .obi_rsp_t   ( sbr_obi_rsp_t )
-  ) i_user_shake256 (
-    .clk_i,
-    .rst_ni,
-    .obi_req_i  ( user_shake_obi_req ),
-    .obi_rsp_o  ( user_shake_obi_rsp )
-  );
-
   // AES Encryption accelerator
   user_aes_en #(
     .ObiCfg      ( SbrObiCfg     ),
@@ -170,21 +150,6 @@ module user_domain import user_pkg::*; import croc_pkg::*; #(
     .rst_ni,
     .obi_req_i  ( user_de_obi_req ),
     .obi_rsp_o  ( user_de_obi_rsp )
-  );
-
-  // Error Subordinate
-  obi_err_sbr #(
-    .ObiCfg      ( SbrObiCfg     ),
-    .obi_req_t   ( sbr_obi_req_t ),
-    .obi_rsp_t   ( sbr_obi_rsp_t ),
-    .NumMaxTrans ( 1             ),
-    .RspData     ( 32'hBADCAB1E  )
-  ) i_user_err (
-    .clk_i,
-    .rst_ni,
-    .testmode_i ( testmode_i         ),
-    .obi_req_i  ( user_error_obi_req ),
-    .obi_rsp_o  ( user_error_obi_rsp )
   );
 
 endmodule

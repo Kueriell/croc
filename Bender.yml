@@ -54,20 +54,6 @@ sources:
       - rtl/croc_soc.sv
       # Rom
       - rtl/user_domain/user_rom.sv
-      # SHAKE-256
-      - rtl/user_domain/shake256/keccak_f/keccak_pkg.sv
-      - rtl/user_domain/shake256/keccak_f/theta.sv
-      - rtl/user_domain/shake256/keccak_f/rho.sv
-      - rtl/user_domain/shake256/keccak_f/pi.sv
-      - rtl/user_domain/shake256/keccak_f/chi.sv
-      - rtl/user_domain/shake256/keccak_f/iota.sv
-      - rtl/user_domain/shake256/keccak_f/string_to_state.sv
-      - rtl/user_domain/shake256/keccak_f/state_to_string.sv
-      - rtl/user_domain/shake256/keccak_f/fsm_keccak.sv
-      - rtl/user_domain/shake256/keccak_f/keccak_top.sv
-      - rtl/user_domain/shake256/shake256_fsm.sv
-      - rtl/user_domain/shake256/shake256_top.sv
-      - rtl/user_domain/user_shake256.sv
       # AES (Encryption)
       - rtl/user_domain/AES_encryption/sbox_cf_small.sv
       - rtl/user_domain/AES_encryption/sub_bytes.sv

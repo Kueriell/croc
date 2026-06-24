@@ -72,7 +72,7 @@ proc insertTapCells {} {
     -halo_width_x 1 -halo_width_y 1
 }
 
-set ctsBuf [ list BUFX64 BUFX48 BUFX44 BUFX32 BUFX24 BUFX16 BUFX12 ]
+set ctsBuf [ list BUFX64 BUFX48 BUFX44 BUFX32 BUFX24 BUFX16 BUFX12 BUFX8 BUFX6 BUFX4 BUFX2 ]
 set ctsBufRoot BUFX64
 
 # disallow OR from inserting these cells

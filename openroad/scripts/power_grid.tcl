@@ -29,7 +29,7 @@ if {[info exists power_grid_defined]} {
 ##########################################################################
 # Core Power Ring
 ## Space between pads and core -> used for power ring [old: 35]
-set PowRingSpace  24
+set PowRingSpace  30
 ## Spacing must meet TM1 rules
 set pgcrSpacing 4
 ## Width must meet TM1 rules
@@ -44,7 +44,7 @@ set tpg1Spacing  10; # big enough to skip over a pad
 set tpg1Offset   70; # offset from leftX of core
 
 set pg4Width      1; # two tracks on Metal4
-set pg4Pitch     180; # multiple of pad-pitch [old:90]
+set pg4Pitch     90; # multiple of pad-pitch [old:90]
 
 # Macro Power Rings -> M3 and M2
 ## Spacing must be larger than pitch of M2/M3
