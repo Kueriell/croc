@@ -29,7 +29,7 @@ if {[info exists power_grid_defined]} {
 ##########################################################################
 # Core Power Ring
 ## Space between pads and core -> used for power ring [old: 35]
-set PowRingSpace  30
+set PowRingSpace  35
 ## Spacing must meet TM1 rules
 set pgcrSpacing 4
 ## Width must meet TM1 rules
@@ -44,7 +44,7 @@ set tpg1Spacing  10; # big enough to skip over a pad
 set tpg1Offset   70; # offset from leftX of core
 
 set pg4Width      1; # two tracks on Metal4
-set pg4Pitch     180; # multiple of pad-pitch [old:90]
+set pg4Pitch     90; # multiple of pad-pitch [old:90]
 
 # Macro Power Rings -> M3 and M2
 ## Spacing must be larger than pitch of M2/M3
@@ -116,3 +116,11 @@ add_pdn_connect -grid {core_grid} -layers {Metal4 Metal1}
 # Generate
 ##########################################################################
 pdngen -failed_via_report ${report_dir}/01_${proj_name}_pdngen.rpt
+
+# Check VDD
+set_pdnsim_net_voltage -net VDD -voltage 1.2
+analyze_power_grid -vsrc src/Vsrc_croc_vdd.loc -net VDD -corner tt
+
+# Check VSS
+set_pdnsim_net_voltage -net VSS -voltage 0
+analyze_power_grid -vsrc src/Vsrc_croc_vss.loc -net VSS -corner tt -error_file reports/vss_connectivity_errors_early.rpt

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<report-database>
+ <description>Main DRC Run Report at</description>
+ <original-file/>
+ <generator>drc: script='/usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/klayout/tech/drc/ihp-sg13cmos5l.drc'</generator>
+ <top-cell>croc_chip</top-cell>
+ <tags>
+ </tags>
+ <categories>
+  <category>
+   <name>TGO.f</name>
+   <description>5.7. TGO.f : Min. ThickGateOx width: 0.86 µm</description>
+   <categories>
+   </categories>
+  </category>
+ </categories>
+ <cells>
+  <cell>
+   <name>croc_chip</name>
+   <variant/>
+   <layout-name/>
+   <references>
+   </references>
+  </cell>
+ </cells>
+ <items>
+ </items>
+</report-database>

@@ -37,33 +37,21 @@ create_library_set -name typical_libs \
                               ../technology/lib/sg13cmos5l_stdcell_typ_1p20V_25C.lib \
 			      ../technology/lib/ez130_8t_tt_1p20v_25c.lib \
 			      ../technology/lib/sg13cmos5l_io_typ_1p2V_3p3V_25C.lib \
-			      ../technology/lib/RM_IHPSG13_1P_512x32_c2_bm_bist_typ_1p20V_25C.lib \
-			      ../technology/lib/RM_IHPSG13_1P_512x64_c2_bm_bist_typ_1p20V_25C.lib \
-			      ../technology/lib/RM_IHPSG13_1P_1024x32_c2_bm_bist_typ_1p20V_25C.lib \
 			      ../technology/lib/RM_IHPSG13_1P_1024x64_c2_bm_bist_typ_1p20V_25C.lib \
-			      ../technology/lib/RM_IHPSG13_1P_2048x64_c2_bm_bist_typ_1p20V_25C.lib \
                            ]
  create_library_set -name best_libs \
                     -timing [ list \
                                ../technology/lib/sg13cmos5l_stdcell_fast_1p32V_m40C.lib \
 			      ../technology/lib/ez130_8t_ff_1p32v_m40c.lib \
 			      ../technology/lib/sg13cmos5l_io_fast_1p32V_3p6V_m40C.lib \
-			      ../technology/lib/RM_IHPSG13_1P_512x32_c2_bm_bist_fast_1p32V_m55C.lib \
-			      ../technology/lib/RM_IHPSG13_1P_512x64_c2_bm_bist_fast_1p32V_m55C.lib \
-			      ../technology/lib/RM_IHPSG13_1P_1024x32_c2_bm_bist_fast_1p32V_m55C.lib \
 			      ../technology/lib/RM_IHPSG13_1P_1024x64_c2_bm_bist_fast_1p32V_m55C.lib \
-			      ../technology/lib/RM_IHPSG13_1P_2048x64_c2_bm_bist_fast_1p32V_m55C.lib \
                             ]
  create_library_set -name worst_libs \
                     -timing [ list \
                                ../technology/lib/sg13cmos5l_stdcell_slow_1p08V_125C.lib \
 			      ../technology/lib/ez130_8t_ss_1p08v_125c.lib \
 			      ../technology/lib/sg13cmos5l_io_slow_1p08V_3p0V_125C.lib \
-			      ../technology/lib/RM_IHPSG13_1P_512x32_c2_bm_bist_slow_1p08V_125C.lib \
-			      ../technology/lib/RM_IHPSG13_1P_512x64_c2_bm_bist_slow_1p08V_125C.lib \
-			      ../technology/lib/RM_IHPSG13_1P_1024x32_c2_bm_bist_slow_1p08V_125C.lib \
 			      ../technology/lib/RM_IHPSG13_1P_1024x64_c2_bm_bist_slow_1p08V_125C.lib \
-			      ../technology/lib/RM_IHPSG13_1P_2048x64_c2_bm_bist_slow_1p08V_125C.lib \
                             ]
 
 # RC corners
