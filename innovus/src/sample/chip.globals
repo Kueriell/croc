@@ -1,0 +1,47 @@
+##########################################################################
+#  Title       : load design
+#  Project     : tsmc 180 dz flow
+##########################################################################
+#  File        : chip.globals
+#  Author      : Beat Muheim  <muheim@ee.ethz.ch>
+#  Company     : Microelectronics Design Center (DZ), ETH Zurich
+##########################################################################
+#  Description : It will read the netlist the cell abstraction and the 
+#                view definition file.
+#
+#                Perform:
+#                source <globals-file>
+#                init_design
+#
+#  Inputs      : ../synopsys/out/top.v src/chip.v lef src/chip.io src/mmmc.view.tcl
+#  Outputs     : 
+#  Rhesuses    : 
+##########################################################################
+#  Copyright (c) 2016 Microelectronics Design Center, ETH Zurich
+##########################################################################
+# v0.1 - <muheim@ee.ethz.ch> - Tue Aug 30 12:45:43 CEST 2016
+#  - copy from tsmc28 v0.1
+##########################################################################
+
+set defHierChar {/}
+set init_verilog {../synopsys/out/top.v src/chip.v}
+set init_design_settop 0
+
+set init_io_file  {src/chip.io}
+
+set init_lef_file {../technology/lef/sg13cmos5l_tech.lef ../technology/lef/ez130_cmos5l_tech.lef ../technology/lef/sg13cmos5l_stdcell.lef ../technology/lef/ez130_8t.lef ../technology/lef/sg13cmos5l_io.lef ../technology/lef/bondpad5l_70x70.lef ../technology/lef/RM_IHPSG13_1P_512x32_c2_bm_bist.lef ../technology/lef/RM_IHPSG13_1P_512x64_c2_bm_bist.lef ../technology/lef/RM_IHPSG13_1P_1024x32_c2_bm_bist.lef ../technology/lef/RM_IHPSG13_1P_1024x64_c2_bm_bist.lef ../technology/lef/RM_IHPSG13_1P_2048x64_c2_bm_bist.lef}
+
+set init_import_mode {-treatUndefinedCellAsBbox 0 -keepEmptyModule 1 -useLefDef56 1 }
+
+set init_mmmc_file {./src/mmmc.view.tcl}
+
+# when the cpf is ust this is not needet
+#set init_pwr_net {VDD}
+#set init_gnd_net {VSS}
+
+# delaycal_use_default_delay_limit 1000
+#
+# Net default delay values are:
+#   Net delay: 1 ns
+#   Transition time: 0 ps
+#   Net load: 0.5 pF

@@ -1,0 +1,232 @@
+Jun 24 16:22:20   -------------------------------------------------------------------------------------
+Jun 24 16:22:20   -- ihp13 v0.2
+Jun 24 16:22:20   -- call: ihp13 -update all -nogui
+Jun 24 16:22:20   -------------------------------------------------------------------------------------
+Jun 24 16:22:20   load db/config from /usr/pack/designkits-1.0-ma/startup/db/software.ascii
+Jun 24 16:22:20   load db/config from /usr/pack/ihp-sg13-kgf/dz/cockpit_ihp13/db/kit.ascii
+Jun 24 16:22:20   load db/config from /usr/pack/ihp-sg13-kgf/dz/cockpit_ihp13/conf/default.ascii
+Jun 24 16:22:20   load db/config from .cockpitrc
+Jun 24 16:22:21   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/dz_tools/.llamaconfig to ./.llamaconfig
+Jun 24 16:22:21   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/pdk/sg13cmos5l_v0.2/.setPDK.csh to ./.setPDK.csh
+Jun 24 16:22:21   create directory technology
+Jun 24 16:22:21   create directory technology/lib
+Jun 24 16:22:21   create directory technology/db
+Jun 24 16:22:21   create directory technology/gds
+Jun 24 16:22:21   create directory technology/verilog
+Jun 24 16:22:21   create link ./technology/lib/sg13cmos5l_stdcell_fast_1p32V_m40C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/lib/sg13cmos5l_stdcell_fast_1p32V_m40C.lib
+Jun 24 16:22:21   create link ./technology/lib/sg13cmos5l_stdcell_fast_1p65V_m40C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/lib/sg13cmos5l_stdcell_fast_1p65V_m40C.lib
+Jun 24 16:22:21   create link ./technology/lib/sg13cmos5l_stdcell_slow_1p08V_125C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/lib/sg13cmos5l_stdcell_slow_1p08V_125C.lib
+Jun 24 16:22:21   create link ./technology/lib/sg13cmos5l_stdcell_slow_1p35V_125C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/lib/sg13cmos5l_stdcell_slow_1p35V_125C.lib
+Jun 24 16:22:21   create link ./technology/lib/sg13cmos5l_stdcell_typ_1p20V_25C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/lib/sg13cmos5l_stdcell_typ_1p20V_25C.lib
+Jun 24 16:22:21   create link ./technology/lib/sg13cmos5l_stdcell_typ_1p50V_25C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/lib/sg13cmos5l_stdcell_typ_1p50V_25C.lib
+Jun 24 16:22:21   create link ./technology/lib/ez130_8t_ff_1p32v_m40c.lib -> /usr/pack/ihp-sg13-kgf/eth/ez130_8t_stdcell/v1.0/lib/ez130_8t_ff_1p32v_m40c.lib
+Jun 24 16:22:21   create link ./technology/lib/ez130_8t_ss_1p08v_125c.lib -> /usr/pack/ihp-sg13-kgf/eth/ez130_8t_stdcell/v1.0/lib/ez130_8t_ss_1p08v_125c.lib
+Jun 24 16:22:21   create link ./technology/lib/ez130_8t_tt_1p20v_25c.lib -> /usr/pack/ihp-sg13-kgf/eth/ez130_8t_stdcell/v1.0/lib/ez130_8t_tt_1p20v_25c.lib
+Jun 24 16:22:21   create link ./technology/lib/sg13cmos5l_io_dummy.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_io/v0.1/lib/sg13cmos5l_io_dummy.lib
+Jun 24 16:22:21   create link ./technology/lib/sg13cmos5l_io_fast_1p32V_3p6V_m40C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_io/v0.1/lib/sg13cmos5l_io_fast_1p32V_3p6V_m40C.lib
+Jun 24 16:22:21   create link ./technology/lib/sg13cmos5l_io_fast_1p65V_3p6V_m40C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_io/v0.1/lib/sg13cmos5l_io_fast_1p65V_3p6V_m40C.lib
+Jun 24 16:22:21   create link ./technology/lib/sg13cmos5l_io_slow_1p08V_3p0V_125C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_io/v0.1/lib/sg13cmos5l_io_slow_1p08V_3p0V_125C.lib
+Jun 24 16:22:21   create link ./technology/lib/sg13cmos5l_io_slow_1p35V_3p0V_125C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_io/v0.1/lib/sg13cmos5l_io_slow_1p35V_3p0V_125C.lib
+Jun 24 16:22:21   create link ./technology/lib/sg13cmos5l_io_typ_1p2V_3p3V_25C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_io/v0.1/lib/sg13cmos5l_io_typ_1p2V_3p3V_25C.lib
+Jun 24 16:22:21   create link ./technology/lib/sg13cmos5l_io_typ_1p5V_3p3V_25C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_io/v0.1/lib/sg13cmos5l_io_typ_1p5V_3p3V_25C.lib
+Jun 24 16:22:21   create link ./technology/lib/RM_IHPSG13_1P_512x32_c2_bm_bist_fast_1p32V_m55C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/lib/RM_IHPSG13_1P_512x32_c2_bm_bist_fast_1p32V_m55C.lib
+Jun 24 16:22:21   create link ./technology/lib/RM_IHPSG13_1P_512x32_c2_bm_bist_slow_1p08V_125C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/lib/RM_IHPSG13_1P_512x32_c2_bm_bist_slow_1p08V_125C.lib
+Jun 24 16:22:21   create link ./technology/lib/RM_IHPSG13_1P_512x32_c2_bm_bist_typ_1p20V_25C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/lib/RM_IHPSG13_1P_512x32_c2_bm_bist_typ_1p20V_25C.lib
+Jun 24 16:22:21   create link ./technology/lib/RM_IHPSG13_1P_512x64_c2_bm_bist_fast_1p32V_m55C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/lib/RM_IHPSG13_1P_512x64_c2_bm_bist_fast_1p32V_m55C.lib
+Jun 24 16:22:21   create link ./technology/lib/RM_IHPSG13_1P_512x64_c2_bm_bist_slow_1p08V_125C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/lib/RM_IHPSG13_1P_512x64_c2_bm_bist_slow_1p08V_125C.lib
+Jun 24 16:22:21   create link ./technology/lib/RM_IHPSG13_1P_512x64_c2_bm_bist_typ_1p20V_25C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/lib/RM_IHPSG13_1P_512x64_c2_bm_bist_typ_1p20V_25C.lib
+Jun 24 16:22:21   create link ./technology/lib/RM_IHPSG13_1P_1024x32_c2_bm_bist_fast_1p32V_m55C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/lib/RM_IHPSG13_1P_1024x32_c2_bm_bist_fast_1p32V_m55C.lib
+Jun 24 16:22:21   create link ./technology/lib/RM_IHPSG13_1P_1024x32_c2_bm_bist_slow_1p08V_125C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/lib/RM_IHPSG13_1P_1024x32_c2_bm_bist_slow_1p08V_125C.lib
+Jun 24 16:22:21   create link ./technology/lib/RM_IHPSG13_1P_1024x32_c2_bm_bist_typ_1p20V_25C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/lib/RM_IHPSG13_1P_1024x32_c2_bm_bist_typ_1p20V_25C.lib
+Jun 24 16:22:21   create link ./technology/lib/RM_IHPSG13_1P_1024x64_c2_bm_bist_fast_1p32V_m55C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/lib/RM_IHPSG13_1P_1024x64_c2_bm_bist_fast_1p32V_m55C.lib
+Jun 24 16:22:21   create link ./technology/lib/RM_IHPSG13_1P_1024x64_c2_bm_bist_slow_1p08V_125C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/lib/RM_IHPSG13_1P_1024x64_c2_bm_bist_slow_1p08V_125C.lib
+Jun 24 16:22:21   create link ./technology/lib/RM_IHPSG13_1P_1024x64_c2_bm_bist_typ_1p20V_25C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/lib/RM_IHPSG13_1P_1024x64_c2_bm_bist_typ_1p20V_25C.lib
+Jun 24 16:22:21   create link ./technology/lib/RM_IHPSG13_1P_2048x64_c2_bm_bist_fast_1p32V_m55C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/lib/RM_IHPSG13_1P_2048x64_c2_bm_bist_fast_1p32V_m55C.lib
+Jun 24 16:22:21   create link ./technology/lib/RM_IHPSG13_1P_2048x64_c2_bm_bist_slow_1p08V_125C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/lib/RM_IHPSG13_1P_2048x64_c2_bm_bist_slow_1p08V_125C.lib
+Jun 24 16:22:21   create link ./technology/lib/RM_IHPSG13_1P_2048x64_c2_bm_bist_typ_1p20V_25C.lib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/lib/RM_IHPSG13_1P_2048x64_c2_bm_bist_typ_1p20V_25C.lib
+Jun 24 16:22:21   create link ./technology/db/sg13cmos5l_stdcell_fast_1p32V_m40C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/db.dz/sg13cmos5l_stdcell_fast_1p32V_m40C.db
+Jun 24 16:22:21   create link ./technology/db/sg13cmos5l_stdcell_fast_1p65V_m40C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/db.dz/sg13cmos5l_stdcell_fast_1p65V_m40C.db
+Jun 24 16:22:21   create link ./technology/db/sg13cmos5l_stdcell_slow_1p08V_125C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/db.dz/sg13cmos5l_stdcell_slow_1p08V_125C.db
+Jun 24 16:22:21   create link ./technology/db/sg13cmos5l_stdcell_slow_1p35V_125C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/db.dz/sg13cmos5l_stdcell_slow_1p35V_125C.db
+Jun 24 16:22:21   create link ./technology/db/sg13cmos5l_stdcell_typ_1p20V_25C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/db.dz/sg13cmos5l_stdcell_typ_1p20V_25C.db
+Jun 24 16:22:21   create link ./technology/db/sg13cmos5l_stdcell_typ_1p50V_25C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/db.dz/sg13cmos5l_stdcell_typ_1p50V_25C.db
+Jun 24 16:22:21   create link ./technology/db/ez130_8t_ff_1p32v_m40c.db -> /usr/pack/ihp-sg13-kgf/eth/ez130_8t_stdcell/v1.0/lib/ez130_8t_ff_1p32v_m40c.db
+Jun 24 16:22:21   create link ./technology/db/ez130_8t_ss_1p08v_125c.db -> /usr/pack/ihp-sg13-kgf/eth/ez130_8t_stdcell/v1.0/lib/ez130_8t_ss_1p08v_125c.db
+Jun 24 16:22:21   create link ./technology/db/ez130_8t_tt_1p20v_25c.db -> /usr/pack/ihp-sg13-kgf/eth/ez130_8t_stdcell/v1.0/lib/ez130_8t_tt_1p20v_25c.db
+Jun 24 16:22:21   create link ./technology/db/sg13cmos5l_io_fast_1p32V_3p6V_m40C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_io/v0.1/db.dz/sg13cmos5l_io_fast_1p32V_3p6V_m40C.db
+Jun 24 16:22:21   create link ./technology/db/sg13cmos5l_io_fast_1p65V_3p6V_m40C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_io/v0.1/db.dz/sg13cmos5l_io_fast_1p65V_3p6V_m40C.db
+Jun 24 16:22:21   create link ./technology/db/sg13cmos5l_io_slow_1p08V_3p0V_125C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_io/v0.1/db.dz/sg13cmos5l_io_slow_1p08V_3p0V_125C.db
+Jun 24 16:22:21   create link ./technology/db/sg13cmos5l_io_slow_1p35V_3p0V_125C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_io/v0.1/db.dz/sg13cmos5l_io_slow_1p35V_3p0V_125C.db
+Jun 24 16:22:21   create link ./technology/db/sg13cmos5l_io_typ_1p2V_3p3V_25C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_io/v0.1/db.dz/sg13cmos5l_io_typ_1p2V_3p3V_25C.db
+Jun 24 16:22:21   create link ./technology/db/sg13cmos5l_io_typ_1p5V_3p3V_25C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_io/v0.1/db.dz/sg13cmos5l_io_typ_1p5V_3p3V_25C.db
+Jun 24 16:22:21   create link ./technology/db/RM_IHPSG13_1P_512x32_c2_bm_bist_fast_1p32V_m55C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/db.dz/RM_IHPSG13_1P_512x32_c2_bm_bist_fast_1p32V_m55C.db
+Jun 24 16:22:21   create link ./technology/db/RM_IHPSG13_1P_512x32_c2_bm_bist_slow_1p08V_125C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/db.dz/RM_IHPSG13_1P_512x32_c2_bm_bist_slow_1p08V_125C.db
+Jun 24 16:22:21   create link ./technology/db/RM_IHPSG13_1P_512x32_c2_bm_bist_typ_1p20V_25C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/db.dz/RM_IHPSG13_1P_512x32_c2_bm_bist_typ_1p20V_25C.db
+Jun 24 16:22:21   create link ./technology/db/RM_IHPSG13_1P_512x64_c2_bm_bist_fast_1p32V_m55C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/db.dz/RM_IHPSG13_1P_512x64_c2_bm_bist_fast_1p32V_m55C.db
+Jun 24 16:22:21   create link ./technology/db/RM_IHPSG13_1P_512x64_c2_bm_bist_slow_1p08V_125C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/db.dz/RM_IHPSG13_1P_512x64_c2_bm_bist_slow_1p08V_125C.db
+Jun 24 16:22:21   create link ./technology/db/RM_IHPSG13_1P_512x64_c2_bm_bist_typ_1p20V_25C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/db.dz/RM_IHPSG13_1P_512x64_c2_bm_bist_typ_1p20V_25C.db
+Jun 24 16:22:21   create link ./technology/db/RM_IHPSG13_1P_1024x32_c2_bm_bist_fast_1p32V_m55C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/db.dz/RM_IHPSG13_1P_1024x32_c2_bm_bist_fast_1p32V_m55C.db
+Jun 24 16:22:21   create link ./technology/db/RM_IHPSG13_1P_1024x32_c2_bm_bist_slow_1p08V_125C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/db.dz/RM_IHPSG13_1P_1024x32_c2_bm_bist_slow_1p08V_125C.db
+Jun 24 16:22:21   create link ./technology/db/RM_IHPSG13_1P_1024x32_c2_bm_bist_typ_1p20V_25C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/db.dz/RM_IHPSG13_1P_1024x32_c2_bm_bist_typ_1p20V_25C.db
+Jun 24 16:22:21   create link ./technology/db/RM_IHPSG13_1P_1024x64_c2_bm_bist_fast_1p32V_m55C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/db.dz/RM_IHPSG13_1P_1024x64_c2_bm_bist_fast_1p32V_m55C.db
+Jun 24 16:22:21   create link ./technology/db/RM_IHPSG13_1P_1024x64_c2_bm_bist_slow_1p08V_125C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/db.dz/RM_IHPSG13_1P_1024x64_c2_bm_bist_slow_1p08V_125C.db
+Jun 24 16:22:21   create link ./technology/db/RM_IHPSG13_1P_1024x64_c2_bm_bist_typ_1p20V_25C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/db.dz/RM_IHPSG13_1P_1024x64_c2_bm_bist_typ_1p20V_25C.db
+Jun 24 16:22:21   create link ./technology/db/RM_IHPSG13_1P_2048x64_c2_bm_bist_fast_1p32V_m55C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/db.dz/RM_IHPSG13_1P_2048x64_c2_bm_bist_fast_1p32V_m55C.db
+Jun 24 16:22:21   create link ./technology/db/RM_IHPSG13_1P_2048x64_c2_bm_bist_slow_1p08V_125C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/db.dz/RM_IHPSG13_1P_2048x64_c2_bm_bist_slow_1p08V_125C.db
+Jun 24 16:22:21   create link ./technology/db/RM_IHPSG13_1P_2048x64_c2_bm_bist_typ_1p20V_25C.db -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/db.dz/RM_IHPSG13_1P_2048x64_c2_bm_bist_typ_1p20V_25C.db
+Jun 24 16:22:21   create link ./technology/verilog/sg13cmos5l_stdcell.v -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/verilog/sg13cmos5l_stdcell.v
+Jun 24 16:22:21   create link ./technology/verilog/ez130_8t.v -> /usr/pack/ihp-sg13-kgf/eth/ez130_8t_stdcell/v1.0/verilog/ez130_8t.v
+Jun 24 16:22:21   create link ./technology/verilog/sg13cmos5l_io.v -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_io/v0.1/verilog/sg13cmos5l_io.v
+Jun 24 16:22:21   create link ./technology/verilog/RM_IHPSG13_1P_512x32_c2_bm_bist.v -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/verilog/RM_IHPSG13_1P_512x32_c2_bm_bist.v
+Jun 24 16:22:21   create link ./technology/verilog/RM_IHPSG13_1P_512x64_c2_bm_bist.v -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/verilog/RM_IHPSG13_1P_512x64_c2_bm_bist.v
+Jun 24 16:22:21   create link ./technology/verilog/RM_IHPSG13_1P_1024x32_c2_bm_bist.v -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/verilog/RM_IHPSG13_1P_1024x32_c2_bm_bist.v
+Jun 24 16:22:21   create link ./technology/verilog/RM_IHPSG13_1P_1024x64_c2_bm_bist.v -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/verilog/RM_IHPSG13_1P_1024x64_c2_bm_bist.v
+Jun 24 16:22:21   create link ./technology/verilog/RM_IHPSG13_1P_2048x64_c2_bm_bist.v -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/verilog/RM_IHPSG13_1P_2048x64_c2_bm_bist.v
+Jun 24 16:22:21   create link ./technology/verilog/RM_IHPSG13_1P_core_behavioral.v -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/verilog/RM_IHPSG13_1P_core_behavioral.v
+Jun 24 16:22:21   create link ./technology/verilog/RM_IHPSG13_1P_core_behavioral_bm_bist.v -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/verilog/RM_IHPSG13_1P_core_behavioral_bm_bist.v
+Jun 24 16:22:21   create link ./technology/verilog/RM_IHPSG13_2P_core_behavioral_bm_bist_ideal.v -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/verilog/RM_IHPSG13_2P_core_behavioral_bm_bist_ideal.v
+Jun 24 16:22:21   create link ./technology/verilog/RM_IHPSG13_2P_core_behavioral_ideal.v -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/verilog/RM_IHPSG13_2P_core_behavioral_ideal.v
+Jun 24 16:22:21   create link ./technology/gds/sg13cmos5l_stdcell.gds -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/gds/sg13cmos5l_stdcell.gds
+Jun 24 16:22:21   create link ./technology/gds/ez130_8t.gds -> /usr/pack/ihp-sg13-kgf/eth/ez130_8t_stdcell/v1.0/gds/ez130_8t.gds
+Jun 24 16:22:21   create link ./technology/gds/sg13cmos5l_io.gds -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_io/v0.1/gds/sg13cmos5l_io.gds
+Jun 24 16:22:21   create link ./technology/gds/bondpad5l_70x70.gds -> /usr/pack/ihp-sg13-kgf/eth/bondpad/bondpad5l_70x70_v0/gds/bondpad5l_70x70.gds
+Jun 24 16:22:21   create link ./technology/gds/RM_IHPSG13_1P_512x32_c2_bm_bist.gds -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/gds/RM_IHPSG13_1P_512x32_c2_bm_bist.gds
+Jun 24 16:22:21   create link ./technology/gds/RM_IHPSG13_1P_512x64_c2_bm_bist.gds -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/gds/RM_IHPSG13_1P_512x64_c2_bm_bist.gds
+Jun 24 16:22:21   create link ./technology/gds/RM_IHPSG13_1P_1024x32_c2_bm_bist.gds -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/gds/RM_IHPSG13_1P_1024x32_c2_bm_bist.gds
+Jun 24 16:22:21   create link ./technology/gds/RM_IHPSG13_1P_1024x64_c2_bm_bist.gds -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/gds/RM_IHPSG13_1P_1024x64_c2_bm_bist.gds
+Jun 24 16:22:21   create link ./technology/gds/RM_IHPSG13_1P_2048x64_c2_bm_bist.gds -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/gds/RM_IHPSG13_1P_2048x64_c2_bm_bist.gds
+Jun 24 16:22:21   create directory docs
+Jun 24 16:22:21   create link ./docs/SG13CMOS5L_os_layout_rules.pdf -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/doc/SG13CMOS5L_os_layout_rules.pdf
+Jun 24 16:22:21   create link ./docs/SG13CMOS5L_os_process_spec.pdf -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/doc/SG13CMOS5L_os_process_spec.pdf
+Jun 24 16:22:21   create link ./docs/ReleaseNotes.txt -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/doc/ReleaseNotes.txt
+Jun 24 16:22:21   create link ./docs/sg13cmos5l_stdcell.celllist -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/doc/sg13cmos5l_stdcell.celllist
+Jun 24 16:22:21   create link ./docs/sg13cmos5l_stdcell_fast_1p32V_m40C.pdf -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/doc/sg13cmos5l_stdcell_fast_1p32V_m40C.pdf
+Jun 24 16:22:21   create link ./docs/sg13cmos5l_stdcell_fast_1p65V_m40C.pdf -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/doc/sg13cmos5l_stdcell_fast_1p65V_m40C.pdf
+Jun 24 16:22:21   create link ./docs/sg13cmos5l_stdcell_slow_1p08V_125C.pdf -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/doc/sg13cmos5l_stdcell_slow_1p08V_125C.pdf
+Jun 24 16:22:21   create link ./docs/sg13cmos5l_stdcell_slow_1p35V_125C.pdf -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/doc/sg13cmos5l_stdcell_slow_1p35V_125C.pdf
+Jun 24 16:22:21   create link ./docs/sg13cmos5l_stdcell_typ_1p20V_25C.pdf -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/doc/sg13cmos5l_stdcell_typ_1p20V_25C.pdf
+Jun 24 16:22:21   create link ./docs/sg13cmos5l_stdcell_typ_1p50V_25C.pdf -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/doc/sg13cmos5l_stdcell_typ_1p50V_25C.pdf
+Jun 24 16:22:21   create link ./docs/sg13cmos5l_io.celllist -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_io/v0.1/doc/sg13cmos5l_io.celllist
+Jun 24 16:22:21   create link ./docs/RI_MGene_IHPSG13_UG_rev_1_2_ext.pdf -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/doc/RI_MGene_IHPSG13_UG_rev_1_2_ext.pdf
+Jun 24 16:22:21   create directory sourcecode
+Jun 24 16:22:21   create directory modelsim
+Jun 24 16:22:21   create directory simvectors
+Jun 24 16:22:21   copy modelsim/5wckSFXi7f (generated data dumped to tempfile) to ./modelsim/modelsim.ini
+Jun 24 16:22:21   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/modelsim/2019.3/compile_gate.csh-example to ./modelsim/compile_gate.csh-example
+Jun 24 16:22:21   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/modelsim/2019.3/compile_rtl.csh-example to ./modelsim/compile_rtl.csh-example
+Jun 24 16:22:21   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/modelsim/2019.3/README to ./modelsim/README
+Jun 24 16:22:21   create modelsim working library modelsim/work
+Jun 24 16:22:22   create directory synopsys
+Jun 24 16:22:22   create directory synopsys/DDC
+Jun 24 16:22:22   create directory synopsys/WORK
+Jun 24 16:22:22   create directory synopsys/scripts
+Jun 24 16:22:22   create directory synopsys/out
+Jun 24 16:22:22   create directory synopsys/reports
+Jun 24 16:22:22   copy synopsys/DDZlNqbSy2 (generated data dumped to tempfile) to ./synopsys/.synopsys_dc.setup
+Jun 24 16:22:22   create directory synopsys/alib
+Jun 24 16:22:22   create directory synopsys/alib/alib-52
+Jun 24 16:22:22   create link synopsys/alib/alib-52/sg13cmos5l_stdcell_fast_1p32V_m40C.db.alib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/db.dz/alib/alib-52/sg13cmos5l_stdcell_fast_1p32V_m40C.db.alib
+Jun 24 16:22:22   create link synopsys/alib/alib-52/sg13cmos5l_stdcell_fast_1p65V_m40C.db.alib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/db.dz/alib/alib-52/sg13cmos5l_stdcell_fast_1p65V_m40C.db.alib
+Jun 24 16:22:22   create link synopsys/alib/alib-52/sg13cmos5l_stdcell_slow_1p08V_125C.db.alib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/db.dz/alib/alib-52/sg13cmos5l_stdcell_slow_1p08V_125C.db.alib
+Jun 24 16:22:22   create link synopsys/alib/alib-52/sg13cmos5l_stdcell_slow_1p35V_125C.db.alib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/db.dz/alib/alib-52/sg13cmos5l_stdcell_slow_1p35V_125C.db.alib
+Jun 24 16:22:22   create link synopsys/alib/alib-52/sg13cmos5l_stdcell_typ_1p20V_25C.db.alib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/db.dz/alib/alib-52/sg13cmos5l_stdcell_typ_1p20V_25C.db.alib
+Jun 24 16:22:22   create link synopsys/alib/alib-52/sg13cmos5l_stdcell_typ_1p50V_25C.db.alib -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/db.dz/alib/alib-52/sg13cmos5l_stdcell_typ_1p50V_25C.db.alib
+Jun 24 16:22:22   create link synopsys/alib/alib-52/ez130_8t_ff_1p32v_m40c.db.alib -> /usr/pack/ihp-sg13-kgf/eth/ez130_8t_stdcell/v1.0/db.dz/alib/alib-52/ez130_8t_ff_1p32v_m40c.db.alib
+Jun 24 16:22:22   create link synopsys/alib/alib-52/ez130_8t_ss_1p08v_125c.db.alib -> /usr/pack/ihp-sg13-kgf/eth/ez130_8t_stdcell/v1.0/db.dz/alib/alib-52/ez130_8t_ss_1p08v_125c.db.alib
+Jun 24 16:22:22   create link synopsys/alib/alib-52/ez130_8t_tt_1p20v_25c.db.alib -> /usr/pack/ihp-sg13-kgf/eth/ez130_8t_stdcell/v1.0/db.dz/alib/alib-52/ez130_8t_tt_1p20v_25c.db.alib
+Jun 24 16:22:22   create link ./docs/RM_IHPSG13_1P_512x32_c2_bm_bist.txt -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/doc/RM_IHPSG13_1P_512x32_c2_bm_bist.txt
+Jun 24 16:22:22   create link ./docs/RM_IHPSG13_1P_512x64_c2_bm_bist.txt -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/doc/RM_IHPSG13_1P_512x64_c2_bm_bist.txt
+Jun 24 16:22:22   create link ./docs/RM_IHPSG13_1P_1024x32_c2_bm_bist.txt -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/doc/RM_IHPSG13_1P_1024x32_c2_bm_bist.txt
+Jun 24 16:22:22   create link ./docs/RM_IHPSG13_1P_1024x64_c2_bm_bist.txt -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/doc/RM_IHPSG13_1P_1024x64_c2_bm_bist.txt
+Jun 24 16:22:22   create link ./docs/RM_IHPSG13_1P_2048x64_c2_bm_bist.txt -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/doc/RM_IHPSG13_1P_2048x64_c2_bm_bist.txt
+Jun 24 16:22:22   create directory tetramax
+Jun 24 16:22:22   create directory tetramax/scripts
+Jun 24 16:22:22   create directory tetramax/reports
+Jun 24 16:22:22   create directory tetramax/pattern
+Jun 24 16:22:22   copy tetramax/scripts/EnSTawPwPI (generated data dumped to tempfile) to ./tetramax/scripts/read_lib.tcl
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/tetramax/tmaxtcl.rc to ./tetramax/tmaxtcl.rc
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/tetramax/tmax.tcl to ./tetramax/scripts/tmax.tcl
+Jun 24 16:22:22   create directory tmp
+Jun 24 16:22:22   create directory innovus
+Jun 24 16:22:22   create directory innovus/reports
+Jun 24 16:22:22   create directory innovus/src
+Jun 24 16:22:22   create directory innovus/src/sample
+Jun 24 16:22:22   create directory innovus/scripts
+Jun 24 16:22:22   create directory innovus/save
+Jun 24 16:22:22   create directory innovus/out
+Jun 24 16:22:22   create directory technology/lef
+Jun 24 16:22:22   create directory technology/cl
+Jun 24 16:22:22   create directory technology/qrc
+Jun 24 16:22:22   create link ./technology/lef/sg13cmos5l_tech.lef -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/lef/sg13cmos5l_tech.lef
+Jun 24 16:22:22   create link ./technology/lef/ez130_cmos5l_tech.lef -> /usr/pack/ihp-sg13-kgf/eth/ez130_8t_stdcell/v1.0/lef/ez130_cmos5l_tech.lef
+Jun 24 16:22:22   create link ./technology/lef/sg13cmos5l_stdcell.lef -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_stdcell/v0.1/lef/sg13cmos5l_stdcell.lef
+Jun 24 16:22:22   create link ./technology/lef/ez130_8t.lef -> /usr/pack/ihp-sg13-kgf/eth/ez130_8t_stdcell/v1.0/lef/ez130_8t.lef
+Jun 24 16:22:22   create link ./technology/lef/sg13cmos5l_io.lef -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_io/v0.1/lef/sg13cmos5l_io.lef
+Jun 24 16:22:22   create link ./technology/lef/bondpad5l_70x70.lef -> /usr/pack/ihp-sg13-kgf/eth/bondpad/bondpad5l_70x70_v0/lef/bondpad5l_70x70.lef
+Jun 24 16:22:22   create link ./technology/lef/RM_IHPSG13_1P_512x32_c2_bm_bist.lef -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/lef.dz/RM_IHPSG13_1P_512x32_c2_bm_bist.lef
+Jun 24 16:22:22   create link ./technology/lef/RM_IHPSG13_1P_512x64_c2_bm_bist.lef -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/lef.dz/RM_IHPSG13_1P_512x64_c2_bm_bist.lef
+Jun 24 16:22:22   create link ./technology/lef/RM_IHPSG13_1P_1024x32_c2_bm_bist.lef -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/lef.dz/RM_IHPSG13_1P_1024x32_c2_bm_bist.lef
+Jun 24 16:22:22   create link ./technology/lef/RM_IHPSG13_1P_1024x64_c2_bm_bist.lef -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/lef.dz/RM_IHPSG13_1P_1024x64_c2_bm_bist.lef
+Jun 24 16:22:22   create link ./technology/lef/RM_IHPSG13_1P_2048x64_c2_bm_bist.lef -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13g2/sg13g2_sram/v2.2/lef.dz/RM_IHPSG13_1P_2048x64_c2_bm_bist.lef
+Jun 24 16:22:22   copy innovus/src/sample/BZqt3NpDr8 (generated data dumped to tempfile) to ./innovus/src/sample/chip.globals
+Jun 24 16:22:22   copy innovus/src/sample/1BW310rxPb (generated data dumped to tempfile) to ./innovus/src/sample/mmmc.view.tcl
+Jun 24 16:22:22   copy innovus/scripts/kA6VRWQzLD (generated data dumped to tempfile) to ./innovus/scripts/exportall.tcl
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/innovus/21/enc.tcl to ./innovus/enc.tcl
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/innovus/21/checkdesign.tcl to ./innovus/scripts/checkdesign.tcl
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/innovus/21/special_cell_setting.tcl to ./innovus/scripts/special_cell_setting.tcl
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/innovus/21/add_clk_decaps.tcl to ./innovus/scripts/add_clk_decaps.tcl
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/innovus/21/fillperi-insert.tcl to ./innovus/scripts/fillperi-insert.tcl
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/innovus/21/mmmc_functional.sdc to ./innovus/src/sample/mmmc_functional.sdc
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/innovus/21/mmmc_shared.sdc to ./innovus/src/sample/mmmc_shared.sdc
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/innovus/21/mmmc_test.sdc to ./innovus/src/sample/mmmc_test.sdc
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/innovus/21/chip.ccopt.spec to ./innovus/src/sample/chip.ccopt.spec
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/innovus/21/chip.cpf to ./innovus/src/sample/chip.cpf
+Jun 24 16:22:22   create directory calibre
+Jun 24 16:22:22   create directory calibre/drc
+Jun 24 16:22:22   create directory calibre/fill
+Jun 24 16:22:22   create directory calibre/lvs
+Jun 24 16:22:22   create directory calibre/pex
+Jun 24 16:22:22   create directory calibre/.init
+Jun 24 16:22:22   create directory dfii/.init
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/calibre/2021.3/start_calibre to ./calibre/start_calibre
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/calibre/ihpsg13g2/runset.drc to ./calibre/runset.drc
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/calibre/ihpsg13g2/runset.fill to ./calibre/runset.fill
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/calibre/ihpsg13g2/runset.lvs to ./calibre/runset.lvs
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/calibre/ihpsg13g2/runset.signoff.drc to ./calibre/runset.signoff.drc
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/calibre/ihpsg13g2/ihpsg13.layerprops to ./calibre/.init/ihpsg13.layerprops
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/calibre/2021.3/lvs/verilog2spice to ./calibre/lvs/verilog2spice
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/calibre/ihpsg13g2/calview.cellmap to ./calibre/pex/calview.cellmap
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/calibre/2021.3/dfii/loadCalibreInteractive.il to ./dfii/.init/loadCalibreInteractive.il
+Jun 24 16:22:22   copy calibre/lvs/XldLtrF5yy (generated data dumped to tempfile) to ./calibre/lvs/verilog.inc
+Jun 24 16:22:22   copy calibre/lvs/QMYtcHgKlM (generated data dumped to tempfile) to ./calibre/lvs/spice.inc
+Jun 24 16:22:22   create directory dfii/cds
+Jun 24 16:22:22   extract userlibs from ./dfii/cds.lib
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/dfii/6/ihpsg13g2_1.3.1/.cdsinit to ./dfii/.cdsinit
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/dfii/6/ihpsg13g2_1.3.1/.simrc to ./dfii/.simrc
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/dfii/6/ihpsg13g2_1.3.1/start_dfii to ./dfii/start_dfii
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/dfii/6/loadKit.il to ./dfii/.init/loadKit.il
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/dfii/6/loadUserCust.il to ./dfii/.init/loadUserCust.il
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/dfii/6/emxconfig.il to ./dfii/.init/emxconfig.il
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/dfii/6/loadPathwave_ads.il to ./dfii/.init/loadPathwave_ads.il
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/dfii/6/loadPathwave_rfic.il to ./dfii/.init/loadPathwave_rfic.il
+Jun 24 16:22:22   create directory openroad/out
+Jun 24 16:22:22   create directory openroad/save
+Jun 24 16:22:22   create directory openroad/reports
+Jun 24 16:22:22   create directory technology/rcx
+Jun 24 16:22:22   create link ./technology/rcx/IHP_rcx_patterns.rules -> /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/librelane/IHP_rcx_patterns.rules
+Jun 24 16:22:22   create directory klayout/.klayout
+Jun 24 16:22:22   create directory klayout/.klayout/tech
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/klayout/2026.04/start_klayout to ./klayout/start_klayout
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/klayout/2026.04/run_bondpad-example to ./klayout/run_bondpad-example
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/klayout/2026.04/run_drc-example to ./klayout/run_drc-example
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/klayout/2026.04/run_dummy-example to ./klayout/run_dummy-example
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/klayout/2026.04/run_lvs-example to ./klayout/run_lvs-example
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/klayout/2026.04/run_sealring-example to ./klayout/run_sealring-example
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/klayout/tech/sg13cmos5l.lyp to ./klayout/sg13cmos5l.lyp
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/klayout/tech/sg13cmos5l.map to ./klayout/sg13cmos5l.map
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/klayout/.klayout/klayoutrc to ./klayout/.klayout/klayoutrc
+Jun 24 16:22:22   copy /usr/pack/ihp-sg13-kgf/open_ihp_sg13cmos5l/sg13cmos5l_tech/v0.2/../../../dz/klayout/def2stream.py to ./klayout/.klayout/def2stream.py
+Jun 24 16:22:22   copy klayout/.klayout/tech/4PyG056AoO (generated data dumped to tempfile) to ./klayout/.klayout/tech/sg13cmos5l.lyt
+Jun 24 16:22:22   copy klayout/3c06NnCm41 (generated data dumped to tempfile) to ./klayout/def2gds-example
+Jun 24 16:22:22   move /home/sem26f42/.cockpit_loc.ihp13 to /home/sem26f42/.cockpit_loc.ihp13~
+Jun 24 16:22:22   copy /home/sem26f42/HlOK0Bi5BD (generated data dumped to tempfile) to /home/sem26f42/.cockpit_loc.ihp13

@@ -93,9 +93,9 @@ source src/padring.tcl
 ##########################################################################
 # RAM sizes
 ##########################################################################
-set RamMaster512x64   [[ord::get_db] findMaster "RM_IHPSG13_1P_512x64_c2_bm_bist"]
-set RamSize512x64_W   [ord::dbu_to_microns [$RamMaster512x64 getWidth]]
-set RamSize512x64_H   [ord::dbu_to_microns [$RamMaster512x64 getHeight]]
+set RamMaster1024x64   [[ord::get_db] findMaster "RM_IHPSG13_1P_1024x64_c2_bm_bist"]
+set RamSize1024x64_W   [ord::dbu_to_microns [$RamMaster1024x64 getWidth]]
+set RamSize1024x64_H   [ord::dbu_to_microns [$RamMaster1024x64 getHeight]]
 
 
 ##########################################################################
@@ -147,7 +147,7 @@ set sramPaddingX 10.0
 
 # Gemeinsame Y-Position (Oben im Core)
 # core_topY ist der obere Rand -> SRAM-Höhe abziehen -> Padding nach innen
-set Y_top [expr $core_topY - $RamSize512x64_H - $sramPaddingY]
+set Y_top [expr $core_topY - $RamSize1024x64_H - $sramPaddingY]
 
 # Bank0: Oben LINKS
 # Start bei linkem Core-Rand + Padding
@@ -157,7 +157,7 @@ utl::report "Placed bank0_sram0 at ($X_left, $Y_top)"
 
 # Bank1: Oben RECHTS
 # Start bei rechtem Core-Rand - SRAM-Breite - Padding
-set X_right [expr $core_rightX - $RamSize512x64_W - $sramPaddingX]
+set X_right [expr $core_rightX - $RamSize1024x64_W - $sramPaddingX]
 placeInstance $bank1_sram0 $X_right $Y_top R0
 utl::report "Placed bank1_sram0 at ($X_right, $Y_top)"
 
@@ -168,8 +168,8 @@ utl::report "Placed bank1_sram0 at ($X_right, $Y_top)"
 #set sramPaddingX 10.0
 
 # Bank0 (Ganz oben an den echten Core-Rand klatschen)
-#set X [expr $floor_midpointX - $RamSize512x64_W/2]
-#set Y [expr $core_topY - $RamSize512x64_H - $sramPaddingY]
+#set X [expr $floor_midpointX - $RamSize1024x64_W/2]
+#set Y [expr $core_topY - $RamSize1024x64_H - $sramPaddingY]
 #placeInstance $bank0_sram0 $X $Y R0
 
 # Bank1 (Ganz unten an den echten Core-Rand klatschen)
@@ -184,13 +184,13 @@ utl::report "Placed bank1_sram0 at ($X_right, $Y_top)"
 # Bank0 (An den linken Rand - vertikal zentriert)
 # Orientierung R90 dreht das Makro um 90 Grad
 #set X [expr $core_leftX + $sramPaddingX]
-#set Y [expr $floor_midpointY - $RamSize512x64_W/2]
+#set Y [expr $floor_midpointY - $RamSize1024x64_W/2]
 #placeInstance $bank0_sram0 $X $Y R90
 
 # Bank1 (An den rechten Rand - vertikal zentriert)
 # Orientierung R270 dreht es um 270 Grad (bzw. -90 Grad)
-#set X [expr $core_rightX - $RamSize512x64_H - $sramPaddingX]
-#set Y [expr $floor_midpointY - $RamSize512x64_W/2]
+#set X [expr $core_rightX - $RamSize1024x64_H - $sramPaddingX]
+#set Y [expr $floor_midpointY - $RamSize1024x64_W/2]
 #placeInstance $bank1_sram0 $X $Y R270
 
 

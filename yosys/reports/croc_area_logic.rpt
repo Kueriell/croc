@@ -1,0 +1,1941 @@
+47. Printing statistics.
+
+=== cdc_2phase_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      147        - wires
+      147        - wire bits
+      147        - public wires
+      147        - public wire bits
+       94        - ports
+       94        - port bits
+        8   141.12 cells
+        4  112.896   DFFRQX3
+        4   28.224   NOR2BX1
+        3        - submodules
+        1        -   cdc_2phase_dst_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_dst
+        1        -   cdc_2phase_src_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_src
+        1        -   cdc_reset_ctrlr$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr
+
+   Chip area for module '\cdc_2phase_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req': 141.120000
+     of which used for sequential elements: 112.896000 (80.00%)
+
+=== cdc_2phase_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      126        - wires
+      126        - wire bits
+      126        - public wires
+      126        - public wire bits
+       80        - ports
+       80        - port bits
+        8   141.12 cells
+        4  112.896   DFFRQX3
+        4   28.224   NOR2BX1
+        3        - submodules
+        1        -   cdc_2phase_dst_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_dst
+        1        -   cdc_2phase_src_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_src
+        1        -   cdc_reset_ctrlr$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr
+
+   Chip area for module '\cdc_2phase_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp': 141.120000
+     of which used for sequential elements: 112.896000 (80.00%)
+
+=== cdc_2phase_dst_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_dst ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      230        - wires
+      230        - wire bits
+      175        - public wires
+      175        - public wire bits
+       89        - ports
+       89        - port bits
+      141 2.29E+03 cells
+        9  203.213   BUFX24
+       41  925.747   DFFQX1
+        2   56.448   DFFRQX3
+       82 1.04E+03   MUX2X1
+        1    11.29   MUXI2X1
+        1    5.645   NAND2X3
+        1    9.878   NAND3BX2
+        2    11.29   NOR2X1
+        1    8.467   OR3BX2
+        1   12.701   XOR2X1
+        1        - submodules
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_dst.i_sync
+
+   Chip area for module '\cdc_2phase_dst_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_dst': 2286.144000
+     of which used for sequential elements: 982.195200 (42.96%)
+
+=== cdc_2phase_dst_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_dst ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      193        - wires
+      193        - wire bits
+      147        - public wires
+      147        - public wire bits
+       75        - ports
+       75        - port bits
+      118 1.83E+03 cells
+        1   15.523   BUFX16
+        2   45.158   BUFX24
+        4   22.579   BUFX3
+       34  767.693   DFFQX1
+        2   56.448   DFFRQX3
+       68  863.654   MUX2X1
+        1    11.29   MUXI2X1
+        1    9.878   NAND2X4
+        1    9.878   NAND3BX3
+        2    11.29   NOR2X1
+        1    8.467   OR3BX2
+        1    9.878   XOR2X2
+        1        - submodules
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_dst.i_sync
+
+   Chip area for module '\cdc_2phase_dst_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_dst': 1831.737600
+     of which used for sequential elements: 824.140800 (44.99%)
+
+=== cdc_2phase_src_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_src ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      227        - wires
+      227        - wire bits
+      174        - public wires
+      174        - public wire bits
+       89        - ports
+       89        - port bits
+      138  2140.79 cells
+        1    11.29   AND3BX1
+        1    8.467   AOI211X1
+        9  101.606   BUFX12
+       41  925.747   DFFQX1
+        1   28.224   DFFRQX3
+       82 1.04E+03   MUX2X1
+        2    11.29   NOR2X1
+        1   12.701   XNOR2X1
+        1        - submodules
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_src.i_sync
+
+   Chip area for module '\cdc_2phase_src_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_src': 2140.790400
+     of which used for sequential elements: 953.971200 (44.56%)
+
+=== cdc_2phase_src_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_src ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      191        - wires
+      191        - wire bits
+      146        - public wires
+      146        - public wire bits
+       75        - ports
+       75        - port bits
+      116 1.81E+03 cells
+        1    11.29   AND3BX1
+        1    8.467   AOI211X1
+        3   67.738   BUFX24
+        5    35.28   BUFX6
+       34  767.693   DFFQX1
+        1   28.224   DFFRQX3
+       68  863.654   MUX2X1
+        2    11.29   NOR2X1
+        1   12.701   XNOR2X2
+        1        - submodules
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_src.i_sync
+
+   Chip area for module '\cdc_2phase_src_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_src': 1806.336000
+     of which used for sequential elements: 795.916800 (44.06%)
+
+=== cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       22        - wires
+       22        - wire bits
+       15        - public wires
+       15        - public wire bits
+       10        - ports
+       10        - port bits
+       12  145.354 cells
+        3   84.672   DFFRQX3
+        2    8.467   INVX1
+        1    7.056   NAND2BX2
+        1    9.878   NAND3BX1
+        1    5.645   NOR2X1
+        1    5.645   NOR2X2
+        1    7.056   NOR3X1
+        1    7.056   OAI21X1
+        1    9.878   OAOI211X1
+        1        - submodules
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst.i_sync
+
+   Chip area for module '\cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst': 145.353600
+     of which used for sequential elements: 84.672000 (58.25%)
+
+=== cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       22        - wires
+       22        - wire bits
+       15        - public wires
+       15        - public wire bits
+       10        - ports
+       10        - port bits
+       12  145.354 cells
+        3   84.672   DFFRQX3
+        2    8.467   INVX1
+        1    7.056   NAND2BX2
+        1    9.878   NAND3BX1
+        1    5.645   NOR2X1
+        1    5.645   NOR2X2
+        1    7.056   NOR3X1
+        1    7.056   OAI21X1
+        1    9.878   OAOI211X1
+        1        - submodules
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst.i_sync
+
+   Chip area for module '\cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst': 145.353600
+     of which used for sequential elements: 84.672000 (58.25%)
+
+=== cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       22        - wires
+       22        - wire bits
+       15        - public wires
+       15        - public wire bits
+       10        - ports
+       10        - port bits
+       12  145.354 cells
+        3   84.672   DFFRQX3
+        2    8.467   INVX1
+        1    7.056   NAND2BX2
+        1    9.878   NAND3BX1
+        1    5.645   NOR2X1
+        1    5.645   NOR2X2
+        1    7.056   NOR3X1
+        1    7.056   OAI21X1
+        1    9.878   OAOI211X1
+        1        - submodules
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst.i_sync
+
+   Chip area for module '\cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst': 145.353600
+     of which used for sequential elements: 84.672000 (58.25%)
+
+=== cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       22        - wires
+       22        - wire bits
+       15        - public wires
+       15        - public wire bits
+       10        - ports
+       10        - port bits
+       12  145.354 cells
+        3   84.672   DFFRQX3
+        2    8.467   INVX1
+        1    7.056   NAND2BX2
+        1    9.878   NAND3BX1
+        1    5.645   NOR2X1
+        1    5.645   NOR2X2
+        1    7.056   NOR3X1
+        1    7.056   OAI21X1
+        1    9.878   OAOI211X1
+        1        - submodules
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst.i_sync
+
+   Chip area for module '\cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst': 145.353600
+     of which used for sequential elements: 84.672000 (58.25%)
+
+=== cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       30        - wires
+       30        - wire bits
+       19        - public wires
+       19        - public wire bits
+       10        - ports
+       10        - port bits
+       20  275.184 cells
+        1    7.056   AND2X1
+        1    9.878   AO21X2
+        2   14.112   AOI21X1
+        5   141.12   DFFRQX3
+        2    8.467   INVX1
+        3   38.102   MUX2X1
+        1    11.29   MUXI2X1
+        2   14.112   NAND2BX1
+        1    8.467   NOR3BX1
+        1    9.878   NOR3BX3
+        1   12.701   XOR2X1
+        1        - submodules
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src.i_sync
+
+   Chip area for module '\cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src': 275.184000
+     of which used for sequential elements: 141.120000 (51.28%)
+
+=== cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       30        - wires
+       30        - wire bits
+       19        - public wires
+       19        - public wire bits
+       10        - ports
+       10        - port bits
+       20  275.184 cells
+        1    7.056   AND2X1
+        1    9.878   AO21X2
+        2   14.112   AOI21X1
+        5   141.12   DFFRQX3
+        2    8.467   INVX1
+        3   38.102   MUX2X1
+        1    11.29   MUXI2X1
+        2   14.112   NAND2BX1
+        1    8.467   NOR3BX1
+        1    9.878   NOR3BX3
+        1   12.701   XOR2X1
+        1        - submodules
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src.i_sync
+
+   Chip area for module '\cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src': 275.184000
+     of which used for sequential elements: 141.120000 (51.28%)
+
+=== cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       30        - wires
+       30        - wire bits
+       19        - public wires
+       19        - public wire bits
+       10        - ports
+       10        - port bits
+       20  275.184 cells
+        1    7.056   AND2X1
+        1    9.878   AO21X2
+        2   14.112   AOI21X1
+        5   141.12   DFFRQX3
+        2    8.467   INVX1
+        3   38.102   MUX2X1
+        1    11.29   MUXI2X1
+        2   14.112   NAND2BX1
+        1    8.467   NOR3BX1
+        1    9.878   NOR3BX3
+        1   12.701   XOR2X1
+        1        - submodules
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src.i_sync
+
+   Chip area for module '\cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src': 275.184000
+     of which used for sequential elements: 141.120000 (51.28%)
+
+=== cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       30        - wires
+       30        - wire bits
+       19        - public wires
+       19        - public wire bits
+       10        - ports
+       10        - port bits
+       20  275.184 cells
+        1    7.056   AND2X1
+        1    9.878   AO21X2
+        2   14.112   AOI21X1
+        5   141.12   DFFRQX3
+        2    8.467   INVX1
+        3   38.102   MUX2X1
+        1    11.29   MUXI2X1
+        2   14.112   NAND2BX1
+        1    8.467   NOR3BX1
+        1    9.878   NOR3BX3
+        1   12.701   XOR2X1
+        1        - submodules
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src.i_sync
+
+   Chip area for module '\cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src': 275.184000
+     of which used for sequential elements: 141.120000 (51.28%)
+
+=== cdc_reset_ctrlr$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       22        - wires
+       22        - wire bits
+       22        - public wires
+       22        - public wire bits
+       14        - ports
+       14        - port bits
+        2        - submodules
+        1        -   cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a
+        1        -   cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b
+
+   Chip area for module '\cdc_reset_ctrlr$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr': 0.000000
+     of which used for sequential elements: 0.000000 (-nan%)
+
+=== cdc_reset_ctrlr$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       22        - wires
+       22        - wire bits
+       22        - public wires
+       22        - public wire bits
+       14        - ports
+       14        - port bits
+        2        - submodules
+        1        -   cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a
+        1        -   cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b
+
+   Chip area for module '\cdc_reset_ctrlr$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr': 0.000000
+     of which used for sequential elements: 0.000000 (-nan%)
+
+=== cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       85        - wires
+       85        - wire bits
+       28        - public wires
+       28        - public wire bits
+       15        - ports
+       15        - port bits
+       68   659.03 cells
+        2   19.757   AO211X2
+        1    11.29   AO31X1
+        4   39.514   AOAI211X1
+        2   14.112   AOI21X1
+        2   14.112   AOI21X2
+        1    11.29   AOI221X2
+        1    8.467   AOI2B1X1
+        1   14.112   AOI2BB2X1
+        1    11.29   BUFX12
+        3   21.168   BUFX6
+        6  169.344   DFFRQX3
+        6   25.402   INVX1
+        1    4.234   INVX2
+        1    9.878   MIN3X1
+        3   38.102   MUX2X1
+        4   22.579   NAND2X1
+        1    5.645   NAND2X1P5
+        1    9.878   NAND3BX1
+        2   14.112   NAND3X1
+        1    7.056   NAND3X2
+        2   14.112   NOR2BX1
+        5   28.224   NOR2X1
+        1    8.467   NOR3BX1
+        4   28.224   NOR3X1
+        2   16.934   OAI211X1
+        2   14.112   OAI21X1
+        1    7.056   OAI21X2
+        1    9.878   OAI31X1
+        1    9.878   OAOI211X1
+        3   25.402   OR3BX1
+        2   25.402   XOR2X1
+        2        - submodules
+        1        -   cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst
+        1        -   cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src
+
+   Chip area for module '\cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a': 659.030400
+     of which used for sequential elements: 169.344000 (25.70%)
+
+=== cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       85        - wires
+       85        - wire bits
+       28        - public wires
+       28        - public wire bits
+       15        - ports
+       15        - port bits
+       68   659.03 cells
+        2   19.757   AO211X2
+        1    11.29   AO31X1
+        4   39.514   AOAI211X1
+        2   14.112   AOI21X1
+        2   14.112   AOI21X2
+        1    11.29   AOI221X2
+        1    8.467   AOI2B1X1
+        1   14.112   AOI2BB2X1
+        1    11.29   BUFX12
+        3   21.168   BUFX6
+        6  169.344   DFFRQX3
+        6   25.402   INVX1
+        1    4.234   INVX2
+        1    9.878   MIN3X1
+        3   38.102   MUX2X1
+        4   22.579   NAND2X1
+        1    5.645   NAND2X1P5
+        1    9.878   NAND3BX1
+        2   14.112   NAND3X1
+        1    7.056   NAND3X2
+        2   14.112   NOR2BX1
+        5   28.224   NOR2X1
+        1    8.467   NOR3BX1
+        4   28.224   NOR3X1
+        2   16.934   OAI211X1
+        2   14.112   OAI21X1
+        1    7.056   OAI21X2
+        1    9.878   OAI31X1
+        1    9.878   OAOI211X1
+        3   25.402   OR3BX1
+        2   25.402   XOR2X1
+        2        - submodules
+        1        -   cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst
+        1        -   cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src
+
+   Chip area for module '\cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b': 659.030400
+     of which used for sequential elements: 169.344000 (25.70%)
+
+=== cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       85        - wires
+       85        - wire bits
+       28        - public wires
+       28        - public wire bits
+       15        - ports
+       15        - port bits
+       68   659.03 cells
+        2   19.757   AO211X2
+        1    11.29   AO31X1
+        4   39.514   AOAI211X1
+        2   14.112   AOI21X1
+        2   14.112   AOI21X2
+        1    11.29   AOI221X2
+        1    8.467   AOI2B1X1
+        1   14.112   AOI2BB2X1
+        1    11.29   BUFX12
+        3   21.168   BUFX6
+        6  169.344   DFFRQX3
+        6   25.402   INVX1
+        1    4.234   INVX2
+        1    9.878   MIN3X1
+        3   38.102   MUX2X1
+        4   22.579   NAND2X1
+        1    5.645   NAND2X1P5
+        1    9.878   NAND3BX1
+        2   14.112   NAND3X1
+        1    7.056   NAND3X2
+        2   14.112   NOR2BX1
+        5   28.224   NOR2X1
+        1    8.467   NOR3BX1
+        4   28.224   NOR3X1
+        2   16.934   OAI211X1
+        2   14.112   OAI21X1
+        1    7.056   OAI21X2
+        1    9.878   OAI31X1
+        1    9.878   OAOI211X1
+        3   25.402   OR3BX1
+        2   25.402   XOR2X1
+        2        - submodules
+        1        -   cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst
+        1        -   cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src
+
+   Chip area for module '\cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a': 659.030400
+     of which used for sequential elements: 169.344000 (25.70%)
+
+=== cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       85        - wires
+       85        - wire bits
+       28        - public wires
+       28        - public wire bits
+       15        - ports
+       15        - port bits
+       68   659.03 cells
+        2   19.757   AO211X2
+        1    11.29   AO31X1
+        4   39.514   AOAI211X1
+        2   14.112   AOI21X1
+        2   14.112   AOI21X2
+        1    11.29   AOI221X2
+        1    8.467   AOI2B1X1
+        1   14.112   AOI2BB2X1
+        1    11.29   BUFX12
+        3   21.168   BUFX6
+        6  169.344   DFFRQX3
+        6   25.402   INVX1
+        1    4.234   INVX2
+        1    9.878   MIN3X1
+        3   38.102   MUX2X1
+        4   22.579   NAND2X1
+        1    5.645   NAND2X1P5
+        1    9.878   NAND3BX1
+        2   14.112   NAND3X1
+        1    7.056   NAND3X2
+        2   14.112   NOR2BX1
+        5   28.224   NOR2X1
+        1    8.467   NOR3BX1
+        4   28.224   NOR3X1
+        2   16.934   OAI211X1
+        2   14.112   OAI21X1
+        1    7.056   OAI21X2
+        1    9.878   OAI31X1
+        1    9.878   OAOI211X1
+        3   25.402   OR3BX1
+        2   25.402   XOR2X1
+        2        - submodules
+        1        -   cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst
+        1        -   cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src
+
+   Chip area for module '\cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b': 659.030400
+     of which used for sequential elements: 169.344000 (25.70%)
+
+=== croc_chip ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+    37600        - wires
+    37600        - wire bits
+     6484        - public wires
+     6484        - public wire bits
+       52        - ports
+       52        - port bits
+    37517 4.44E+05 cells
+      196        -   $scopeinfo
+      518 3.66E+03   AND2X1
+        4   28.224   AND2X2
+       42  474.163   AND3BX1
+        1    11.29   AND3BX2
+        7    59.27   AND3X1
+      115  973.728   AND3X2
+        9   88.906   AND4X1
+       86  849.542   AND4X2
+       20  197.568   AO211X1
+      186 1.84E+03   AO211X2
+      268 2.65E+03   AO21X2
+       96 1.22E+03   AO22X2
+        3   33.869   AO31X1
+       26   293.53   AO31X2
+      648  6.4E+03   AOAI211X1
+       29  286.474   AOAI211X2
+      578 4.89E+03   AOI211X1
+       12  101.606   AOI211X2
+      111  939.859   AOI21BX1
+        1    9.878   AOI21BX2
+     1184 8.35E+03   AOI21X1
+       21  148.176   AOI21X2
+      517 5.11E+03   AOI221X1
+        5   56.448   AOI221X2
+        7   79.027   AOI221X3
+      447 4.42E+03   AOI22X1
+        3   29.635   AOI22X1P5
+        8   79.027   AOI22X2
+      298 2.52E+03   AOI2B1X1
+        1    9.878   AOI2B1X2
+        3    46.57   AOI2B2BX1
+      115  1.3E+03   AOI2B2X1
+        2   25.402   AOI2B2X2
+        1   14.112   AOI2BB2X1
+        2   28.224   AOI2BB2X2
+        1    5.645   BUFX1
+        7   79.027   BUFX12
+        8   45.158   BUFX2
+     2554 1.44E+04   BUFX3
+       26  183.456   BUFX6
+     5451 1.54E+05   DFFRQX3
+      777 3.29E+03   INVX1
+       38  160.877   INVX2
+        1    4.234   INVX3
+      116 1.15E+03   MIN3X1
+        2   19.757   MIN3X2
+     3691 4.69E+04   MUX2X1
+        4   50.803   MUX2X2
+     2049 2.31E+04   MUXI2X1
+        4   50.803   MUXI2X2
+       17  479.808   MUXT4X1
+       19  536.256   MUXT4X1P5
+        1   28.224   MUXT4X2
+      587 1.66E+04   MUXT4X3
+      403 2.84E+03   NAND2BX1
+        8   56.448   NAND2BX1P5
+        3   21.168   NAND2BX2
+        4   28.224   NAND2BX3
+     2473  1.4E+04   NAND2X1
+       48   270.95   NAND2X1P5
+        6   33.869   NAND2X2
+        6   33.869   NAND2X3
+       59  582.826   NAND3BX1
+        2   19.757   NAND3BX2
+        1    9.878   NAND3BX3
+      518 3.66E+03   NAND3X1
+       11   77.616   NAND3X2
+        1   14.112   NAND4BBX1
+        1   14.112   NAND4BBX2
+       14  158.054   NAND4BX1
+        4   45.158   NAND4BX2
+       64  632.218   NAND4X2
+      570  4021.92   NOR2BX1
+       20   141.12   NOR2BX2
+     1852 1.05E+04   NOR2X1
+       69  389.491   NOR2X2
+       20  112.896   NOR2X3
+      343  2904.25   NOR3BX1
+        9   76.205   NOR3BX1P5
+        2   19.757   NOR3BX3
+      460  3245.76   NOR3X1
+       26  183.456   NOR3X2
+       15  190.512   NOR4BBX1
+        2   28.224   NOR4BBX2
+       15  169.344   NOR4BX1
+        7   79.027   NOR4BX2
+       79  780.394   NOR4X1
+        5   49.392   NOR4X2
+        2   19.757   OA211X1
+      165 1.63E+03   OA211X2
+      302 2.56E+03   OA21X2
+      760 6.44E+03   OAI211X1
+       16  135.475   OAI211X2
+     1419    1E+04   OAI21X1
+       28  197.568   OAI21X2
+      139 1.77E+03   OAI221X1
+        3   38.102   OAI221X2
+      374 3.69E+03   OAI22X1
+        2   19.757   OAI22X2
+       28  395.136   OAI2B2BX1
+       11  139.709   OAI2BB2X2
+      161 1.59E+03   OAI31X1
+       41  405.014   OAI31X2
+      558 5.51E+03   OAOI211X1
+       15  148.176   OAOI211X2
+        1    7.056   OR2X1
+      211 1.49E+03   OR2X2
+        1    7.056   OR2X3
+      189  1.6E+03   OR3BX1
+       19  160.877   OR3BX2
+        2   16.934   OR3X1
+       78  660.442   OR3X2
+       45  444.528   OR4X1
+        2        -   RM_IHPSG13_1P_1024x64_c2_bm_bist
+        1    4.234   TIEHI
+        1    4.234   TIELO
+      294 3.73E+03   XNOR2X1
+        5   63.504   XNOR2X2
+      265  5609.52   XNOR3X1
+        1   21.168   XNOR3X2
+        2   25.402   XOR2X1
+     4269 4.22E+04   XOR2X2
+        4        -   sg13cmos5l_IOPadIOVdd
+        4        -   sg13cmos5l_IOPadIOVss
+        9        -   sg13cmos5l_IOPadIn
+       32        -   sg13cmos5l_IOPadInOut30mA
+        7        -   sg13cmos5l_IOPadOut16mA
+        4        -   sg13cmos5l_IOPadVdd
+        4        -   sg13cmos5l_IOPadVss
+       40        - submodules
+        1        -   cdc_2phase_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req
+        1        -   cdc_2phase_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_clint.i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[0].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[10].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[11].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[12].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[13].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[14].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[15].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[16].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[17].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[18].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[19].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[1].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[20].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[21].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[22].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[23].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[24].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[25].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[26].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[27].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[28].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[29].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[2].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[30].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[31].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[3].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[4].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[5].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[6].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[7].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[8].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[9].i_sync
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_modem.i_sync_cd
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_modem.i_sync_cts
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_modem.i_sync_dsr
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_modem.i_sync_ri
+        1        -   sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_rx.i_sync
+
+   Area for cell type $scopeinfo is unknown!
+   Area for cell type \RM_IHPSG13_1P_1024x64_c2_bm_bist is unknown!
+   Area for cell type \sg13cmos5l_IOPadIOVdd is unknown!
+   Area for cell type \sg13cmos5l_IOPadIOVss is unknown!
+   Area for cell type \sg13cmos5l_IOPadIn is unknown!
+   Area for cell type \sg13cmos5l_IOPadInOut30mA is unknown!
+   Area for cell type \sg13cmos5l_IOPadOut16mA is unknown!
+   Area for cell type \sg13cmos5l_IOPadVdd is unknown!
+   Area for cell type \sg13cmos5l_IOPadVss is unknown!
+
+   Chip area for module '\croc_chip': 444158.265600
+     of which used for sequential elements: 153849.024000 (34.64%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_clint.i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_clint.i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst.i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst.i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src.i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src.i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst.i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst.i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src.i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src.i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_dst.i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        7        - wires
+        7        - wire bits
+        7        - public wires
+        7        - public wire bits
+        4        - ports
+        4        - port bits
+        3   84.672 cells
+        3   84.672   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_dst.i_sync': 84.672000
+     of which used for sequential elements: 84.672000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_src.i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        7        - wires
+        7        - wire bits
+        7        - public wires
+        7        - public wire bits
+        4        - ports
+        4        - port bits
+        3   84.672 cells
+        3   84.672   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_src.i_sync': 84.672000
+     of which used for sequential elements: 84.672000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst.i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst.i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src.i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src.i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst.i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst.i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src.i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src.i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_dst.i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        7        - wires
+        7        - wire bits
+        7        - public wires
+        7        - public wire bits
+        4        - ports
+        4        - port bits
+        3   84.672 cells
+        3   84.672   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_dst.i_sync': 84.672000
+     of which used for sequential elements: 84.672000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_src.i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        7        - wires
+        7        - wire bits
+        7        - public wires
+        7        - public wire bits
+        4        - ports
+        4        - port bits
+        3   84.672 cells
+        3   84.672   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_src.i_sync': 84.672000
+     of which used for sequential elements: 84.672000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[0].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[0].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[10].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[10].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[11].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[11].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[12].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[12].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[13].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[13].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[14].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[14].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[15].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[15].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[16].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[16].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[17].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[17].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[18].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[18].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[19].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[19].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[1].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[1].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[20].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[20].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[21].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[21].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[22].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[22].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[23].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[23].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[24].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[24].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[25].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[25].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[26].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[26].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[27].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[27].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[28].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[28].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[29].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[29].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[2].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[2].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[30].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[30].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[31].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[31].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[3].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[3].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[4].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[4].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[5].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[5].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[6].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[6].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[7].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[7].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[8].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[8].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[9].i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[9].i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_modem.i_sync_cd ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_modem.i_sync_cd': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_modem.i_sync_cts ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_modem.i_sync_cts': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_modem.i_sync_dsr ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_modem.i_sync_dsr': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_modem.i_sync_ri ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_modem.i_sync_ri': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_rx.i_sync ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        6        - public wires
+        6        - public wire bits
+        4        - ports
+        4        - port bits
+        2   56.448 cells
+        2   56.448   DFFRQX3
+
+   Chip area for module '\sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_rx.i_sync': 56.448000
+     of which used for sequential elements: 56.448000 (100.00%)
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        |        +-Area including submodules.
+        |        | 
+    38550  4.6E+05 croc_chip
+        8   141.12 cdc_2phase_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req
+      141 2.29E+03   cdc_2phase_dst_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_dst
+        3   84.672     sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_dst.i_sync
+      138  2140.79   cdc_2phase_src_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_src
+        3   84.672     sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_src.i_sync
+       68   659.03     cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a
+       12  145.354       cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst
+        2   56.448         sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst.i_sync
+       20  275.184       cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src
+        2   56.448         sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src.i_sync
+       68   659.03     cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b
+       12  145.354       cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst
+        2   56.448         sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst.i_sync
+       20  275.184       cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src
+        2   56.448         sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src.i_sync
+        8   141.12 cdc_2phase_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp
+      118 1.83E+03   cdc_2phase_dst_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_dst
+        3   84.672     sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_dst.i_sync
+      116 1.81E+03   cdc_2phase_src_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_src
+        3   84.672     sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_src.i_sync
+       68   659.03     cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a
+       12  145.354       cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst
+        2   56.448         sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst.i_sync
+       20  275.184       cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src
+        2   56.448         sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src.i_sync
+       68   659.03     cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b
+       12  145.354       cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst
+        2   56.448         sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst.i_sync
+       20  275.184       cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src
+        2   56.448         sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src.i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_clint.i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[0].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[10].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[11].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[12].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[13].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[14].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[15].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[16].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[17].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[18].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[19].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[1].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[20].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[21].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[22].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[23].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[24].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[25].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[26].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[27].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[28].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[29].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[2].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[30].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[31].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[3].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[4].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[5].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[6].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[7].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[8].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[9].i_sync
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_modem.i_sync_cd
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_modem.i_sync_cts
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_modem.i_sync_dsr
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_modem.i_sync_ri
+        2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_rx.i_sync
+
+        +----------Count including submodules.
+        |        +-Area including submodules.
+        |        | 
+    39610        - wires
+    39610        - wire bits
+     7995        - public wires
+     7995        - public wire bits
+      922        - ports
+      922        - port bits
+        -        - memories
+        -        - memory bits
+        -        - processes
+    38550  4.6E+05 cells
+      196        -   $scopeinfo
+      522 3.68E+03   AND2X1
+        4   28.224   AND2X2
+       44  496.742   AND3BX1
+        1    11.29   AND3BX2
+        7    59.27   AND3X1
+      115  973.728   AND3X2
+        9   88.906   AND4X1
+       86  849.542   AND4X2
+       20  197.568   AO211X1
+      194  1916.41   AO211X2
+      272 2.69E+03   AO21X2
+       96 1.22E+03   AO22X2
+        7   79.027   AO31X1
+       26   293.53   AO31X2
+      664 6.56E+03   AOAI211X1
+       29  286.474   AOAI211X2
+      580 4.91E+03   AOI211X1
+       12  101.606   AOI211X2
+      111  939.859   AOI21BX1
+        1    9.878   AOI21BX2
+     1200   8467.2   AOI21X1
+       29  204.624   AOI21X2
+      517 5.11E+03   AOI221X1
+        9  101.606   AOI221X2
+        7   79.027   AOI221X3
+      447 4.42E+03   AOI22X1
+        3   29.635   AOI22X1P5
+        8   79.027   AOI22X2
+      302 2.56E+03   AOI2B1X1
+        1    9.878   AOI2B1X2
+        3    46.57   AOI2B2BX1
+      115  1.3E+03   AOI2B2X1
+        2   25.402   AOI2B2X2
+        5    70.56   AOI2BB2X1
+        2   28.224   AOI2BB2X2
+        1    5.645   BUFX1
+       20  225.792   BUFX12
+        1   15.523   BUFX16
+        8   45.158   BUFX2
+       14  316.109   BUFX24
+     2558 1.44E+04   BUFX3
+       43  303.408   BUFX6
+      150  3386.88   DFFQX1
+     5625   158760   DFFRQX3
+      817 3.46E+03   INVX1
+       42  177.811   INVX2
+        1    4.234   INVX3
+      120 1.19E+03   MIN3X1
+        2   19.757   MIN3X2
+     4015  5.1E+04   MUX2X1
+        4   50.803   MUX2X2
+     2055 2.32E+04   MUXI2X1
+        4   50.803   MUXI2X2
+       17  479.808   MUXT4X1
+       19  536.256   MUXT4X1P5
+        1   28.224   MUXT4X2
+      587 1.66E+04   MUXT4X3
+      411  2.9E+03   NAND2BX1
+        8   56.448   NAND2BX1P5
+        7   49.392   NAND2BX2
+        4   28.224   NAND2BX3
+     2489  1.4E+04   NAND2X1
+       52   293.53   NAND2X1P5
+        6   33.869   NAND2X2
+        7   39.514   NAND2X3
+        1    9.878   NAND2X4
+       67  661.853   NAND3BX1
+        3   29.635   NAND3BX2
+        2   19.757   NAND3BX3
+      526 3.71E+03   NAND3X1
+       15   105.84   NAND3X2
+        1   14.112   NAND4BBX1
+        1   14.112   NAND4BBX2
+       14  158.054   NAND4BX1
+        4   45.158   NAND4BX2
+       64  632.218   NAND4X2
+      586 4.13E+03   NOR2BX1
+       20   141.12   NOR2BX2
+     1884 1.06E+04   NOR2X1
+       73   412.07   NOR2X2
+       20  112.896   NOR2X3
+      351 2.97E+03   NOR3BX1
+        9   76.205   NOR3BX1P5
+        6    59.27   NOR3BX3
+      480  3386.88   NOR3X1
+       26  183.456   NOR3X2
+       15  190.512   NOR4BBX1
+        2   28.224   NOR4BBX2
+       15  169.344   NOR4BX1
+        7   79.027   NOR4BX2
+       79  780.394   NOR4X1
+        5   49.392   NOR4X2
+        2   19.757   OA211X1
+      165 1.63E+03   OA211X2
+      302 2.56E+03   OA21X2
+      768  6502.81   OAI211X1
+       16  135.475   OAI211X2
+     1431 1.01E+04   OAI21X1
+       32  225.792   OAI21X2
+      139 1.77E+03   OAI221X1
+        3   38.102   OAI221X2
+      374 3.69E+03   OAI22X1
+        2   19.757   OAI22X2
+       28  395.136   OAI2B2BX1
+       11  139.709   OAI2BB2X2
+      165 1.63E+03   OAI31X1
+       41  405.014   OAI31X2
+      566 5.59E+03   OAOI211X1
+       15  148.176   OAOI211X2
+        1    7.056   OR2X1
+      211 1.49E+03   OR2X2
+        1    7.056   OR2X3
+      201  1.7E+03   OR3BX1
+       21  177.811   OR3BX2
+        2   16.934   OR3X1
+       78  660.442   OR3X2
+       45  444.528   OR4X1
+        2        -   RM_IHPSG13_1P_1024x64_c2_bm_bist
+        1    4.234   TIEHI
+        1    4.234   TIELO
+      295 3.75E+03   XNOR2X1
+        6   76.205   XNOR2X2
+      265  5609.52   XNOR3X1
+        1   21.168   XNOR3X2
+       15  190.512   XOR2X1
+     4270 4.22E+04   XOR2X2
+        4        -   sg13cmos5l_IOPadIOVdd
+        4        -   sg13cmos5l_IOPadIOVss
+        9        -   sg13cmos5l_IOPadIn
+       32        -   sg13cmos5l_IOPadInOut30mA
+        7        -   sg13cmos5l_IOPadOut16mA
+        4        -   sg13cmos5l_IOPadVdd
+        4        -   sg13cmos5l_IOPadVss
+       40 1.56E+04 submodules
+        1 7.12E+03   cdc_2phase_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req
+        1 6.33E+03   cdc_2phase_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_clint.i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[0].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[10].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[11].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[12].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[13].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[14].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[15].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[16].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[17].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[18].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[19].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[1].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[20].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[21].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[22].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[23].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[24].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[25].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[26].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[27].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[28].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[29].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[2].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[30].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[31].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[3].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[4].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[5].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[6].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[7].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[8].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[9].i_sync
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_modem.i_sync_cd
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_modem.i_sync_cts
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_modem.i_sync_dsr
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_modem.i_sync_ri
+        1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_rx.i_sync
+
+   Area for cell type $scopeinfo is unknown!
+   Area for cell type \RM_IHPSG13_1P_1024x64_c2_bm_bist is unknown!
+   Area for cell type \sg13cmos5l_IOPadIOVdd is unknown!
+   Area for cell type \sg13cmos5l_IOPadIOVss is unknown!
+   Area for cell type \sg13cmos5l_IOPadIn is unknown!
+   Area for cell type \sg13cmos5l_IOPadInOut30mA is unknown!
+   Area for cell type \sg13cmos5l_IOPadOut16mA is unknown!
+   Area for cell type \sg13cmos5l_IOPadVdd is unknown!
+   Area for cell type \sg13cmos5l_IOPadVss is unknown!
+
+   Chip area for top module '\croc_chip': 459759.081600
+     of which used for sequential elements: 162146.880000 (35.27%)
+

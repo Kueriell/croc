@@ -1,0 +1,518 @@
+; DZ customizations
+; v2.1 - zerun Tue 21 Mar 10:53:03 CET 2023
+; - add loadKit.il and emx to .init folder
+; - move license parts to loadKit.il
+; - remove loading the /il/cdsLibMgr.il, it only try to load another file under PROJECT "/cds/cdsLibMgr.il"
+; v2.0 - zerun@ethz.ch - Fri Feb 25 14:37:45 CET 2022
+; - fix error with PROJECT path under dfii, the folder cds/ was required, which we don't have, remove this cds folder
+; - fix license issue
+; v1.1 - <muheim@ee.ethz.ch> - Fri Oct 29 16:39:44 CEST 2021
+;  - add EMX integration 
+;  - added Calibre startup loader
+;
+
+printf("[INFO] Start cdsinit.\n")
+; design kit installation path
+SG13_IHP_TECH=getShellEnvVar("IHP_TECH");
+; path of user data and library tree
+SG13_PROJECT=getShellEnvVar("PROJECT");
+; path to digital libraries
+SG13_IHP_DIGLIBS = getShellEnvVar("IHP_DIGLIBS");
+
+;this cdsLibMgr.il will try to load another cdsLibMgr.il inside project directory /dfii/cds/cdsLibMgr.il,
+;we don't have this and other settings are copied below
+;if(isFile(strcat(SG13_IHP_TECH "/il/cdsLibMgr.il"))
+;  loadi(strcat(SG13_IHP_TECH "/il/cdsLibMgr.il"))
+;);
+
+; setup technology and deskit information
+loadi(strcat(SG13_IHP_TECH "/lib/SG13_dev/prop.db"))
+;show categories in libraryManager
+envSetVal("cdsLibManager.main" "showCategoriesOn" 'boolean t)
+let((envFile)
+  when(isFile(envFile=strcat(SG13_IHP_TECH "/env/cdsenv")) ; load minimum settings from env/ dir, overwrite with later definitions
+     envLoadFile(envFile) ; Load initial local environment. Standard ~/.cdsenv will override our default values
+  ) ; when ; because it is loaded later
+) ; let
+ loadi(strcat(SG13_IHP_TECH "/env/schBindKeys.il")) ; setup bindkey information
+ loadi(strcat(SG13_IHP_TECH "/env/leBindKeys.il"))
+ loadi(strcat(SG13_IHP_TECH "/env/wheelmouse.il")) ; add wheelmouse support
+ loadi(strcat(SG13_IHP_TECH "/env/ConfigIHPPDK.il")) ;
+ loadi(strcat(SG13_IHP_TECH "/env/load_modules.dz.il"))
+ loadi(strcat(SG13_IHP_TECH "/il/callback_trigger.il"))
+ loadi(strcat(SG13_IHP_TECH "/il/ihpUpdateCdf.il"))
+;; to copy a slit or fill cell to the original one:
+ loadi(strcat(SG13_IHP_TECH "/il/cpFillViews.il"))
+unless(boundp('SG13_LIBRARY)
+  SG13_LIBRARY = "SG13_dev" ; where to look
+)
+PDK_LIBRARY = "SG13_dev"
+;;---------------------------------
+;; PVS integration
+;;---------------------------------
+;; load pre trigger file
+loadi(strcat(SG13_IHP_TECH "/PVS_SG13/pvsPreTrigger.il"));
+;; set preset files for different actions
+setShellEnvVar("PVSUI_DRC_PRESETS_FILE" strcat(SG13_IHP_TECH "/PVS_SG13/cds/pvsDRC_preset"));
+setShellEnvVar("PVSUI_LVS_PRESETS_FILE" strcat(SG13_IHP_TECH "/PVS_SG13/cds/pvsLVS_preset"));
+;; load per default the .simrc file from $IHP_TECH/work/skel/cds
+setShellEnvVar("SIMRC" "$IHP_TECH/work/skel/cds/");
+;;---------------------------------
+;; Calibre DFII integration
+;;---------------------------------
+
+
+  ;;setup calibre
+  calibreIntegration();
+  let(
+      (cal_file cal_file2 calFileList)
+      ;;calibre post triiger
+      cal_file = strcat(getShellEnvVar("IHP_TECH") "/Calibre/Skill/instFill.il");
+      cal_file2 = strcat(getShellEnvVar("IHP_TECH") "/Calibre/Skill/calCellMapGen.il");
+      calFileList = list(cal_file cal_file2)
+      foreach(file calFileList
+         when(isFile(file)
+            loadi(file);
+         );
+      );end foreach
+  );end let
+;;---------------------------------
+;; auCdl Schematic Netlist Export Setup for Mentor Calibre
+;;---------------------------------
+  loadi(strcat(SG13_IHP_TECH "/lib/SG13_dev/cdlNetlistExportSetup.il") );
+unless(boundp('SG13_TFID)
+  SG13_TFID = techGetTechFile(ddGetObj(SG13_LIBRARY)) ; get the techFile
+)
+unless(boundp('SG13_GRID)
+  SG13_GRID = techGetMfgGridResolution(SG13_TFID) ; grid in [um]
+)
+; define some general (common) environment settings:
+envSetVal( "asimenv.startup" "projectDir" 'string "./sim")
+envSetVal("asimenv.startup" "simulator" 'string "spectre")
+envSetVal("graphic" "drfPath" 'string strcat(SG13_IHP_TECH "/env/display.drf"))
+; default dir for new libs
+envSetVal("ddserv.lib" "newLibDir" 'string strcat(SG13_PROJECT "/cds"))
+envSetVal("layout" "xSnapSpacing" 'float 0.01)
+envSetVal("layout" "ySnapSpacing" 'float 0.01)
+envSetVal("layout" "extractStopLevel" 'int 2)  ; shouldn't that be layoutXL?
+envSetVal("layout" "displayPinNames" 'boolean t)
+envSetVal("layout" "dynamicHilightOn" 'boolean t)
+; draw cursor as crosshair
+  envSetVal("layout" "cursorShape" 'boolean t)
+; double click should open readonly
+  envSetVal("cdsLibManager.main" "dblClickEditCellView" 'boolean nil)
+  envSetVal("cdsLibManager.newLib" "pathText" 'string strcat(SG13_PROJECT "/cds"))
+  ; enable dynamic measurements
+  envSetVal("layout" "measurementDisplayOn" 'boolean t)
+  envSetVal("layout" "measurementDisplayTypes" 'string "deltaXY area length")
+; set some DRD features
+  envSetVal("layout" "drdEditHierDepth" 'int 2)
+  envSetVal("layout" "drdEditDisplayArrows" 'boolean t)
+  envSetVal("layout" "drdEditDisplayEdges" 'boolean t)
+  envSetVal("layout" "drdEditDisplayMarkers" 'boolean t)
+  envSetVal("layout" "drdEditDisplayText" 'boolean t)
+  envSetVal("layout" "drdEditMode" 'cyclic "notify")  ; toggle with Ctrl-E
+  envSetVal("layoutXL" "drdUseNetName" 'boolean t)  ; flag short before end of drawing operation
+  envSetVal("layout" "markNetOptionsFile" 'string  "$IHP_TECH/env/markNetOptions"   )
+;spectre:
+envSetVal("spectre.envOpts" "modelFiles" 'string
+   strcat(
+          " $IHP_TECH/tech/SG13G2_HBT/VBIC/spectre/SG13G2_cornerBIP_vbic.scs;typ"
+          " #;$IHP_TECH/tech/SG13G2_HBT/HICUM/spectre/SG13G2_cornerBIP_hicum.scs;typ"
+          " $IHP_TECH/tech/SG13_MOS/library/spectreG2/cornerMOSlv_psp.scs;tt"
+          " $IHP_TECH/tech/SG13_MOS/library/spectreG2/cornerMOShv_psp.scs;tt"
+          " #;$IHP_TECH/tech/SG13_MOS/library/spectreG2/CheckMOSstat.scs"
+          " #;$IHP_TECH/tech/SG13_MOS/library/spectreG2/CheckMOSdyn.scs"
+          " $IHP_TECH/tech/SG13G2_PASSIVES/spectre/SG13_cornerRES.scs;typ"
+          " $IHP_TECH/tech/SG13G2_PASSIVES/spectre/SG13_cornerCAP.scs;typ"
+          " #;$IHP_TECH/tech/SG13G2_PASSIVES/spectre/Ind_unit_4PI"
+          " #;$IHP_TECH/tech/SG13G2_PASSIVES/spectre/Ind_unit_2PI"
+          " $IHP_TECH/tech/SG13G2_PASSIVES/spectre/sg13g2_dschottky_nbl1_corner.scs;tt"
+          " $IHP_TECH/tech/SG13G2_PASSIVES/spectre/SG13_diodes.lib"
+          " $IHP_TECH/tech/SG13_ESD/spectre/SG13_esd.lib"
+          " $IHP_TECH/tech/SG13_PASSIVES/spectre/SG13_cornerTSV.scs;typ"
+          " $IHP_TECH/tech/SG13_PASSIVES/spectre/SG13_bondpad.lib"
+   )
+)
+TL_RLCG_PATH = strcat(SG13_IHP_TECH "/lib/TL_SG13/RLCG/spectre/")
+if( isDir(TL_RLCG_PATH)
+   envSetVal("spectre.envOpts" "includePath" 'string TL_RLCG_PATH) )
+envSetVal("spectre.envOpts" "analysisOrder" 'string  "dc ac noise sp xf tran pss pnoise") ; pss must come before pnoise
+;-----------------------------------------------------------------------------
+;AMS options
+;-----------------------------------------------------------------------------
+tmpm = ""
+envSetVal("ams.envOpts" "modelFiles" 'string
+   strcat(tmpm
+          " $IHP_TECH/tech/SG13G2_HBT/VBIC/spectre/SG13G2_cornerBIP_vbic.scs;typ"
+          " #;$IHP_TECH/tech/SG13G2_HBT/HICUM/spectre/SG13G2_cornerBIP_hicum.scs;typ"
+          " $IHP_TECH/tech/SG13_MOS/library/spectreG2/cornerMOSlv_psp.scs;tt"
+          " $IHP_TECH/tech/SG13_MOS/library/spectreG2/cornerMOShv_psp.scs;tt"
+          " #;$IHP_TECH/tech/SG13_MOS/library/spectreG2/CheckMOSstat.scs"
+          " #;$IHP_TECH/tech/SG13_MOS/library/spectreG2/CheckMOSdyn.scs"
+          " $IHP_TECH/tech/SG13G2_PASSIVES/spectre/SG13_cornerRES.scs;typ"
+          " $IHP_TECH/tech/SG13G2_PASSIVES/spectre/SG13_cornerCAP.scs;typ"
+          " #;$IHP_TECH/tech/SG13G2_PASSIVES/spectre/Ind_unit_4PI"
+          " #;$IHP_TECH/tech/SG13G2_PASSIVES/spectre/Ind_unit_2PI"
+          " $IHP_TECH/tech/SG13G2_PASSIVES/spectre/sg13g2_dschottky_nbl1_corner.scs;tt"
+          " $IHP_TECH/tech/SG13G2_PASSIVES/spectre/SG13_diodes.lib"
+          " $IHP_TECH/tech/SG13_ESD/spectre/SG13_esd.lib"
+          " $IHP_TECH/tech/SG13_PASSIVES/spectre/SG13_cornerTSV.scs;typ"
+          " $IHP_TECH/tech/SG13_PASSIVES/spectre/SG13_bondpad.lib"
+   )
+)
+;-------------------------------------------------------------------------------------
+let((envFile)
+  when(isFile(envFile="./.cdsenv") ; fixed path
+    envLoadFile(envFile) ; Load local environment which has been saved from Cadence menu
+  ) ; when
+) ; let
+let((test tmp)
+  ; remove tmp = strcat(SG13_PROJECT "/cds") 
+  tmp = list( "." strcat(SG13_IHP_TECH "/il")
+              strcat(SG13_IHP_TECH "/env") strcat(SG13_IHP_TECH "/lib/SG13_dev") )
+  if( isDir(strcat(SG13_IHP_TECH "/il/pCells")) tmp = append1(tmp strcat(SG13_IHP_TECH "/il/pCells")) )
+  test = setSkillPath( append( tmp getSkillPath() ) ) ; extended search path
+  foreach( i test
+    if( member(i tmp) warn("Invalid Skill search path: %L" i) )
+  )
+)
+; ads:
+when(isDir(strcat(car(getInstallPath()) "/etc/tools/" "ADSsim"))
+  envSetVal("ADSsim.envOpts" "modelFiles" 'string strcat(SG13_IHP_TECH "/tech/ads/models.typ"))
+)
+leSetEnv("displayRefPoint" t); Display Reference Point
+leSetEnv("autoSetRefPoint" t); Auto Set Reference Point
+leSetEnv("numSides" 20); Conic Sides
+leSetEnv("displayPinNames" t)
+leSetEnv("maintainConnections" nil) ; with default off...very dangerous feature (for the layout)!
+;--------------------------------------------------------------------------------------------------------------------
+when(getd('awvSetWaveformToolName)
+  awvSetWaveformToolName("wavescan") ; use old waveform tool thughout the different Cadence versions
+)
+techSetPrecision(5) ; necessary for Assura !! 6 gives numerical overflow for Mim.g. (w/o warning); using 5, minimum is 4...
+; Note: both functions may fail in 64bit Linux for 5.0.32 - if icfb hangs, update to 5.1.41
+if(getd('ddsOpenLibManager) then
+  ddsOpenLibManager() ; open library browser
+else
+ dmbOpenLibBrowser() ; open library browser
+)
+
+; removed in the latest pdk
+;; ; preset Assura-form-data (version 3.1.x only)
+;; ; (predefined procedure name and form names)
+;; procedure(vuiUserDefinedSetupCB(form)
+;; let((fh cvIf tfId params)
+;;   ; create the ./parameterSet.il file...becomes RSF include file
+;;   ; GUI will read this file and declare the variables as dfII globals
+;;   fh=outfile("./parameterSet.il")
+;;   fprintf(fh ";Copyright VENDORNAMELONG_2\n" )
+;;   fprintf(fh "; Assura helper file, created on %s for\n" getCurrentTime())
+;;   fprintf(fh "; Technology %s/%s\n\n" SG13_TECHNOLOGY SG13_METALLIZATION)
+;;   fprintf(fh "SG13_Assura_TECHNOLOGY = %L\n" SG13_TECHNOLOGY) ; added TECH/MET for better LVS module support
+;;   fprintf(fh "SG13_Assura_METALLIZATION = %L\n" SG13_METALLIZATION)
+;;   fprintf(fh "SG13_Assura_grid = %L\n" SG13_GRID)
+;;   fprintf(fh "SG13_Assura_verification = t\n")
+;;   fprintf(fh "\n")
+;; ; included this for filler generation. Attention: empty input layer will cause Assura to halt!
+;;   fprintf(fh "avParameters(\n")
+;;   fprintf(fh "  ?outputErrorLib modifyExistingLibrary\n")
+;;   fprintf(fh ")\n")
+;; ; Assura is not able to create AssuraOutLib if base directory does not exist or if techfile
+;; ; uses layers with numbers above 127.
+;;   unless(isDir("../cds")
+;;     if( zerop(system("mkdir ../cds")) then
+;;       printf("Successfully created missing ../cds directory for AssuraOutLib\n")
+;;     else
+;;       printf("ERROR: Could not create ../cds directory as parent for AssuraOutLib. Assura extraction may fail.\n")
+;;     ) ; if mkdir
+;;   ) ; unless cds
+;;   if(isFile(strcat(SG13_IHP_TECH "/lib/" SG13_LIBRARY "/SG13.tf.forAssuraOnly")) then ; use special reduced techfile
+;;     fprintf(fh "outFile( \"df2\" \"AssuraOutLib\" \"../cds/\" \"%s\" flat\n" strcat(SG13_IHP_TECH "/lib/SG13_dev/SG13.tf.forAssuraOnly") ) ; never use this anywhere else
+;;   else ; use regular techfile
+;;     fprintf(fh "outFile( \"df2\" \"AssuraOutLib\" \"../cds/\" \"%s\" flat\n" strcat(SG13_IHP_TECH "/lib/SG13_dev/SG13.tf") )
+;;   ) ; if isFile
+;;   fprintf(fh "        outLayer( GenFillerActiv \"Activ\" type( \"filler\" ) )\n")
+;;   fprintf(fh "        outLayer( GenFillerGatPoly \"GatPoly\" type( \"filler\" ) )\n")
+;;   fprintf(fh "        outLayer( GenFillerMetal1 \"Metal1\" type( \"filler\" ) )\n")
+;;   fprintf(fh "        outLayer( GenFillerMetal2 \"Metal2\" type( \"filler\" ) )\n")
+;;   fprintf(fh "        outLayer( GenFillerMetal3 \"Metal3\" type( \"filler\" ) )\n")
+;;   fprintf(fh "        outLayer( GenFillerMetal4 \"Metal4\" type( \"filler\" ) )\n")
+;;   fprintf(fh "        outLayer( GenFillerMetal5 \"Metal5\" type( \"filler\" ) )\n")
+;;   fprintf(fh "        outLayer( GenFillerTopMetal1 \"TopMetal1\" type( \"filler\" ) )\n")
+;;   fprintf(fh "        outLayer( GenFillerTopMetal2 \"TopMetal2\" type( \"filler\" ) )\n")
+;;   fprintf(fh "     )\n")
+;;   ; add control parameters from techfile since Assura LVS is too stupid to read it
+;;   cvId=getCurrentWindow()~>cellView
+;;   tfId=techGetTechFile(cvId)
+;;   params=techGetParams(tfId) ; returns entire contols section
+;;   fprintf(fh "params='%L\n" params)
+;;   close(fh)
+;;   when(form->hiFormSym == 'vuiDRCForm
+;;     form->technologyField->value = "SG13_dev"
+;;     form->runsetField->value = "default"
+;;     form->switches->value = ""
+;;     form->runDir->value = "./Assura"
+;;     form->rsfInclude->value = "./parameterSet.il"
+;;   ) ; when DRC
+;;   when(form->hiFormSym == 'vuiLVSForm
+;;     form->technologyField->value = "SG13_dev"
+;;     form->runsetField->value = "default"
+;;     form->runDir->value = "./Assura"
+;;     form->rsfInclude->value = "./parameterSet.il"
+;;   ) ; when LVS
+;;   SG13_Assura_verification = t ; avoid wrong messages about DRC in Diva mode, enable probing of Assura-markers
+;;   t ; bring up form
+;; ) ; let
+;; ) ; procedure vuiUserDefinedSetup
+;; ; cleanup Assura-GUI created globals!
+;; procedure(vuiUserDefinedPostRunCB(runName runDir runType)
+;;   SG13_Assura_verification = nil
+;;   printf("Cleaned up setup from Assura run %s %s in %s\n" runName runType runDir)
+;;   t
+;; ) ; procedure vuiUserDefinedPostRunCB
+
+
+; replace Cadence function for opening schematic properties with this one
+; to fix Linux problem (form size too small)
+; attention: this workaround seems to cause another problem...a 5s delay on
+; closing the form? Delay depends on Linux distribution.
+procedure( TIsopCB2( l_newSize "l" )
+    let( ((initSize schObjPropForm->initialSize))
+    if(cadr(l_newSize) < 200 then
+      Debug(10 "newSize=%L initSize=%L\n" l_newSize initSize)
+      Debug(10 "catched wrong form size error (type 1)\n")
+      l_newSize = list(car(l_newSize) 725)
+    )
+    hiSetFormSize(schObjPropForm l_newSize)
+    if(cadr(initSize) > 200 then
+      schObjPropForm->initialSize = initSize
+    else
+      Debug(10 "newSize=%L initSize=%L\n" l_newSize initSize)
+      Debug(10 "catched wrong form size error (type 2)\n")
+      schObjPropForm->initialSize = l_newSize
+    )
+  )
+) ; TIsopCB2
+procedure( TIsopCB1( )
+    hiRegTimer(sprintf( nil "TIsopCB2('%L)" hiiGetFormSize(schObjPropForm) ) 6) ; means 6 10th-of-seconds
+) ; TIsopCB1
+procedure( TIschObjProp( )
+    hiRegTimer( "TIsopCB1()" 1 ) ; means 1 10th-of-seconds
+    schHiObjectProperty()
+) ; TIschObjProp
+; enable debug messages up to level 10
+; DEBUG=10
+; try to switch off echCommands in DRC and Extract
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;try to fix bug with unbound variables during loading virtuoso
+;;this procedure will load layerProc.cxt file
+;;initalize form and we will have access to it.
+procedure( createAndSetForms()
+    iviCreateExtForm();
+    hiInstantiateForm(ivExtOptionsForm);
+    ivExtOptionsForm->echoCommands->value = nil;
+    iviCreateDRCForm();
+    hiInstantiateForm(ivDRCOptionsForm);
+    ivDRCOptionsForm->echoCommands->value = nil;
+)
+  unless( (boundp( 'ivDRCOptionsForm ) != nil)
+     createAndSetForms();
+  );
+  unless( (boundp( 'ivExtOptionsForm ) != nil)
+     createAndSetForms();
+  );
+ihpCdfUpdCreateMenu()
+APACHEROOT = getShellEnvVar("APACHEROOT")
+when( APACHEROOT
+   printf("Start Totem-EX initialization\n")
+   load(strcat(APACHEROOT "/lib/ams_skill/load_ams.il"))
+   SDIDefaults = strcat(SG13_IHP_TECH "/Columbus/Totem_SG13.def")
+   SDIStoppingViews = list( "auLvs" "ivpcell" "symbol" "ivpcell4" ) ; required for our libs
+   SDIDesignNet->groundNetName="sub!"
+   ; SDICenteredPin = t
+   ; SDIDiscardFillLayers = list("BuLay" "NWell" "PWell" "PWellBlock" "Activ" "GatPoly")
+   printf("Stop Totem-EX initialization\n")
+)
+load_module_libs()
+
+
+SetupGDSForm()
+;------------------------------
+; Personal preferences:
+;-----------------------------
+editor = "nedit"
+;;remove loading of the onGrid because in loading in tools.il file.
+loadi("tluForm.il")
+; Multipath templates
+printf("Loading MPP templates\n")
+load(strcat(SG13_IHP_TECH "/lib/SG13_dev/mpp_templates.il"))
+; Innovus
+when( getShellEnvVar("INNOVUSHOME")
+   printf("Init Innovus\n")
+   loadi(strcat(getShellEnvVar("INNOVUSHOME") "/tools/innovus/gift/AoT/VEXface/virLaunchInnovusIC61x.il"))
+)
+; Enable the Create->Geometric Wire functionality
+envSetVal( "we" "mixedSignalWireEditingEnvironment" 'boolean t )
+; Avoids "|" sign for instances
+envSetVal("layoutXL" "prefixLayoutInstNamesWithPipe" 'boolean nil)
+;Load LiberateAMS GUI
+liberateHome = getShellEnvVar("LIBERATEHOME")
+unless(liberateHome liberateHome = getShellEnvVar("ALTOSHOME"))
+if(liberateHome then
+    elib = strcat(liberateHome "/etc/liberate_gui.il.e")
+    printf("[INFO] %s\n" "Loading Liberate AMS environment")
+    load(elib)
+    ;Set up netlisting for post-layout Liberate AMS compatibility
+    envSetVal("asimenv" "mappingMode" 'string "oss")
+    hnlSpectreMapNetInName='(
+        (">" "\\>")
+        ("<" "\\<")
+        ("." "_")
+        ("#" "\\#")
+        ("$" "\\$")
+        ("%" "\\%")
+        ("^" "\\^")
+        ("&" "\\&")
+        ("*" "\\*")
+        ("(" "_")
+        (")" "")
+        ("\\" "\\\\")
+        ("|" "_")
+        ("+" "\\+")
+        ("-" "\\-")
+        ("=" "\\=")
+        ("{" "\\{")
+        ("}" "\\}")
+        ("[" "\\[")
+        ("]" "\\]")
+        ("\"" "\\\"")
+        ("'" "\\'")
+        (":" "_")
+        (";" "\\;")
+        ("~" "\\~")
+        ("`" "\\`")
+        ("," "\\,")
+        ("?" "\\?")
+        ("/" "\\/")
+        ("@" "\\@")
+    )
+    printf( "[INFO] Liberate AMS setup was executed  \n")
+)
+liberate_default_variables = list(
+  "spectre_use_char_opt_license 0"
+  "packet_require_spectre_char_opt 0"
+)
+;######################################################################################
+;# Specify the leaf cells where the netlist stops and the models begin
+;######################################################################################
+liberate_default_commands = list(
+  "define_leafcell -type nmos       -pin_position {0 1 2 3}   {sg13_lv_nmos}"
+  "define_leafcell -type nmos       -pin_position {0 1 2 3}   {sg13_hv_nmos}"
+  "define_leafcell -type nmos       -pin_position {0 1 2 3}   {npn13G2}"
+  "define_leafcell -type nmos       -pin_position {0 1 2 3}   {npn13G2v}"
+  "define_leafcell -type nmos       -pin_position {0 1 2 3}   {npn13G2l}"
+  "define_leafcell -type black_box  -pin_position {0 1 2}    { isolbox }"
+  "define_leafcell -type pmos       -pin_position {0 1 2 3}   {sg13_lv_pmos}"
+  "define_leafcell -type pmos       -pin_position {0 1 2 3}   {sg13_hv_pmos}"
+  "define_leafcell -type diode      -pin_position {0 1}     {dantenna}"
+  "define_leafcell -type diode      -pin_position {0 1}     {dpantenna}"
+  "define_leafcell -type diode      -pin_position {0 1}     {nmoscl_2 nmoscl_4}"
+  "define_leafcell -type diode      -pin_position {0 1}     {diodevss_2kv diodevdd_2kv diodevss_4kv diodevdd_4kv}"
+  "define_leafcell -type r          -pin_position {0 1 2}    {res_rppd res_rhigh res_rsil}"
+  "define_leafcell -type r          -pin_position {0 1}       {ptap1 ntap1 resistor}"
+  "define_leafcell -type c          -pin_position {0 1}       {cap_cmim capacitor}"
+  "set_var voltage_map 1"
+  "set_vdd -no_model VDD 1.2"
+  "set_gnd -no_model VSS 0"
+  "set_gnd -no_model GND 0"
+  "set_var spectre_use_char_opt_license 0"
+  "set_var packet_require_spectre_char_opt 0"
+)
+liberate_unified_macro_token=t
+;loading predefined file to block selected devices in QRC to avoid double counting of parasitics
+procedure( vuiUserDefinedRCXFormSetupCB(form)
+    let( ( page1 page2 page3 page4 page5 page6 blocking_file)
+        blocking_file = strcat(SG13_IHP_TECH "/PVS_SG13/blocking_cells_file")
+    when( form->hiFormSym == 'vuiRcxRunForm
+            page1 = _vuiRcxGetTabField("vuiRcxRunForm" "setupTab")
+            page2 = _vuiRcxGetTabField("vuiRcxRunForm" "extractTab")
+            page3 = _vuiRcxGetTabField("vuiRcxRunForm" "filterTab")
+            page4 = _vuiRcxGetTabField("vuiRcxRunForm" "netlistTab")
+            page5 = _vuiRcxGetTabField("vuiRcxRunForm" "runTab")
+            page6 = _vuiRcxGetTabField("vuiRcxRunForm" "snaTab")
+      if(isFile(blocking_file)
+              ;; Set Field values in Setup Tab
+              page2->parasBlockDevCellsFile->value = blocking_file
+      );
+        ); end of when
+        t ; a true return value is necessary
+    ); end of let
+); end of procedure vuiUserDefinedRCXFormSetupCB
+; EMX Setup: requires EMX install dir and config file in cds directory
+EMXInstallDir = getShellEnvVar("EMXHOME")
+when( EMXInstallDir
+    file= strcat(SG13_IHP_TECH "/lib/SG13_dev/emxconfig.il")
+    when(isFile(file)
+        printf("Loading the EMX setup...\n")
+        loadi(file);
+        printf("EMX setup loaded.\n")
+    );
+)
+; Analog FastSPICE (AFS)
+afsInstallDir = getShellEnvVar("AFS_ROOT")
+when( afsInstallDir
+    printf("Loading the AFS integration...\n")
+    load(strcat(getShellEnvVar("AFS_ROOT") "/3rdParty/cdsinit-bda"))
+    printf("AFS loaded.\n")
+)
+;------------------------------
+printf("DZ: BEGIN OF LOCAL CUSTOMIZATION LOADING\n")
+
+let( ( localLibPath addon addonsL )
+
+  localLibPath = "./.init/"
+
+  addonsL = '(
+               "loadKit.il"
+               "loadUserCust.il"
+               "loadCalibreInteractive.il"
+               "emxconfig.il"
+               "loadPathwave_ads.il"
+               "loadPathwave_rfic.il"
+             )
+
+  foreach( addon addonsL
+    if( isFile( strcat( localLibPath addon ) ) then
+        printf( "DZ: load '%s' \n" strcat( localLibPath addon ) )
+        load( strcat( localLibPath addon ) )
+    else
+        printf( "DZ: ERROR: load '%s' -> no such file!\n" strcat( localLibPath addon ) )
+    )
+  );foreach
+);let
+
+
+;------------------------------
+; RFpro
+;-----------------------------
+when(getShellEnvVar("HPEESOF_DIR")
+  fileName = strcat(getShellEnvVar("HPEESOF_DIR") "/idf/config/.cdsinit")
+  if( isFile( fileName ) then
+    load( fileName ) )
+)
+
+;some settings for the ruler
+envSetVal("layout" "saveRulers" 'boolean nil)
+envSetVal("layout" "ruleGravityOn" 'boolean nil)
+
+;envSetVal("layout" "useRulerSnapModes" 'boolean t)
+;envSetVal("layout" "rulerSnapTarget" 'cyclic "Edges")
+;;leSetEnv("rulerSnapTarget" "Edges and Points")
+;;single-segment
+;envSetVal("layout" "rulerSegSnapMode" 'string "orthogonal")
+;;multi-segment
+;envSetVal("layout" "rulerSnapMode" 'string "orthogonal")
+
+printf("[INFO] End cdsinit.\n")
+

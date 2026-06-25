@@ -28,13 +28,15 @@ utl::report "Clock Tree Synthesis"
 # Wir behalten die Cluster-Werte bei, aber fügen DRV-Repair direkt nach der Synthese ein
 clock_tree_synthesis -buf_list $ctsBuf -root_buf $ctsBufRoot \
                      -sink_clustering_enable \
-                     -sink_clustering_size 20 \
-                     -sink_clustering_max_diameter 40 \
+                     -sink_clustering_size 15 \
+                     -sink_clustering_max_diameter 30 \
                      -balance_levels \
                      -repair_clock_nets
 
+
 utl::report "DRV Repair (Slew & Cap focus)"
 repair_design -slew_margin 0.1 -cap_margin 0.1
+repair_design -max_wire_length 550 -verbose
 
 
 utl::report "Legalize after CTS"

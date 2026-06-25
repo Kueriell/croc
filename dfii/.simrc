@@ -1,0 +1,4 @@
+     lvsLimitLinesInOutFile=65535
+     auCdlEnableNetlistInclusion=t
+     auCdlCDFPinCntrl=t
+     

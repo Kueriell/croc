@@ -1,0 +1,1018 @@
+
+==========================================================================
+04-01_croc.grt check_setup
+--------------------------------------------------------------------------
+1
+
+==========================================================================
+04-01_croc.grt report_tns
+--------------------------------------------------------------------------
+tns max -64.11
+
+==========================================================================
+04-01_croc.grt report_wns
+--------------------------------------------------------------------------
+wns max -0.36
+
+==========================================================================
+04-01_croc.grt report_worst_slack
+--------------------------------------------------------------------------
+worst slack max -0.36
+
+==========================================================================
+04-01_croc.grt report_checks -path_delay min
+--------------------------------------------------------------------------
+[WARNING STA-0168] unknown field nets.
+Startpoint: i_croc_soc.i_rstgen.i_rstgen_bypass.synch_regs_q_3__reg
+            (rising edge-triggered flip-flop clocked by clk_sys)
+Endpoint: i_croc_soc.i_user.i_user_aes_en.output_q_38__reg
+          (removal check against rising-edge clock clk_sys)
+Path Group: asynchronous
+Path Type: min
+Corner: ff
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock clk_sys (rise edge)
+                          0.00    0.00   clock source latency
+     2    0.20    0.25    0.02    0.02 ^ clk_i (in)
+                  0.25    0.00    0.02 ^ pad_clk_i/pad (sg13cmos5l_IOPadIn)
+     2    0.17    0.20    0.09    0.11 ^ pad_clk_i/p2c (sg13cmos5l_IOPadIn)
+                  0.20    0.06    0.18 ^ clkbuf_regs_0_clk_sys/A (BUFX64)
+     1    0.02    0.02    0.11    0.29 ^ clkbuf_regs_0_clk_sys/Y (BUFX64)
+                  0.02    0.00    0.29 ^ clkbuf_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     2    0.12    0.02    0.06    0.35 ^ clkbuf_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.04    0.02    0.36 ^ clkbuf_1_0_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     4    0.17    0.03    0.07    0.43 ^ clkbuf_1_0_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.04    0.01    0.44 ^ clkbuf_3_2_0_i_croc_soc.clk_i_regs/A (BUFX64)
+    16    0.41    0.04    0.07    0.52 ^ clkbuf_3_2_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.11    0.05    0.57 ^ clkbuf_7_40_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     9    0.19    0.03    0.10    0.66 ^ clkbuf_7_40_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.04    0.02    0.68 ^ clkbuf_leaf_197_i_croc_soc.clk_i_regs/A (BUFX64)
+     5    0.02    0.02    0.06    0.74 ^ clkbuf_leaf_197_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.02    0.00    0.74 ^ i_croc_soc.i_rstgen.i_rstgen_bypass.synch_regs_q_3__reg/CK (DFFRQX3)
+     2    0.00    0.03    0.18    0.92 ^ i_croc_soc.i_rstgen.i_rstgen_bypass.synch_regs_q_3__reg/Q (DFFRQX3)
+                  0.03    0.00    0.92 ^ i_croc_soc.i_rstgen.i_rstgen_bypass.i_tc_clk_mux2_rst_no.i_mux/A0 (MUX2X2)
+     2    0.03    0.10    0.14    1.06 ^ i_croc_soc.i_rstgen.i_rstgen_bypass.i_tc_clk_mux2_rst_no.i_mux/Y (MUX2X2)
+                  0.10    0.00    1.07 ^ place11803/A (BUFX3)
+    15    0.07    0.16    0.18    1.24 ^ place11803/Y (BUFX3)
+                  0.17    0.01    1.25 ^ i_croc_soc.i_user.i_user_aes_en.output_q_38__reg/RB (DFFRQX3)
+                                  1.25   data arrival time
+
+                          0.00    0.00   clock clk_sys (rise edge)
+                          0.00    0.00   clock source latency
+     2    0.24    0.26    0.03    0.03 ^ clk_i (in)
+                  0.26    0.00    0.03 ^ pad_clk_i/pad (sg13cmos5l_IOPadIn)
+     2    0.18    0.22    0.10    0.12 ^ pad_clk_i/p2c (sg13cmos5l_IOPadIn)
+                  0.23    0.07    0.19 ^ clkbuf_regs_0_clk_sys/A (BUFX64)
+     1    0.03    0.03    0.12    0.31 ^ clkbuf_regs_0_clk_sys/Y (BUFX64)
+                  0.03    0.00    0.31 ^ clkbuf_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     2    0.14    0.02    0.06    0.37 ^ clkbuf_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.04    0.02    0.39 ^ clkbuf_1_0_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     4    0.21    0.03    0.07    0.46 ^ clkbuf_1_0_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.04    0.02    0.48 ^ clkbuf_3_0_0_i_croc_soc.clk_i_regs/A (BUFX64)
+    16    0.55    0.04    0.07    0.55 ^ clkbuf_3_0_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.12    0.05    0.60 ^ clkbuf_7_4_0_i_croc_soc.clk_i_regs/A (BUFX64)
+    10    0.31    0.04    0.10    0.70 ^ clkbuf_7_4_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.06    0.02    0.72 ^ clkbuf_leaf_10_i_croc_soc.clk_i_regs/A (BUFX64)
+     7    0.03    0.02    0.07    0.79 ^ clkbuf_leaf_10_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.02    0.00    0.79 ^ i_croc_soc.i_user.i_user_aes_en.output_q_38__reg/CK (DFFRQX3)
+                          0.10    0.89   clock uncertainty
+                         -0.03    0.86   clock reconvergence pessimism
+                         -0.08    0.78   library removal time
+                                  0.78   data required time
+-----------------------------------------------------------------------------
+                                  0.78   data required time
+                                 -1.25   data arrival time
+-----------------------------------------------------------------------------
+                                  0.47   slack (MET)
+
+
+Startpoint: i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_cdc_reset_ctrlr/i_cdc_reset_ctrlr_half_a/i_state_transition_cdc_src/i_sync/reg_q_0__reg
+            (rising edge-triggered flip-flop clocked by clk_jtg)
+Endpoint: i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_cdc_reset_ctrlr/i_cdc_reset_ctrlr_half_a/i_state_transition_cdc_src/i_sync/serial_o_reg
+          (rising edge-triggered flip-flop clocked by clk_jtg)
+Path Group: clk_jtg
+Path Type: min
+Corner: ff
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock clk_jtg (rise edge)
+                          0.00    0.00   clock source latency
+     2    0.20    0.25    0.02    0.02 ^ jtag_tck_i (in)
+                  0.25    0.00    0.02 ^ pad_jtag_tck_i/pad (sg13cmos5l_IOPadIn)
+     2    0.11    0.14    0.08    0.10 ^ pad_jtag_tck_i/p2c (sg13cmos5l_IOPadIn)
+                  0.12    0.03    0.13 ^ clkbuf_regs_1_clk_jtg/A (BUFX64)
+     1    0.02    0.02    0.09    0.22 ^ clkbuf_regs_1_clk_jtg/Y (BUFX64)
+                  0.02    0.00    0.22 ^ clkbuf_0_i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.tck_i_regs/A (BUFX64)
+     8    0.20    0.03    0.06    0.28 ^ clkbuf_0_i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.tck_i_regs/Y (BUFX64)
+                  0.05    0.02    0.30 ^ clkbuf_3_4__f_i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.tck_i_regs/A (BUFX64)
+    12    0.28    0.04    0.08    0.37 ^ clkbuf_3_4__f_i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.tck_i_regs/Y (BUFX64)
+                  0.05    0.02    0.39 ^ clkbuf_leaf_53_i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.tck_i_regs/A (BUFX64)
+     4    0.01    0.02    0.06    0.45 ^ clkbuf_leaf_53_i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.tck_i_regs/Y (BUFX64)
+                  0.02    0.00    0.45 ^ i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_cdc_reset_ctrlr/i_cdc_reset_ctrlr_half_a/i_state_transition_cdc_src/i_sync/reg_q_0__reg/CK (DFFRQX3)
+     1    0.00    0.02    0.15    0.61 v i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_cdc_reset_ctrlr/i_cdc_reset_ctrlr_half_a/i_state_transition_cdc_src/i_sync/reg_q_0__reg/Q (DFFRQX3)
+                  0.02    0.00    0.61 v i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_cdc_reset_ctrlr/i_cdc_reset_ctrlr_half_a/i_state_transition_cdc_src/i_sync/serial_o_reg/D (DFFRQX3)
+                                  0.61   data arrival time
+
+                          0.00    0.00   clock clk_jtg (rise edge)
+                          0.00    0.00   clock source latency
+     2    0.24    0.26    0.03    0.03 ^ jtag_tck_i (in)
+                  0.26    0.00    0.03 ^ pad_jtag_tck_i/pad (sg13cmos5l_IOPadIn)
+     2    0.13    0.16    0.09    0.11 ^ pad_jtag_tck_i/p2c (sg13cmos5l_IOPadIn)
+                  0.14    0.03    0.15 ^ clkbuf_regs_1_clk_jtg/A (BUFX64)
+     1    0.03    0.02    0.09    0.24 ^ clkbuf_regs_1_clk_jtg/Y (BUFX64)
+                  0.02    0.00    0.24 ^ clkbuf_0_i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.tck_i_regs/A (BUFX64)
+     8    0.27    0.03    0.06    0.31 ^ clkbuf_0_i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.tck_i_regs/Y (BUFX64)
+                  0.06    0.02    0.33 ^ clkbuf_3_4__f_i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.tck_i_regs/A (BUFX64)
+    12    0.39    0.05    0.08    0.41 ^ clkbuf_3_4__f_i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.tck_i_regs/Y (BUFX64)
+                  0.07    0.03    0.44 ^ clkbuf_leaf_48_i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.tck_i_regs/A (BUFX64)
+     3    0.02    0.02    0.07    0.51 ^ clkbuf_leaf_48_i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.tck_i_regs/Y (BUFX64)
+                  0.02    0.00    0.51 ^ i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_cdc_reset_ctrlr/i_cdc_reset_ctrlr_half_a/i_state_transition_cdc_src/i_sync/serial_o_reg/CK (DFFRQX3)
+                          0.10    0.61   clock uncertainty
+                         -0.04    0.57   clock reconvergence pessimism
+                          0.01    0.58   library hold time
+                                  0.58   data required time
+-----------------------------------------------------------------------------
+                                  0.58   data required time
+                                 -0.61   data arrival time
+-----------------------------------------------------------------------------
+                                  0.03   slack (MET)
+
+
+Startpoint: i_croc_soc.i_user.i_user_aes_en.wdata_q_15__reg
+            (rising edge-triggered flip-flop clocked by clk_sys)
+Endpoint: i_croc_soc.i_user.i_user_aes_en.wdata_q2_15__reg
+          (rising edge-triggered flip-flop clocked by clk_sys)
+Path Group: clk_sys
+Path Type: min
+Corner: ff
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock clk_sys (rise edge)
+                          0.00    0.00   clock source latency
+     2    0.20    0.25    0.02    0.02 ^ clk_i (in)
+                  0.25    0.00    0.02 ^ pad_clk_i/pad (sg13cmos5l_IOPadIn)
+     2    0.17    0.20    0.09    0.11 ^ pad_clk_i/p2c (sg13cmos5l_IOPadIn)
+                  0.20    0.06    0.18 ^ clkbuf_regs_0_clk_sys/A (BUFX64)
+     1    0.02    0.02    0.11    0.29 ^ clkbuf_regs_0_clk_sys/Y (BUFX64)
+                  0.02    0.00    0.29 ^ clkbuf_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     2    0.12    0.02    0.06    0.35 ^ clkbuf_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.04    0.02    0.36 ^ clkbuf_1_0_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     4    0.17    0.03    0.07    0.43 ^ clkbuf_1_0_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.04    0.01    0.44 ^ clkbuf_3_2_0_i_croc_soc.clk_i_regs/A (BUFX64)
+    16    0.41    0.04    0.07    0.52 ^ clkbuf_3_2_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.05    0.02    0.53 ^ clkbuf_7_32_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     8    0.18    0.03    0.07    0.61 ^ clkbuf_7_32_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.04    0.01    0.62 ^ clkbuf_leaf_151_i_croc_soc.clk_i_regs/A (BUFX64)
+    15    0.03    0.02    0.06    0.68 ^ clkbuf_leaf_151_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.02    0.00    0.68 ^ i_croc_soc.i_user.i_user_aes_en.wdata_q_15__reg/CK (DFFRQX3)
+     1    0.02    0.04    0.18    0.86 v i_croc_soc.i_user.i_user_aes_en.wdata_q_15__reg/Q (DFFRQX3)
+                  0.04    0.00    0.86 v i_croc_soc.i_user.i_user_aes_en.wdata_q2_15__reg/D (DFFRQX3)
+                                  0.86   data arrival time
+
+                          0.00    0.00   clock clk_sys (rise edge)
+                          0.00    0.00   clock source latency
+     2    0.24    0.26    0.03    0.03 ^ clk_i (in)
+                  0.26    0.00    0.03 ^ pad_clk_i/pad (sg13cmos5l_IOPadIn)
+     2    0.18    0.22    0.10    0.12 ^ pad_clk_i/p2c (sg13cmos5l_IOPadIn)
+                  0.23    0.07    0.19 ^ clkbuf_regs_0_clk_sys/A (BUFX64)
+     1    0.03    0.03    0.12    0.31 ^ clkbuf_regs_0_clk_sys/Y (BUFX64)
+                  0.03    0.00    0.31 ^ clkbuf_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     2    0.14    0.02    0.06    0.37 ^ clkbuf_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.04    0.02    0.39 ^ clkbuf_1_0_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     4    0.21    0.03    0.07    0.46 ^ clkbuf_1_0_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.04    0.02    0.48 ^ clkbuf_3_0_0_i_croc_soc.clk_i_regs/A (BUFX64)
+    16    0.55    0.04    0.07    0.55 ^ clkbuf_3_0_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.17    0.08    0.63 ^ clkbuf_7_10_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     8    0.29    0.04    0.12    0.76 ^ clkbuf_7_10_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.05    0.01    0.77 ^ clkbuf_leaf_202_i_croc_soc.clk_i_regs/A (BUFX64)
+     8    0.02    0.02    0.06    0.83 ^ clkbuf_leaf_202_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.02    0.00    0.83 ^ i_croc_soc.i_user.i_user_aes_en.wdata_q2_15__reg/CK (DFFRQX3)
+                          0.10    0.93   clock uncertainty
+                         -0.03    0.90   clock reconvergence pessimism
+                          0.01    0.91   library hold time
+                                  0.91   data required time
+-----------------------------------------------------------------------------
+                                  0.91   data required time
+                                 -0.86   data arrival time
+-----------------------------------------------------------------------------
+                                 -0.05   slack (VIOLATED)
+
+
+
+==========================================================================
+04-01_croc.grt report_checks -path_delay max
+--------------------------------------------------------------------------
+[WARNING STA-0168] unknown field nets.
+Startpoint: i_croc_soc.i_rstgen.i_rstgen_bypass.synch_regs_q_3__reg
+            (rising edge-triggered flip-flop clocked by clk_sys)
+Endpoint: i_croc_soc.i_croc.i_core_wrap.i_core.crash_dump_o_13__reg
+          (recovery check against rising-edge clock clk_sys)
+Path Group: asynchronous
+Path Type: max
+Corner: tt
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock clk_sys (rise edge)
+                          0.00    0.00   clock source latency
+     2    0.24    0.35    0.04    0.04 ^ clk_i (in)
+                  0.35    0.00    0.04 ^ pad_clk_i/pad (sg13cmos5l_IOPadIn)
+     2    0.18    0.33    0.16    0.20 ^ pad_clk_i/p2c (sg13cmos5l_IOPadIn)
+                  0.29    0.07    0.27 ^ clkbuf_regs_0_clk_sys/A (BUFX64)
+     1    0.03    0.03    0.17    0.44 ^ clkbuf_regs_0_clk_sys/Y (BUFX64)
+                  0.03    0.00    0.44 ^ clkbuf_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     2    0.13    0.03    0.09    0.53 ^ clkbuf_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.05    0.02    0.55 ^ clkbuf_1_0_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     4    0.20    0.04    0.10    0.65 ^ clkbuf_1_0_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.05    0.02    0.67 ^ clkbuf_3_2_0_i_croc_soc.clk_i_regs/A (BUFX64)
+    16    0.52    0.08    0.12    0.78 ^ clkbuf_3_2_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.16    0.07    0.86 ^ clkbuf_7_40_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     9    0.25    0.05    0.15    1.00 ^ clkbuf_7_40_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.07    0.02    1.03 ^ clkbuf_leaf_197_i_croc_soc.clk_i_regs/A (BUFX64)
+     5    0.02    0.02    0.09    1.12 ^ clkbuf_leaf_197_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.02    0.00    1.12 ^ i_croc_soc.i_rstgen.i_rstgen_bypass.synch_regs_q_3__reg/CK (DFFRQX3)
+     2    0.01    0.05    0.28    1.40 ^ i_croc_soc.i_rstgen.i_rstgen_bypass.synch_regs_q_3__reg/Q (DFFRQX3)
+                  0.05    0.00    1.40 ^ i_croc_soc.i_rstgen.i_rstgen_bypass.i_tc_clk_mux2_rst_no.i_mux/A0 (MUX2X2)
+     2    0.03    0.16    0.23    1.63 ^ i_croc_soc.i_rstgen.i_rstgen_bypass.i_tc_clk_mux2_rst_no.i_mux/Y (MUX2X2)
+                  0.16    0.00    1.63 ^ wire13077/A (BUFX12)
+     6    0.06    0.07    0.16    1.79 ^ wire13077/Y (BUFX12)
+                  0.08    0.01    1.81 ^ wire13076/A (BUFX12)
+     7    0.06    0.07    0.13    1.94 ^ wire13076/Y (BUFX12)
+                  0.07    0.01    1.95 ^ wire13075/A (BUFX8)
+     3    0.05    0.08    0.14    2.09 ^ wire13075/Y (BUFX8)
+                  0.08    0.01    2.10 ^ place12161/A (BUFX8)
+    16    0.11    0.13    0.18    2.28 ^ place12161/Y (BUFX8)
+                  0.13    0.01    2.29 ^ place12206/A (BUFX3)
+    16    0.08    0.30    0.31    2.60 ^ place12206/Y (BUFX3)
+                  0.30    0.01    2.61 ^ place12212/A (BUFX3)
+    13    0.06    0.22    0.31    2.92 ^ place12212/Y (BUFX3)
+                  0.22    0.01    2.93 ^ place12216/A (BUFX3)
+    14    0.06    0.22    0.28    3.21 ^ place12216/Y (BUFX3)
+                  0.22    0.00    3.22 ^ place12217/A (BUFX3)
+    16    0.07    0.26    0.31    3.52 ^ place12217/Y (BUFX3)
+                  0.26    0.00    3.53 ^ place12218/A (BUFX3)
+    16    0.07    0.26    0.32    3.85 ^ place12218/Y (BUFX3)
+                  0.26    0.00    3.85 ^ i_croc_soc.i_croc.i_core_wrap.i_core.crash_dump_o_13__reg/RB (DFFRQX3)
+                                  3.85   data arrival time
+
+                         10.00   10.00   clock clk_sys (rise edge)
+                          0.00   10.00   clock source latency
+     2    0.20    0.34    0.03   10.03 ^ clk_i (in)
+                  0.34    0.00   10.03 ^ pad_clk_i/pad (sg13cmos5l_IOPadIn)
+     2    0.17    0.30    0.16   10.19 ^ pad_clk_i/p2c (sg13cmos5l_IOPadIn)
+                  0.26    0.06   10.25 ^ clkbuf_regs_0_clk_sys/A (BUFX64)
+     1    0.02    0.03    0.16   10.41 ^ clkbuf_regs_0_clk_sys/Y (BUFX64)
+                  0.03    0.00   10.41 ^ clkbuf_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     2    0.12    0.03    0.09   10.50 ^ clkbuf_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.04    0.01   10.51 ^ clkbuf_1_1_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     4    0.16    0.04    0.10   10.61 ^ clkbuf_1_1_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.05    0.01   10.62 ^ clkbuf_3_7_0_i_croc_soc.clk_i_regs/A (BUFX64)
+    16    0.42    0.08    0.12   10.74 ^ clkbuf_3_7_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.08    0.02   10.76 ^ clkbuf_7_115_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     7    0.18    0.04    0.12   10.87 ^ clkbuf_7_115_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.05    0.01   10.88 ^ clkbuf_leaf_630_i_croc_soc.clk_i_regs/A (BUFX64)
+     6    0.02    0.02    0.08   10.96 ^ clkbuf_leaf_630_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.02    0.00   10.97 ^ i_croc_soc.i_croc.i_core_wrap.i_core.crash_dump_o_13__reg/CK (DFFRQX3)
+                         -0.10   10.87   clock uncertainty
+                          0.03   10.90   clock reconvergence pessimism
+                         -0.19   10.71   library recovery time
+                                 10.71   data required time
+-----------------------------------------------------------------------------
+                                 10.71   data required time
+                                 -3.85   data arrival time
+-----------------------------------------------------------------------------
+                                  6.86   slack (MET)
+
+
+Startpoint: i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/async_ack_o_reg
+            (rising edge-triggered flip-flop clocked by clk_sys)
+Endpoint: i_croc_soc.i_croc.i_dm_top.i_dm_top.data_csrs_mem_6__reg
+          (rising edge-triggered flip-flop clocked by clk_sys)
+Path Group: path delay
+Path Type: max
+Corner: tt
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.02    0.00    0.00 ^ i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/async_ack_o_reg/CK (DFFRQX3)
+     6    0.02    0.09    0.32    0.32 ^ i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/async_ack_o_reg/Q (DFFRQX3)
+                  0.09    0.00    0.32 ^ i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_152_/A (XOR2X1)
+     1    0.00    0.10    0.12    0.45 ^ i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_152_/Y (XOR2X1)
+                  0.10    0.00    0.45 ^ i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/_1_/AB (NOR2BX1)
+     2    0.01    0.17    0.16    0.60 ^ i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/_1_/Y (NOR2BX1)
+                  0.17    0.00    0.61 ^ _31211_/A (NAND2X1)
+     2    0.03    0.39    0.36    0.97 v _31211_/Y (NAND2X1)
+                  0.39    0.00    0.97 v _31212_/B (NOR3BX1P5)
+     2    0.01    0.24    0.29    1.26 ^ _31212_/Y (NOR3BX1P5)
+                  0.24    0.00    1.26 ^ _43843_/A (NAND2X1)
+     2    0.01    0.17    0.22    1.48 v _43843_/Y (NAND2X1)
+                  0.17    0.00    1.48 v place11314/A (BUFX3)
+     3    0.02    0.07    0.17    1.65 v place11314/Y (BUFX3)
+                  0.07    0.00    1.65 v _43989_/A (NOR2X1)
+     4    0.02    0.37    0.30    1.95 ^ _43989_/Y (NOR2X1)
+                  0.37    0.00    1.95 ^ _43992_/B (AOI22X2)
+    16    0.04    0.32    0.39    2.35 v _43992_/Y (AOI22X2)
+                  0.32    0.00    2.35 v _44262_/D (AO211X2)
+     1    0.00    0.05    0.31    2.66 v _44262_/Y (AO211X2)
+                  0.05    0.00    2.66 v _44263_/B (AOI21X1)
+     1    0.00    0.11    0.11    2.77 ^ _44263_/Y (AOI21X1)
+                  0.11    0.00    2.77 ^ i_croc_soc.i_croc.i_dm_top.i_dm_top.data_csrs_mem_6__reg/D (DFFRQX3)
+                                  2.77   data arrival time
+
+                          3.00    3.00   max_delay
+                         -0.12    2.88   library setup time
+                                  2.88   data required time
+-----------------------------------------------------------------------------
+                                  2.88   data required time
+                                 -2.77   data arrival time
+-----------------------------------------------------------------------------
+                                  0.10   slack (MET)
+
+
+Startpoint: i_croc_soc.i_croc.i_dmi_jtag.i_dmi_jtag_tap.td_o_reg
+            (rising edge-triggered flip-flop clocked by clk_jtg')
+Endpoint: jtag_tdo_o (output port clocked by clk_jtg)
+Path Group: clk_jtg
+Path Type: max
+Corner: tt
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                         12.50   12.50   clock clk_jtg' (rise edge)
+                          0.00   12.50   clock source latency
+     2    0.23    0.49    0.03   12.53 v jtag_tck_i (in)
+                  0.49    0.00   12.53 v pad_jtag_tck_i/pad (sg13cmos5l_IOPadIn)
+     2    0.13    0.26    0.69   13.22 v pad_jtag_tck_i/p2c (sg13cmos5l_IOPadIn)
+                  0.21    0.04   13.26 v clkbuf_regs_1_clk_jtg/A (BUFX64)
+     1    0.03    0.03    0.16   13.41 v clkbuf_regs_1_clk_jtg/Y (BUFX64)
+                  0.03    0.00   13.41 v clkbuf_0_i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.tck_i_regs/A (BUFX64)
+     8    0.26    0.05    0.11   13.53 v clkbuf_0_i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.tck_i_regs/Y (BUFX64)
+                  0.07    0.03   13.55 v clkbuf_3_0__f_i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.tck_i_regs/A (BUFX64)
+    15    0.39    0.06    0.13   13.69 v clkbuf_3_0__f_i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.tck_i_regs/Y (BUFX64)
+                  0.09    0.03   13.72 v i_croc_soc.i_croc.i_dmi_jtag.i_dmi_jtag_tap.i_tck_inv.i_inv_12834/A (INVX2)
+     1    0.00    0.03    0.05   13.76 ^ i_croc_soc.i_croc.i_dmi_jtag.i_dmi_jtag_tap.i_tck_inv.i_inv_12834/Y (INVX2)
+                  0.03    0.00   13.76 ^ i_croc_soc.i_croc.i_dmi_jtag.i_dmi_jtag_tap.i_dft_tck_mux.i_mux/A0 (MUX2X2)
+     1    0.00    0.04    0.12   13.88 ^ i_croc_soc.i_croc.i_dmi_jtag.i_dmi_jtag_tap.i_dft_tck_mux.i_mux/Y (MUX2X2)
+                  0.04    0.00   13.88 ^ i_croc_soc.i_croc.i_dmi_jtag.i_dmi_jtag_tap.td_o_reg/CK (DFFRQX3)
+     1    0.04    0.14    0.37   14.25 ^ i_croc_soc.i_croc.i_dmi_jtag.i_dmi_jtag_tap.td_o_reg/Q (DFFRQX3)
+                  0.14    0.01   14.26 ^ wire13032/A (BUFX12)
+     1    0.07    0.08    0.16   14.42 ^ wire13032/Y (BUFX12)
+                  0.11    0.01   14.43 ^ pad_jtag_tdo_o/c2p (sg13cmos5l_IOPadOut16mA)
+     2   15.00    3.55    3.15   17.58 ^ pad_jtag_tdo_o/pad (sg13cmos5l_IOPadOut16mA)
+                  2.66    0.00   17.58 ^ jtag_tdo_o (out)
+                                 17.58   data arrival time
+
+                         25.00   25.00   clock clk_jtg (rise edge)
+                          0.00   25.00   clock network delay (propagated)
+                         -0.10   24.90   clock uncertainty
+                          0.00   24.90   clock reconvergence pessimism
+                         -5.00   19.90   output external delay
+                                 19.90   data required time
+-----------------------------------------------------------------------------
+                                 19.90   data required time
+                                -17.58   data arrival time
+-----------------------------------------------------------------------------
+                                  2.32   slack (MET)
+
+
+Startpoint: i_croc_soc.i_croc.i_core_wrap.i_core.id_stage_i.controller_i.instr_i_23__reg
+            (rising edge-triggered flip-flop clocked by clk_sys)
+Endpoint: i_croc_soc.i_croc.i_core_wrap.i_core.crash_dump_o_49__reg
+          (rising edge-triggered flip-flop clocked by clk_sys)
+Path Group: clk_sys
+Path Type: max
+Corner: tt
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock clk_sys (rise edge)
+                          0.00    0.00   clock source latency
+     2    0.24    0.35    0.04    0.04 ^ clk_i (in)
+                  0.35    0.00    0.04 ^ pad_clk_i/pad (sg13cmos5l_IOPadIn)
+     2    0.18    0.33    0.16    0.20 ^ pad_clk_i/p2c (sg13cmos5l_IOPadIn)
+                  0.29    0.07    0.27 ^ clkbuf_regs_0_clk_sys/A (BUFX64)
+     1    0.03    0.03    0.17    0.44 ^ clkbuf_regs_0_clk_sys/Y (BUFX64)
+                  0.03    0.00    0.44 ^ clkbuf_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     2    0.13    0.03    0.09    0.53 ^ clkbuf_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.05    0.02    0.55 ^ clkbuf_1_1_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     4    0.19    0.04    0.10    0.65 ^ clkbuf_1_1_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.05    0.01    0.66 ^ clkbuf_3_6_0_i_croc_soc.clk_i_regs/A (BUFX64)
+    16    0.52    0.09    0.12    0.78 ^ clkbuf_3_6_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.12    0.04    0.82 ^ clkbuf_7_108_0_i_croc_soc.clk_i_regs/A (BUFX64)
+    10    0.32    0.06    0.13    0.95 ^ clkbuf_7_108_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.08    0.03    0.98 ^ clkbuf_leaf_480_i_croc_soc.clk_i_regs/A (BUFX64)
+     7    0.02    0.02    0.10    1.07 ^ clkbuf_leaf_480_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.02    0.00    1.07 ^ i_croc_soc.i_croc.i_core_wrap.i_core.id_stage_i.controller_i.instr_i_23__reg/CK (DFFRQX3)
+    14    0.07    0.19    0.37    1.45 v i_croc_soc.i_croc.i_core_wrap.i_core.id_stage_i.controller_i.instr_i_23__reg/Q (DFFRQX3)
+                  0.19    0.00    1.45 v place12651/A (BUFX3)
+    14    0.09    0.24    0.30    1.75 v place12651/Y (BUFX3)
+                  0.24    0.01    1.76 v place12655/A (BUFX3)
+    14    0.06    0.17    0.27    2.03 v place12655/Y (BUFX3)
+                  0.17    0.00    2.04 v _33583_/A (OR3X2)
+     2    0.01    0.07    0.26    2.30 v _33583_/Y (OR3X2)
+                  0.07    0.00    2.30 v _33584_/D (OR4X1)
+     4    0.01    0.14    0.35    2.65 v _33584_/Y (OR4X1)
+                  0.14    0.00    2.65 v _33984_/C (NOR3X1)
+     2    0.01    0.44    0.38    3.04 ^ _33984_/Y (NOR3X1)
+                  0.44    0.00    3.04 ^ _33985_/B (NAND2X1)
+     6    0.02    0.34    0.36    3.40 v _33985_/Y (NAND2X1)
+                  0.34    0.00    3.40 v _33986_/C (NOR3X1)
+     2    0.01    0.25    0.28    3.69 ^ _33986_/Y (NOR3X1)
+                  0.25    0.00    3.69 ^ _33987_/C (OAI211X1)
+     2    0.01    0.17    0.23    3.92 v _33987_/Y (OAI211X1)
+                  0.17    0.00    3.92 v _33988_/B (NAND2X1)
+     3    0.02    0.23    0.23    4.15 ^ _33988_/Y (NAND2X1)
+                  0.23    0.00    4.15 ^ _34000_/C (AND4X1)
+     2    0.02    0.17    0.37    4.52 ^ _34000_/Y (AND4X1)
+                  0.17    0.00    4.52 ^ place11331/A (BUFX3)
+    16    0.05    0.19    0.25    4.77 ^ place11331/Y (BUFX3)
+                  0.19    0.00    4.77 ^ _34005_/A (OR2X2)
+    12    0.06    0.29    0.31    5.09 ^ _34005_/Y (OR2X2)
+                  0.29    0.00    5.09 ^ _34203_/D (OAOI211X1)
+     2    0.03    0.43    0.31    5.40 v _34203_/Y (OAOI211X1)
+                  0.43    0.00    5.41 v _34205_/C (OAI31X1)
+     3    0.01    0.43    0.48    5.89 ^ _34205_/Y (OAI31X1)
+                  0.43    0.00    5.89 ^ _34206_/B (NAND2X1)
+     3    0.01    0.19    0.28    6.17 v _34206_/Y (NAND2X1)
+                  0.19    0.00    6.17 v _34231_/B (NOR3X1)
+     1    0.00    0.18    0.21    6.38 ^ _34231_/Y (NOR3X1)
+                  0.18    0.00    6.38 ^ _34232_/C (AOI21X1)
+     1    0.00    0.12    0.10    6.48 v _34232_/Y (AOI21X1)
+                  0.12    0.00    6.48 v _34235_/B (AOI2B1X2)
+     9    0.03    0.34    0.30    6.78 ^ _34235_/Y (AOI2B1X2)
+                  0.34    0.00    6.78 ^ _34237_/A (AND2X1)
+     1    0.01    0.09    0.22    7.00 ^ _34237_/Y (AND2X1)
+                  0.09    0.00    7.00 ^ _34238_/B (XOR2X2)
+     2    0.01    0.08    0.16    7.16 ^ _34238_/Y (XOR2X2)
+                  0.08    0.00    7.16 ^ _34239_/C (AND3X1)
+     1    0.01    0.07    0.19    7.35 ^ _34239_/Y (AND3X1)
+                  0.07    0.00    7.35 ^ _34265_/B (AOAI211X2)
+     2    0.01    0.12    0.15    7.49 v _34265_/Y (AOAI211X2)
+                  0.12    0.00    7.49 v _34329_/B (OAI31X2)
+    12    0.04    0.63    0.54    8.03 ^ _34329_/Y (OAI31X2)
+                  0.63    0.00    8.04 ^ _34457_/A (NOR2X1)
+     6    0.02    0.25    0.39    8.43 v _34457_/Y (NOR2X1)
+                  0.25    0.00    8.43 v _34458_/D (AOI2B2X1)
+     3    0.01    0.28    0.31    8.74 ^ _34458_/Y (AOI2B2X1)
+                  0.28    0.00    8.74 ^ _34459_/D (OAI211X2)
+     4    0.01    0.19    0.25    8.99 v _34459_/Y (OAI211X2)
+                  0.19    0.00    8.99 v _34460_/B (XOR2X2)
+     1    0.00    0.08    0.20    9.19 v _34460_/Y (XOR2X2)
+                  0.08    0.00    9.19 v _34492_/B (OAOI211X2)
+     1    0.00    0.11    0.11    9.30 ^ _34492_/Y (OAOI211X2)
+                  0.11    0.00    9.30 ^ place10715/A (BUFX4)
+    15    0.07    0.17    0.23    9.53 ^ place10715/Y (BUFX4)
+                  0.17    0.00    9.53 ^ _37114_/B (NAND4X2)
+     1    0.01    0.16    0.18    9.71 v _37114_/Y (NAND4X2)
+                  0.16    0.00    9.71 v _37137_/B (AO31X1)
+     8    0.03    0.25    0.35   10.06 v _37137_/Y (AO31X1)
+                  0.25    0.00   10.06 v _37147_/B (OAI21X1)
+     1    0.00    0.15    0.19   10.25 ^ _37147_/Y (OAI21X1)
+                  0.15    0.00   10.25 ^ _37148_/D (AOAI211X2)
+     6    0.03    0.29    0.29   10.54 v _37148_/Y (AOAI211X2)
+                  0.29    0.00   10.54 v place10483/A (BUFX3)
+    16    0.08    0.22    0.32   10.87 v place10483/Y (BUFX3)
+                  0.23    0.01   10.88 v _37201_/S0 (MUX2X1)
+     1    0.00    0.07    0.20   11.08 ^ _37201_/Y (MUX2X1)
+                  0.07    0.00   11.08 ^ i_croc_soc.i_croc.i_core_wrap.i_core.crash_dump_o_49__reg/D (DFFRQX3)
+                                 11.08   data arrival time
+
+                         10.00   10.00   clock clk_sys (rise edge)
+                          0.00   10.00   clock source latency
+     2    0.20    0.34    0.03   10.03 ^ clk_i (in)
+                  0.34    0.00   10.03 ^ pad_clk_i/pad (sg13cmos5l_IOPadIn)
+     2    0.17    0.30    0.16   10.19 ^ pad_clk_i/p2c (sg13cmos5l_IOPadIn)
+                  0.26    0.06   10.25 ^ clkbuf_regs_0_clk_sys/A (BUFX64)
+     1    0.02    0.03    0.16   10.41 ^ clkbuf_regs_0_clk_sys/Y (BUFX64)
+                  0.03    0.00   10.41 ^ clkbuf_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     2    0.12    0.03    0.09   10.50 ^ clkbuf_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.04    0.01   10.51 ^ clkbuf_1_1_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     4    0.16    0.04    0.10   10.61 ^ clkbuf_1_1_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.05    0.01   10.62 ^ clkbuf_3_7_0_i_croc_soc.clk_i_regs/A (BUFX64)
+    16    0.42    0.08    0.12   10.74 ^ clkbuf_3_7_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.09    0.02   10.76 ^ clkbuf_7_114_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     8    0.19    0.04    0.11   10.87 ^ clkbuf_7_114_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.06    0.02   10.89 ^ i_croc_soc.i_croc.i_core_wrap.i_core.crash_dump_o_49__reg/CK (DFFRQX3)
+                         -0.10   10.79   clock uncertainty
+                          0.04   10.83   clock reconvergence pessimism
+                         -0.11   10.73   library setup time
+                                 10.73   data required time
+-----------------------------------------------------------------------------
+                                 10.73   data required time
+                                -11.08   data arrival time
+-----------------------------------------------------------------------------
+                                 -0.36   slack (VIOLATED)
+
+
+
+==========================================================================
+04-01_croc.grt report_checks -unconstrained
+--------------------------------------------------------------------------
+[WARNING STA-0168] unknown field nets.
+Startpoint: i_croc_soc.i_rstgen.i_rstgen_bypass.synch_regs_q_3__reg
+            (rising edge-triggered flip-flop clocked by clk_sys)
+Endpoint: i_croc_soc.i_croc.i_core_wrap.i_core.crash_dump_o_13__reg
+          (recovery check against rising-edge clock clk_sys)
+Path Group: asynchronous
+Path Type: max
+Corner: tt
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock clk_sys (rise edge)
+                          0.00    0.00   clock source latency
+     2    0.24    0.35    0.04    0.04 ^ clk_i (in)
+                  0.35    0.00    0.04 ^ pad_clk_i/pad (sg13cmos5l_IOPadIn)
+     2    0.18    0.33    0.16    0.20 ^ pad_clk_i/p2c (sg13cmos5l_IOPadIn)
+                  0.29    0.07    0.27 ^ clkbuf_regs_0_clk_sys/A (BUFX64)
+     1    0.03    0.03    0.17    0.44 ^ clkbuf_regs_0_clk_sys/Y (BUFX64)
+                  0.03    0.00    0.44 ^ clkbuf_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     2    0.13    0.03    0.09    0.53 ^ clkbuf_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.05    0.02    0.55 ^ clkbuf_1_0_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     4    0.20    0.04    0.10    0.65 ^ clkbuf_1_0_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.05    0.02    0.67 ^ clkbuf_3_2_0_i_croc_soc.clk_i_regs/A (BUFX64)
+    16    0.52    0.08    0.12    0.78 ^ clkbuf_3_2_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.16    0.07    0.86 ^ clkbuf_7_40_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     9    0.25    0.05    0.15    1.00 ^ clkbuf_7_40_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.07    0.02    1.03 ^ clkbuf_leaf_197_i_croc_soc.clk_i_regs/A (BUFX64)
+     5    0.02    0.02    0.09    1.12 ^ clkbuf_leaf_197_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.02    0.00    1.12 ^ i_croc_soc.i_rstgen.i_rstgen_bypass.synch_regs_q_3__reg/CK (DFFRQX3)
+     2    0.01    0.05    0.28    1.40 ^ i_croc_soc.i_rstgen.i_rstgen_bypass.synch_regs_q_3__reg/Q (DFFRQX3)
+                  0.05    0.00    1.40 ^ i_croc_soc.i_rstgen.i_rstgen_bypass.i_tc_clk_mux2_rst_no.i_mux/A0 (MUX2X2)
+     2    0.03    0.16    0.23    1.63 ^ i_croc_soc.i_rstgen.i_rstgen_bypass.i_tc_clk_mux2_rst_no.i_mux/Y (MUX2X2)
+                  0.16    0.00    1.63 ^ wire13077/A (BUFX12)
+     6    0.06    0.07    0.16    1.79 ^ wire13077/Y (BUFX12)
+                  0.08    0.01    1.81 ^ wire13076/A (BUFX12)
+     7    0.06    0.07    0.13    1.94 ^ wire13076/Y (BUFX12)
+                  0.07    0.01    1.95 ^ wire13075/A (BUFX8)
+     3    0.05    0.08    0.14    2.09 ^ wire13075/Y (BUFX8)
+                  0.08    0.01    2.10 ^ place12161/A (BUFX8)
+    16    0.11    0.13    0.18    2.28 ^ place12161/Y (BUFX8)
+                  0.13    0.01    2.29 ^ place12206/A (BUFX3)
+    16    0.08    0.30    0.31    2.60 ^ place12206/Y (BUFX3)
+                  0.30    0.01    2.61 ^ place12212/A (BUFX3)
+    13    0.06    0.22    0.31    2.92 ^ place12212/Y (BUFX3)
+                  0.22    0.01    2.93 ^ place12216/A (BUFX3)
+    14    0.06    0.22    0.28    3.21 ^ place12216/Y (BUFX3)
+                  0.22    0.00    3.22 ^ place12217/A (BUFX3)
+    16    0.07    0.26    0.31    3.52 ^ place12217/Y (BUFX3)
+                  0.26    0.00    3.53 ^ place12218/A (BUFX3)
+    16    0.07    0.26    0.32    3.85 ^ place12218/Y (BUFX3)
+                  0.26    0.00    3.85 ^ i_croc_soc.i_croc.i_core_wrap.i_core.crash_dump_o_13__reg/RB (DFFRQX3)
+                                  3.85   data arrival time
+
+                         10.00   10.00   clock clk_sys (rise edge)
+                          0.00   10.00   clock source latency
+     2    0.20    0.34    0.03   10.03 ^ clk_i (in)
+                  0.34    0.00   10.03 ^ pad_clk_i/pad (sg13cmos5l_IOPadIn)
+     2    0.17    0.30    0.16   10.19 ^ pad_clk_i/p2c (sg13cmos5l_IOPadIn)
+                  0.26    0.06   10.25 ^ clkbuf_regs_0_clk_sys/A (BUFX64)
+     1    0.02    0.03    0.16   10.41 ^ clkbuf_regs_0_clk_sys/Y (BUFX64)
+                  0.03    0.00   10.41 ^ clkbuf_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     2    0.12    0.03    0.09   10.50 ^ clkbuf_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.04    0.01   10.51 ^ clkbuf_1_1_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     4    0.16    0.04    0.10   10.61 ^ clkbuf_1_1_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.05    0.01   10.62 ^ clkbuf_3_7_0_i_croc_soc.clk_i_regs/A (BUFX64)
+    16    0.42    0.08    0.12   10.74 ^ clkbuf_3_7_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.08    0.02   10.76 ^ clkbuf_7_115_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     7    0.18    0.04    0.12   10.87 ^ clkbuf_7_115_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.05    0.01   10.88 ^ clkbuf_leaf_630_i_croc_soc.clk_i_regs/A (BUFX64)
+     6    0.02    0.02    0.08   10.96 ^ clkbuf_leaf_630_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.02    0.00   10.97 ^ i_croc_soc.i_croc.i_core_wrap.i_core.crash_dump_o_13__reg/CK (DFFRQX3)
+                         -0.10   10.87   clock uncertainty
+                          0.03   10.90   clock reconvergence pessimism
+                         -0.19   10.71   library recovery time
+                                 10.71   data required time
+-----------------------------------------------------------------------------
+                                 10.71   data required time
+                                 -3.85   data arrival time
+-----------------------------------------------------------------------------
+                                  6.86   slack (MET)
+
+
+Startpoint: i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/async_ack_o_reg
+            (rising edge-triggered flip-flop clocked by clk_sys)
+Endpoint: i_croc_soc.i_croc.i_dm_top.i_dm_top.data_csrs_mem_6__reg
+          (rising edge-triggered flip-flop clocked by clk_sys)
+Path Group: path delay
+Path Type: max
+Corner: tt
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.02    0.00    0.00 ^ i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/async_ack_o_reg/CK (DFFRQX3)
+     6    0.02    0.09    0.32    0.32 ^ i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/async_ack_o_reg/Q (DFFRQX3)
+                  0.09    0.00    0.32 ^ i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_152_/A (XOR2X1)
+     1    0.00    0.10    0.12    0.45 ^ i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_152_/Y (XOR2X1)
+                  0.10    0.00    0.45 ^ i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/_1_/AB (NOR2BX1)
+     2    0.01    0.17    0.16    0.60 ^ i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/_1_/Y (NOR2BX1)
+                  0.17    0.00    0.61 ^ _31211_/A (NAND2X1)
+     2    0.03    0.39    0.36    0.97 v _31211_/Y (NAND2X1)
+                  0.39    0.00    0.97 v _31212_/B (NOR3BX1P5)
+     2    0.01    0.24    0.29    1.26 ^ _31212_/Y (NOR3BX1P5)
+                  0.24    0.00    1.26 ^ _43843_/A (NAND2X1)
+     2    0.01    0.17    0.22    1.48 v _43843_/Y (NAND2X1)
+                  0.17    0.00    1.48 v place11314/A (BUFX3)
+     3    0.02    0.07    0.17    1.65 v place11314/Y (BUFX3)
+                  0.07    0.00    1.65 v _43989_/A (NOR2X1)
+     4    0.02    0.37    0.30    1.95 ^ _43989_/Y (NOR2X1)
+                  0.37    0.00    1.95 ^ _43992_/B (AOI22X2)
+    16    0.04    0.32    0.39    2.35 v _43992_/Y (AOI22X2)
+                  0.32    0.00    2.35 v _44262_/D (AO211X2)
+     1    0.00    0.05    0.31    2.66 v _44262_/Y (AO211X2)
+                  0.05    0.00    2.66 v _44263_/B (AOI21X1)
+     1    0.00    0.11    0.11    2.77 ^ _44263_/Y (AOI21X1)
+                  0.11    0.00    2.77 ^ i_croc_soc.i_croc.i_dm_top.i_dm_top.data_csrs_mem_6__reg/D (DFFRQX3)
+                                  2.77   data arrival time
+
+                          3.00    3.00   max_delay
+                         -0.12    2.88   library setup time
+                                  2.88   data required time
+-----------------------------------------------------------------------------
+                                  2.88   data required time
+                                 -2.77   data arrival time
+-----------------------------------------------------------------------------
+                                  0.10   slack (MET)
+
+
+Startpoint: i_croc_soc.i_croc.i_dmi_jtag.i_dmi_jtag_tap.td_o_reg
+            (rising edge-triggered flip-flop clocked by clk_jtg')
+Endpoint: jtag_tdo_o (output port clocked by clk_jtg)
+Path Group: clk_jtg
+Path Type: max
+Corner: tt
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                         12.50   12.50   clock clk_jtg' (rise edge)
+                          0.00   12.50   clock source latency
+     2    0.23    0.49    0.03   12.53 v jtag_tck_i (in)
+                  0.49    0.00   12.53 v pad_jtag_tck_i/pad (sg13cmos5l_IOPadIn)
+     2    0.13    0.26    0.69   13.22 v pad_jtag_tck_i/p2c (sg13cmos5l_IOPadIn)
+                  0.21    0.04   13.26 v clkbuf_regs_1_clk_jtg/A (BUFX64)
+     1    0.03    0.03    0.16   13.41 v clkbuf_regs_1_clk_jtg/Y (BUFX64)
+                  0.03    0.00   13.41 v clkbuf_0_i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.tck_i_regs/A (BUFX64)
+     8    0.26    0.05    0.11   13.53 v clkbuf_0_i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.tck_i_regs/Y (BUFX64)
+                  0.07    0.03   13.55 v clkbuf_3_0__f_i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.tck_i_regs/A (BUFX64)
+    15    0.39    0.06    0.13   13.69 v clkbuf_3_0__f_i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.tck_i_regs/Y (BUFX64)
+                  0.09    0.03   13.72 v i_croc_soc.i_croc.i_dmi_jtag.i_dmi_jtag_tap.i_tck_inv.i_inv_12834/A (INVX2)
+     1    0.00    0.03    0.05   13.76 ^ i_croc_soc.i_croc.i_dmi_jtag.i_dmi_jtag_tap.i_tck_inv.i_inv_12834/Y (INVX2)
+                  0.03    0.00   13.76 ^ i_croc_soc.i_croc.i_dmi_jtag.i_dmi_jtag_tap.i_dft_tck_mux.i_mux/A0 (MUX2X2)
+     1    0.00    0.04    0.12   13.88 ^ i_croc_soc.i_croc.i_dmi_jtag.i_dmi_jtag_tap.i_dft_tck_mux.i_mux/Y (MUX2X2)
+                  0.04    0.00   13.88 ^ i_croc_soc.i_croc.i_dmi_jtag.i_dmi_jtag_tap.td_o_reg/CK (DFFRQX3)
+     1    0.04    0.14    0.37   14.25 ^ i_croc_soc.i_croc.i_dmi_jtag.i_dmi_jtag_tap.td_o_reg/Q (DFFRQX3)
+                  0.14    0.01   14.26 ^ wire13032/A (BUFX12)
+     1    0.07    0.08    0.16   14.42 ^ wire13032/Y (BUFX12)
+                  0.11    0.01   14.43 ^ pad_jtag_tdo_o/c2p (sg13cmos5l_IOPadOut16mA)
+     2   15.00    3.55    3.15   17.58 ^ pad_jtag_tdo_o/pad (sg13cmos5l_IOPadOut16mA)
+                  2.66    0.00   17.58 ^ jtag_tdo_o (out)
+                                 17.58   data arrival time
+
+                         25.00   25.00   clock clk_jtg (rise edge)
+                          0.00   25.00   clock network delay (propagated)
+                         -0.10   24.90   clock uncertainty
+                          0.00   24.90   clock reconvergence pessimism
+                         -5.00   19.90   output external delay
+                                 19.90   data required time
+-----------------------------------------------------------------------------
+                                 19.90   data required time
+                                -17.58   data arrival time
+-----------------------------------------------------------------------------
+                                  2.32   slack (MET)
+
+
+Startpoint: i_croc_soc.i_croc.i_core_wrap.i_core.id_stage_i.controller_i.instr_i_23__reg
+            (rising edge-triggered flip-flop clocked by clk_sys)
+Endpoint: i_croc_soc.i_croc.i_core_wrap.i_core.crash_dump_o_49__reg
+          (rising edge-triggered flip-flop clocked by clk_sys)
+Path Group: clk_sys
+Path Type: max
+Corner: tt
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock clk_sys (rise edge)
+                          0.00    0.00   clock source latency
+     2    0.24    0.35    0.04    0.04 ^ clk_i (in)
+                  0.35    0.00    0.04 ^ pad_clk_i/pad (sg13cmos5l_IOPadIn)
+     2    0.18    0.33    0.16    0.20 ^ pad_clk_i/p2c (sg13cmos5l_IOPadIn)
+                  0.29    0.07    0.27 ^ clkbuf_regs_0_clk_sys/A (BUFX64)
+     1    0.03    0.03    0.17    0.44 ^ clkbuf_regs_0_clk_sys/Y (BUFX64)
+                  0.03    0.00    0.44 ^ clkbuf_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     2    0.13    0.03    0.09    0.53 ^ clkbuf_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.05    0.02    0.55 ^ clkbuf_1_1_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     4    0.19    0.04    0.10    0.65 ^ clkbuf_1_1_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.05    0.01    0.66 ^ clkbuf_3_6_0_i_croc_soc.clk_i_regs/A (BUFX64)
+    16    0.52    0.09    0.12    0.78 ^ clkbuf_3_6_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.12    0.04    0.82 ^ clkbuf_7_108_0_i_croc_soc.clk_i_regs/A (BUFX64)
+    10    0.32    0.06    0.13    0.95 ^ clkbuf_7_108_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.08    0.03    0.98 ^ clkbuf_leaf_480_i_croc_soc.clk_i_regs/A (BUFX64)
+     7    0.02    0.02    0.10    1.07 ^ clkbuf_leaf_480_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.02    0.00    1.07 ^ i_croc_soc.i_croc.i_core_wrap.i_core.id_stage_i.controller_i.instr_i_23__reg/CK (DFFRQX3)
+    14    0.07    0.19    0.37    1.45 v i_croc_soc.i_croc.i_core_wrap.i_core.id_stage_i.controller_i.instr_i_23__reg/Q (DFFRQX3)
+                  0.19    0.00    1.45 v place12651/A (BUFX3)
+    14    0.09    0.24    0.30    1.75 v place12651/Y (BUFX3)
+                  0.24    0.01    1.76 v place12655/A (BUFX3)
+    14    0.06    0.17    0.27    2.03 v place12655/Y (BUFX3)
+                  0.17    0.00    2.04 v _33583_/A (OR3X2)
+     2    0.01    0.07    0.26    2.30 v _33583_/Y (OR3X2)
+                  0.07    0.00    2.30 v _33584_/D (OR4X1)
+     4    0.01    0.14    0.35    2.65 v _33584_/Y (OR4X1)
+                  0.14    0.00    2.65 v _33984_/C (NOR3X1)
+     2    0.01    0.44    0.38    3.04 ^ _33984_/Y (NOR3X1)
+                  0.44    0.00    3.04 ^ _33985_/B (NAND2X1)
+     6    0.02    0.34    0.36    3.40 v _33985_/Y (NAND2X1)
+                  0.34    0.00    3.40 v _33986_/C (NOR3X1)
+     2    0.01    0.25    0.28    3.69 ^ _33986_/Y (NOR3X1)
+                  0.25    0.00    3.69 ^ _33987_/C (OAI211X1)
+     2    0.01    0.17    0.23    3.92 v _33987_/Y (OAI211X1)
+                  0.17    0.00    3.92 v _33988_/B (NAND2X1)
+     3    0.02    0.23    0.23    4.15 ^ _33988_/Y (NAND2X1)
+                  0.23    0.00    4.15 ^ _34000_/C (AND4X1)
+     2    0.02    0.17    0.37    4.52 ^ _34000_/Y (AND4X1)
+                  0.17    0.00    4.52 ^ place11331/A (BUFX3)
+    16    0.05    0.19    0.25    4.77 ^ place11331/Y (BUFX3)
+                  0.19    0.00    4.77 ^ _34005_/A (OR2X2)
+    12    0.06    0.29    0.31    5.09 ^ _34005_/Y (OR2X2)
+                  0.29    0.00    5.09 ^ _34203_/D (OAOI211X1)
+     2    0.03    0.43    0.31    5.40 v _34203_/Y (OAOI211X1)
+                  0.43    0.00    5.41 v _34205_/C (OAI31X1)
+     3    0.01    0.43    0.48    5.89 ^ _34205_/Y (OAI31X1)
+                  0.43    0.00    5.89 ^ _34206_/B (NAND2X1)
+     3    0.01    0.19    0.28    6.17 v _34206_/Y (NAND2X1)
+                  0.19    0.00    6.17 v _34231_/B (NOR3X1)
+     1    0.00    0.18    0.21    6.38 ^ _34231_/Y (NOR3X1)
+                  0.18    0.00    6.38 ^ _34232_/C (AOI21X1)
+     1    0.00    0.12    0.10    6.48 v _34232_/Y (AOI21X1)
+                  0.12    0.00    6.48 v _34235_/B (AOI2B1X2)
+     9    0.03    0.34    0.30    6.78 ^ _34235_/Y (AOI2B1X2)
+                  0.34    0.00    6.78 ^ _34237_/A (AND2X1)
+     1    0.01    0.09    0.22    7.00 ^ _34237_/Y (AND2X1)
+                  0.09    0.00    7.00 ^ _34238_/B (XOR2X2)
+     2    0.01    0.08    0.16    7.16 ^ _34238_/Y (XOR2X2)
+                  0.08    0.00    7.16 ^ _34239_/C (AND3X1)
+     1    0.01    0.07    0.19    7.35 ^ _34239_/Y (AND3X1)
+                  0.07    0.00    7.35 ^ _34265_/B (AOAI211X2)
+     2    0.01    0.12    0.15    7.49 v _34265_/Y (AOAI211X2)
+                  0.12    0.00    7.49 v _34329_/B (OAI31X2)
+    12    0.04    0.63    0.54    8.03 ^ _34329_/Y (OAI31X2)
+                  0.63    0.00    8.04 ^ _34457_/A (NOR2X1)
+     6    0.02    0.25    0.39    8.43 v _34457_/Y (NOR2X1)
+                  0.25    0.00    8.43 v _34458_/D (AOI2B2X1)
+     3    0.01    0.28    0.31    8.74 ^ _34458_/Y (AOI2B2X1)
+                  0.28    0.00    8.74 ^ _34459_/D (OAI211X2)
+     4    0.01    0.19    0.25    8.99 v _34459_/Y (OAI211X2)
+                  0.19    0.00    8.99 v _34460_/B (XOR2X2)
+     1    0.00    0.08    0.20    9.19 v _34460_/Y (XOR2X2)
+                  0.08    0.00    9.19 v _34492_/B (OAOI211X2)
+     1    0.00    0.11    0.11    9.30 ^ _34492_/Y (OAOI211X2)
+                  0.11    0.00    9.30 ^ place10715/A (BUFX4)
+    15    0.07    0.17    0.23    9.53 ^ place10715/Y (BUFX4)
+                  0.17    0.00    9.53 ^ _37114_/B (NAND4X2)
+     1    0.01    0.16    0.18    9.71 v _37114_/Y (NAND4X2)
+                  0.16    0.00    9.71 v _37137_/B (AO31X1)
+     8    0.03    0.25    0.35   10.06 v _37137_/Y (AO31X1)
+                  0.25    0.00   10.06 v _37147_/B (OAI21X1)
+     1    0.00    0.15    0.19   10.25 ^ _37147_/Y (OAI21X1)
+                  0.15    0.00   10.25 ^ _37148_/D (AOAI211X2)
+     6    0.03    0.29    0.29   10.54 v _37148_/Y (AOAI211X2)
+                  0.29    0.00   10.54 v place10483/A (BUFX3)
+    16    0.08    0.22    0.32   10.87 v place10483/Y (BUFX3)
+                  0.23    0.01   10.88 v _37201_/S0 (MUX2X1)
+     1    0.00    0.07    0.20   11.08 ^ _37201_/Y (MUX2X1)
+                  0.07    0.00   11.08 ^ i_croc_soc.i_croc.i_core_wrap.i_core.crash_dump_o_49__reg/D (DFFRQX3)
+                                 11.08   data arrival time
+
+                         10.00   10.00   clock clk_sys (rise edge)
+                          0.00   10.00   clock source latency
+     2    0.20    0.34    0.03   10.03 ^ clk_i (in)
+                  0.34    0.00   10.03 ^ pad_clk_i/pad (sg13cmos5l_IOPadIn)
+     2    0.17    0.30    0.16   10.19 ^ pad_clk_i/p2c (sg13cmos5l_IOPadIn)
+                  0.26    0.06   10.25 ^ clkbuf_regs_0_clk_sys/A (BUFX64)
+     1    0.02    0.03    0.16   10.41 ^ clkbuf_regs_0_clk_sys/Y (BUFX64)
+                  0.03    0.00   10.41 ^ clkbuf_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     2    0.12    0.03    0.09   10.50 ^ clkbuf_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.04    0.01   10.51 ^ clkbuf_1_1_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     4    0.16    0.04    0.10   10.61 ^ clkbuf_1_1_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.05    0.01   10.62 ^ clkbuf_3_7_0_i_croc_soc.clk_i_regs/A (BUFX64)
+    16    0.42    0.08    0.12   10.74 ^ clkbuf_3_7_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.09    0.02   10.76 ^ clkbuf_7_114_0_i_croc_soc.clk_i_regs/A (BUFX64)
+     8    0.19    0.04    0.11   10.87 ^ clkbuf_7_114_0_i_croc_soc.clk_i_regs/Y (BUFX64)
+                  0.06    0.02   10.89 ^ i_croc_soc.i_croc.i_core_wrap.i_core.crash_dump_o_49__reg/CK (DFFRQX3)
+                         -0.10   10.79   clock uncertainty
+                          0.04   10.83   clock reconvergence pessimism
+                         -0.11   10.73   library setup time
+                                 10.73   data required time
+-----------------------------------------------------------------------------
+                                 10.73   data required time
+                                -11.08   data arrival time
+-----------------------------------------------------------------------------
+                                 -0.36   slack (VIOLATED)
+
+
+
+==========================================================================
+04-01_croc.grt report_check_types -max_slew -max_cap -max_fanout -violators
+--------------------------------------------------------------------------
+
+==========================================================================
+04-01_croc.grt max_slew_check_slack
+--------------------------------------------------------------------------
+-2.4305672645568848
+
+==========================================================================
+04-01_croc.grt max_slew_check_limit
+--------------------------------------------------------------------------
+1.2000000476837158
+
+==========================================================================
+04-01_croc.grt max_slew_check_slack_limit
+--------------------------------------------------------------------------
+-2.0255
+
+==========================================================================
+04-01_croc.grt max_fanout_check_slack
+--------------------------------------------------------------------------
+0.0
+
+==========================================================================
+04-01_croc.grt max_fanout_check_limit
+--------------------------------------------------------------------------
+16.0
+
+==========================================================================
+04-01_croc.grt max_fanout_check_slack_limit
+--------------------------------------------------------------------------
+0.0000
+
+==========================================================================
+04-01_croc.grt max_capacitance_check_slack
+--------------------------------------------------------------------------
+-11.160959243774414
+
+==========================================================================
+04-01_croc.grt max_capacitance_check_limit
+--------------------------------------------------------------------------
+4.21304988861084
+
+==========================================================================
+04-01_croc.grt max_capacitance_check_slack_limit
+--------------------------------------------------------------------------
+-2.6491
+
+==========================================================================
+04-01_croc.grt max_slew_violation_count
+--------------------------------------------------------------------------
+max slew violation count 71
+
+==========================================================================
+04-01_croc.grt max_fanout_violation_count
+--------------------------------------------------------------------------
+max fanout violation count 0
+
+==========================================================================
+04-01_croc.grt max_cap_violation_count
+--------------------------------------------------------------------------
+max cap violation count 71
+
+==========================================================================
+04-01_croc.grt setup_violation_count
+--------------------------------------------------------------------------
+setup violation count 481
+
+==========================================================================
+04-01_croc.grt hold_violation_count
+--------------------------------------------------------------------------
+hold violation count 8
+
+==========================================================================
+04-01_croc.grt critical path delay
+--------------------------------------------------------------------------
+11.0818
+
+==========================================================================
+04-01_croc.grt critical path slack
+--------------------------------------------------------------------------
+-0.3563
+
+==========================================================================
+04-01_croc.grt slack div critical path delay
+--------------------------------------------------------------------------
+-3.215182
+
+==========================================================================
+04-01_croc.grt report_power tt
+--------------------------------------------------------------------------
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             8.93e-03   8.33e-05   1.64e-06   9.02e-03  16.3%
+Combinational          1.34e-04   3.57e-04   2.41e-06   4.93e-04   0.9%
+Clock                  3.26e-02   9.50e-03   2.84e-06   4.21e-02  76.1%
+Macro                  8.72e-05   0.00e+00   1.58e-06   8.88e-05   0.2%
+Pad                    2.83e-04   3.30e-03   1.08e-07   3.59e-03   6.5%
+----------------------------------------------------------------
+Total                  4.20e-02   1.32e-02   8.57e-06   5.53e-02 100.0%
+                          76.0%      24.0%       0.0%
+
+==========================================================================
+04-01_croc.grt report_design_area
+--------------------------------------------------------------------------
+
+==========================================================================
+04-01_croc.grt area by hierarchy
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Design Area Summary
+--------------------------------------------------------------------------------
+Die Area:              4629056.0 um2
+Core Area:             2200258.368 um2
+Total Area:            2738504.5632 um2
+Total Active Area:     1095784.5632 um2
+
+Core Utilization:      0.49802540426016007
+Std Cell Utilization:  0.3395741436149706
+
+--------------------------------------------------------------------------------
+Hierarchical Area Report
+--------------------------------------------------------------------------------
+                                                                                Global Area (um^2)                                                              Global Instances                                                                Local Area (um^2)                                                               Local Instances
+                                                                                ------------------------------------------------------------------------------- ------------------------------------------------------------------------------- ------------------------------------------------------------------------------- ----------------------------------------------------------------------------
+Hierarchy Name                                                                  Total           StdCell         Macro           Cover           Pad             Total           StdCell         Macro           Cover           Pad             Total           StdCell         Macro           Cover           Pad             Total           StdCell         Macro           Cover           Pad             
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<top>                                                                           2738504.563     567892.282      527892.282      313600.000      1329120.000     48528           48204           2               64              258             2723495.040     552882.758      527892.282      313600.000      1329120.000     47537           47213           2               64              258             
+  i_croc_soc.i_croc.i_clint.i_sync                                              56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req                              6756.826        6756.826        0.000           0.000           0.000           476             476             0               0               0               141.120         141.120         0.000           0.000           0.000           8               8               0               0               0               
+    i_cdc_reset_ctrlr                                                           2324.246        2324.246        0.000           0.000           0.000           201             201             0               0               0               0.000           0.000           0.000           0.000           0.000           0               0               0               0               0               
+      i_cdc_reset_ctrlr_half_a                                                  1160.006        1160.006        0.000           0.000           0.000           100             100             0               0               0               626.573         626.573         0.000           0.000           0.000           64              64              0               0               0               
+        i_state_transition_cdc_dst                                              201.802         201.802         0.000           0.000           0.000           14              14              0               0               0               145.354         145.354         0.000           0.000           0.000           12              12              0               0               0               
+          i_sync                                                                56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+        i_state_transition_cdc_src                                              331.632         331.632         0.000           0.000           0.000           22              22              0               0               0               275.184         275.184         0.000           0.000           0.000           20              20              0               0               0               
+          i_sync                                                                56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+      i_cdc_reset_ctrlr_half_b                                                  1164.240        1164.240        0.000           0.000           0.000           101             101             0               0               0               630.806         630.806         0.000           0.000           0.000           65              65              0               0               0               
+        i_state_transition_cdc_dst                                              201.802         201.802         0.000           0.000           0.000           14              14              0               0               0               145.354         145.354         0.000           0.000           0.000           12              12              0               0               0               
+          i_sync                                                                56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+        i_state_transition_cdc_src                                              331.632         331.632         0.000           0.000           0.000           22              22              0               0               0               275.184         275.184         0.000           0.000           0.000           20              20              0               0               0               
+          i_sync                                                                56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+    i_dst                                                                       2167.603        2167.603        0.000           0.000           0.000           135             135             0               0               0               2082.931        2082.931        0.000           0.000           0.000           132             132             0               0               0               
+      i_sync                                                                    84.672          84.672          0.000           0.000           0.000           3               3               0               0               0               84.672          84.672          0.000           0.000           0.000           3               3               0               0               0               
+    i_src                                                                       2123.856        2123.856        0.000           0.000           0.000           132             132             0               0               0               2039.184        2039.184        0.000           0.000           0.000           129             129             0               0               0               
+      i_sync                                                                    84.672          84.672          0.000           0.000           0.000           3               3               0               0               0               84.672          84.672          0.000           0.000           0.000           3               3               0               0               0               
+  i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp                             6090.739        6090.739        0.000           0.000           0.000           435             435             0               0               0               145.354         145.354         0.000           0.000           0.000           9               9               0               0               0               
+    i_cdc_reset_ctrlr                                                           2324.246        2324.246        0.000           0.000           0.000           201             201             0               0               0               0.000           0.000           0.000           0.000           0.000           0               0               0               0               0               
+      i_cdc_reset_ctrlr_half_a                                                  1164.240        1164.240        0.000           0.000           0.000           101             101             0               0               0               630.806         630.806         0.000           0.000           0.000           65              65              0               0               0               
+        i_state_transition_cdc_dst                                              201.802         201.802         0.000           0.000           0.000           14              14              0               0               0               145.354         145.354         0.000           0.000           0.000           12              12              0               0               0               
+          i_sync                                                                56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+        i_state_transition_cdc_src                                              331.632         331.632         0.000           0.000           0.000           22              22              0               0               0               275.184         275.184         0.000           0.000           0.000           20              20              0               0               0               
+          i_sync                                                                56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+      i_cdc_reset_ctrlr_half_b                                                  1160.006        1160.006        0.000           0.000           0.000           100             100             0               0               0               626.573         626.573         0.000           0.000           0.000           64              64              0               0               0               
+        i_state_transition_cdc_dst                                              201.802         201.802         0.000           0.000           0.000           14              14              0               0               0               145.354         145.354         0.000           0.000           0.000           12              12              0               0               0               
+          i_sync                                                                56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+        i_state_transition_cdc_src                                              331.632         331.632         0.000           0.000           0.000           22              22              0               0               0               275.184         275.184         0.000           0.000           0.000           20              20              0               0               0               
+          i_sync                                                                56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+    i_dst                                                                       1833.149        1833.149        0.000           0.000           0.000           114             114             0               0               0               1748.477        1748.477        0.000           0.000           0.000           111             111             0               0               0               
+      i_sync                                                                    84.672          84.672          0.000           0.000           0.000           3               3               0               0               0               84.672          84.672          0.000           0.000           0.000           3               3               0               0               0               
+    i_src                                                                       1787.990        1787.990        0.000           0.000           0.000           111             111             0               0               0               1703.318        1703.318        0.000           0.000           0.000           108             108             0               0               0               
+      i_sync                                                                    84.672          84.672          0.000           0.000           0.000           3               3               0               0               0               84.672          84.672          0.000           0.000           0.000           3               3               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[0\].i_sync                                56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[10\].i_sync                               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[11\].i_sync                               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[12\].i_sync                               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[13\].i_sync                               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[14\].i_sync                               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[15\].i_sync                               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[16\].i_sync                               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[17\].i_sync                               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[18\].i_sync                               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[19\].i_sync                               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[1\].i_sync                                56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[20\].i_sync                               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[21\].i_sync                               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[22\].i_sync                               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[23\].i_sync                               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[24\].i_sync                               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[25\].i_sync                               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[26\].i_sync                               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[27\].i_sync                               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[28\].i_sync                               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[29\].i_sync                               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[2\].i_sync                                56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[30\].i_sync                               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[31\].i_sync                               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[3\].i_sync                                56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[4\].i_sync                                56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[5\].i_sync                                56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[6\].i_sync                                56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[7\].i_sync                                56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[8\].i_sync                                56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_gpio.gen_gpios\[9\].i_sync                                56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               
+  i_croc_soc.i_croc.i_uart.i_uart_modem.i_sync_cd                               60.682          60.682          0.000           0.000           0.000           3               3               0               0               0               60.682          60.682          0.000           0.000           0.000           3               3               0               0               0               
+  i_croc_soc.i_croc.i_uart.i_uart_modem.i_sync_cts                              60.682          60.682          0.000           0.000           0.000           3               3               0               0               0               60.682          60.682          0.000           0.000           0.000           3               3               0               0               0               
+  i_croc_soc.i_croc.i_uart.i_uart_modem.i_sync_dsr                              60.682          60.682          0.000           0.000           0.000           3               3               0               0               0               60.682          60.682          0.000           0.000           0.000           3               3               0               0               0               
+  i_croc_soc.i_croc.i_uart.i_uart_modem.i_sync_ri                               60.682          60.682          0.000           0.000           0.000           3               3               0               0               0               60.682          60.682          0.000           0.000           0.000           3               3               0               0               0               
+  i_croc_soc.i_croc.i_uart.i_uart_rx.i_sync                                     56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               56.448          56.448          0.000           0.000           0.000           2               2               0               0               0               

@@ -1,0 +1,59 @@
+#! /bin/csh -f
+
+# v0.4 -  <bmuheim@ethz.ch> - Fri Mar 17 10:51:59 CET 2023
+# - remove GOLDENGATE settings will be done in the cds_ic
+# - add the description to the CDS_LOAD_ENV and move it to there
+# - start the tool ($CDS) without virtuoso add again 
+# v0.3 - Zerun Thu  9 Feb 11:21:53 CET 2023
+# - move the IHP path and calibre runsets to setPDK.csh
+#
+# v0.2 - <bmuheim@ethz.ch> - Wed May 19 09:14:34 CEST 2021
+#  - set CDS_Netlisting_Mode
+#  - add the environment variable for calibre
+#    hart coding the calibre version and the lic information
+# v0.1 - <kgf@ee.ethz.ch> - Tue Mar 26 10:22:42 CET 2019
+#  - copy from tsmc180 v0.1, 
+
+## set the relevant env for dfii and calibre
+source ../.setPDK.csh
+
+setenv PROJECT $PWD
+
+
+## the variables to be set
+setenv CDS_Netlisting_Mode "Analog"
+
+
+#  setenv CDS_LOAD_ENV CWD
+#
+#          CWD:  loads only the ./.cdsenv
+#        False: loads neither ~/.cdsenv nor ./.cdsenv
+#       addCWD: loads ~/.cdsenv , then load ./.cdsenv
+#  CWDElseHome: loads ./.cdsenv if it exists, or ~/.cdsenv , if it exists
+#          CSF: Search setup.loc for <toolname>.cdsenv files
+setenv CDS_LOAD_ENV "CSF"
+
+# This variable is used to make sure that the case is preserved
+# when VHDL files are read by Verilog In. Otherwise there is sometimes
+# a discrepancy between the VHDL file and the later resulting Verilog netlist
+#setenv CDS_ALT_NMP match
+
+
+## Determine the tool to startup 
+switch ($1)
+  case 617:
+     set CDS = "cds_ic-6.17.704 -usematlab virtuoso"
+     breaksw
+  case xterm
+     set CDS = "cds_ic-6.18.230 -usematlab xterm"
+     breaksw
+
+## this is the command that runs as default, it can be adjusted to whatever you
+## please
+default:
+     set CDS = "cds_ic-6.18.230 -usematlab virtuoso"
+     breaksw
+endsw  
+
+##echo "Starting $CDS "
+$CDS 

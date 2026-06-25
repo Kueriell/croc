@@ -1,0 +1,165 @@
+#
+#  12-oct-06, braendli
+#  .synopsys_dc.setup template for dcsh *AND* dctcl mode 
+#
+#  important: the first character of this file has to 
+#             be '#' or dcsh mode wont work... honestly
+#
+# v0.3 - <muheim@ee.ethz.ch> - Mon Feb  9 13:55:05 CET 2015
+#  - add the set lib info and the dz procedure's
+# v0.2 - <kgf@ee.ethz.ch> - Tue May  7 18:39:57 CEST 2013
+#  - common file for both dc_shell and pt_shell 
+
+## COMMON SETUP FOR BOTH DC AND PT 
+
+
+#****** identification ******
+set designer {Your Name}
+set company  {ETH IIS/DZ}
+
+
+#****** set the lib info ******
+# These are the variables that are needed by dz_list_pvt and dz_set_pvt
+  set dz_lib_l_list [list sg13cmos5l_stdcell sg13cmos5l_stdcell sg13cmos5l_stdcell sg13cmos5l_stdcell sg13cmos5l_stdcell sg13cmos5l_stdcell ez130_8t_ff_1p32v_m40c.db ez130_8t_ss_1p08v_125c.db ez130_8t_tt_1p20v_25c.db sg13cmos5l_io sg13cmos5l_io sg13cmos5l_io sg13cmos5l_io sg13cmos5l_io sg13cmos5l_io RM_IHPSG13_1P_512x32_c2_bm_bist RM_IHPSG13_1P_512x32_c2_bm_bist RM_IHPSG13_1P_512x32_c2_bm_bist RM_IHPSG13_1P_512x64_c2_bm_bist RM_IHPSG13_1P_512x64_c2_bm_bist RM_IHPSG13_1P_512x64_c2_bm_bist RM_IHPSG13_1P_1024x32_c2_bm_bist RM_IHPSG13_1P_1024x32_c2_bm_bist RM_IHPSG13_1P_1024x32_c2_bm_bist RM_IHPSG13_1P_1024x64_c2_bm_bist RM_IHPSG13_1P_1024x64_c2_bm_bist RM_IHPSG13_1P_1024x64_c2_bm_bist RM_IHPSG13_1P_2048x64_c2_bm_bist RM_IHPSG13_1P_2048x64_c2_bm_bist RM_IHPSG13_1P_2048x64_c2_bm_bist ]
+  set dz_lib_p_list [list fast fast slow slow typ typ ff ss tt fast fast slow slow typ typ fast slow typ fast slow typ fast slow typ fast slow typ fast slow typ ]
+  set dz_lib_v_list [list 1p32 1p65 1p08 1p35 1p20 1p50 1p32 1p08 1p20 1p32 1p65 1p08 1p35 1p2 1p5 1p32 1p08 1p20 1p32 1p08 1p20 1p32 1p08 1p20 1p32 1p08 1p20 1p32 1p08 1p20 ]
+  set dz_lib_t_list [list m40 m40 125 125 25 25 m40 125 25 m40 m40 125 125 25 25 m55 125 25 m55 125 25 m55 125 25 m55 125 25 m55 125 25 ]
+  set dz_lib_name_list [list sg13cmos5l_stdcell_fast_1p32V_m40C sg13cmos5l_stdcell_fast_1p65V_m40C sg13cmos5l_stdcell_slow_1p08V_125C sg13cmos5l_stdcell_slow_1p35V_125C sg13cmos5l_stdcell_typ_1p20V_25C sg13cmos5l_stdcell_typ_1p50V_25C ez130_8t_ff_1p32v_m40c ez130_8t_ss_1p08v_125c ez130_8t_tt_1p20v_25c sg13cmos5l_io_fast_1p32V_3p6V_m40C sg13cmos5l_io_fast_1p65V_3p6V_m40C sg13cmos5l_io_slow_1p08V_3p0V_125C sg13cmos5l_io_slow_1p35V_3p0V_125C sg13cmos5l_io_typ_1p2V_3p3V_25C sg13cmos5l_io_typ_1p5V_3p3V_25C RM_IHPSG13_1P_512x32_c2_bm_bist_fast_1p32V_m55C RM_IHPSG13_1P_512x32_c2_bm_bist_slow_1p08V_125C RM_IHPSG13_1P_512x32_c2_bm_bist_typ_1p20V_25C RM_IHPSG13_1P_512x64_c2_bm_bist_fast_1p32V_m55C RM_IHPSG13_1P_512x64_c2_bm_bist_slow_1p08V_125C RM_IHPSG13_1P_512x64_c2_bm_bist_typ_1p20V_25C RM_IHPSG13_1P_1024x32_c2_bm_bist_fast_1p32V_m55C RM_IHPSG13_1P_1024x32_c2_bm_bist_slow_1p08V_125C RM_IHPSG13_1P_1024x32_c2_bm_bist_typ_1p20V_25C RM_IHPSG13_1P_1024x64_c2_bm_bist_fast_1p32V_m55C RM_IHPSG13_1P_1024x64_c2_bm_bist_slow_1p08V_125C RM_IHPSG13_1P_1024x64_c2_bm_bist_typ_1p20V_25C RM_IHPSG13_1P_2048x64_c2_bm_bist_fast_1p32V_m55C RM_IHPSG13_1P_2048x64_c2_bm_bist_slow_1p08V_125C RM_IHPSG13_1P_2048x64_c2_bm_bist_typ_1p20V_25C ]
+
+
+
+#****** search path ******
+set search_path [concat ../technology/db $search_path]
+
+
+#****** link library ******
+set link_library   [list "*" sg13cmos5l_stdcell_typ_1p20V_25C.lib ez130_8t_tt_1p20v_25c.db sg13cmos5l_io_typ_1p2V_3p3V_25C.db RM_IHPSG13_1P_1024x16_c2_bm_bist_typ_1p20V_25C.db RM_IHPSG13_1P_1024x32_c2_bm_bist_typ_1p20V_25C.db RM_IHPSG13_1P_1024x64_c2_bm_bist_typ_1p20V_25C.db RM_IHPSG13_1P_1024x8_c2_bm_bist_typ_1p20V_25C.db RM_IHPSG13_1P_2048x64_c2_bm_bist_typ_1p20V_25C.db RM_IHPSG13_1P_256x16_c2_bm_bist_typ_1p20V_25C.db RM_IHPSG13_1P_256x32_c2_bm_bist_typ_1p20V_25C.db RM_IHPSG13_1P_256x48_c2_bm_bist_typ_1p20V_25C.db RM_IHPSG13_1P_256x64_c2_bm_bist_typ_1p20V_25C.db RM_IHPSG13_1P_256x8_c3_bm_bist_typ_1p20V_25C.db RM_IHPSG13_1P_4096x16_c3_bm_bist_typ_1p20V_25C.db RM_IHPSG13_1P_4096x8_c3_bm_bist_typ_1p20V_25C.db RM_IHPSG13_1P_512x16_c2_bm_bist_typ_1p20V_25C.db RM_IHPSG13_1P_512x32_c2_bm_bist_typ_1p20V_25C.db RM_IHPSG13_1P_512x64_c2_bm_bist_typ_1p20V_25C.db RM_IHPSG13_1P_512x8_c3_bm_bist_typ_1p20V_25C.db RM_IHPSG13_1P_64x64_c2_bm_bist_typ_1p20V_25C.db RM_IHPSG13_1P_8192x32_c4_typ_1p20V_25C.db RM_IHPSG13_2P_1024x16_c2_bm_bist_typ_1p20V_25C.db RM_IHPSG13_2P_1024x32_c2_bm_bist_typ_1p20V_25C.db RM_IHPSG13_2P_256x16_c2_bm_bist_typ_1p20V_25C.db RM_IHPSG13_2P_256x32_c2_bm_bist_typ_1p20V_25C.db RM_IHPSG13_2P_256x8_c2_bm_bist_typ_1p20V_25C.db RM_IHPSG13_2P_512x16_c2_bm_bist_typ_1p20V_25C.db RM_IHPSG13_2P_512x32_c2_bm_bist_typ_1p20V_25C.db RM_IHPSG13_2P_512x8_c2_bm_bist_typ_1p20V_25C.db RM_IHPSG13_2P_64x22_c2_typ_1p20V_25C.db RM_IHPSG13_2P_64x32_c2_typ_1p20V_25C.db]
+
+
+#****** define command aliases ******
+alias h   "history"
+alias cud "current_design"
+alias rad "remove_design -all"
+
+#***** reports with more accuracy ***********************
+set report_default_significant_digits  4
+
+
+if {$synopsys_program_name =="dc_shell"} {
+  puts "Loading Design Compiler Setup"
+
+
+  #****** std.cells/pads, macro cell: symbol, target and link library ******
+  set target_library [list ez130_8t_tt_1p20v_25c.db sg13cmos5l_stdcell_typ_1p20V_25C.lib]
+  set symbol_library [list ]
+  set alib_library_analysis_path "./alib"
+
+  #****** libraries for DesignWare components synthesis ******
+  set synthetic_library [concat  $synthetic_library dw_foundation.sldb]
+  set link_library      [concat  $link_library      dw_foundation.sldb]
+
+
+  #****** work, std.cells/pads, macro cell: design libraries ******
+  define_design_lib work -path ./WORK
+
+  
+
+  #****** report inferred latches after elaborate ******
+  set hdlin_check_no_latch true
+  set hdlin_latch_always_async_set_reset true                
+
+
+  #****** variable for saif export (power estimation) ******
+  set power_preserve_rtl_hier_names true
+
+
+  #****** vhdl/verilog export variables ******
+  set vhdlout_dont_write_types true
+  set vhdlout_write_components false
+  set verilogout_no_tri true
+
+  #***** This should make sure nets are named consistently ********               
+  set hdlin_presto_net_name_prefix n   
+
+
+  #***** Scan ports with better names ********************
+  set test_scan_in_port_naming_style "scan_data%s%s_i"
+  set test_scan_out_port_naming_style "scan_data%s%s_o"
+  set test_scan_enable_port_naming_style "scan_enable%s_i"
+
+  #***** User customization *******************************
+  #**
+  #** if the file .synopsys_user.setup exists it will be sourced
+
+  if {[file readable .synopsys_user.setup]} {
+    source .synopsys_user.setup
+  }
+
+} elseif {$synopsys_program_name =="pt_shell"} {
+  puts "Loading Primetime Setup"
+} else {
+  puts "WARNING: running undetermined Synopsys tool"
+}
+
+
+#****** dz pvt setting and list procedure's ******
+
+proc dz_list_pvt {} {
+  global dz_lib_l_list 
+  global dz_lib_p_list
+  global dz_lib_v_list
+  global dz_lib_t_list
+  global dz_lib_name_list
+        
+  # Set up the column widths
+  set w0 2
+  set w1 64
+  set w2 8
+  set w3 12
+  set w4 8
+
+  set sep [string repeat - [expr  $w1 + $w2 + $w3 + $w4 + 4]]
+  puts ""
+  puts [format "%-*s%-*s%-*s%-*s%-*s%s" $w0 "" $w1 "lib" $w2 "proces" $w3 "voltage" $w4 "temp." "name"]
+  puts [format "%-*s$sep" $w0 ""]
+
+  set i 0
+  foreach n $dz_lib_name_list {
+    puts [format "%-*s%-*s%-*s%-*s%-*s%s" $w0 "" $w1 [lindex $dz_lib_l_list $i] \
+                                                 $w2 [lindex $dz_lib_p_list $i] \
+                                                 $w3 [lindex $dz_lib_v_list $i] \
+                                                 $w4 [lindex $dz_lib_t_list $i] \
+                                                 $n]
+    incr i
+  }
+  puts ""
+}
+
+proc dz_set_pvt {lib_name_list} {
+  global dz_lib_name_list
+  global link_library
+  global target_library
+  set dz_target_link_library {}
+
+  # remove the db from the target and link library
+  set link_library   [lsearch -not -all -inline $link_library *.db]
+  set target_library [lsearch -not -all -inline $target_library *.db]
+  
+  foreach n $lib_name_list {
+    if { [lsearch -exact $dz_lib_name_list $n] >= 0 } {
+      lappend dz_target_link_library $n.db
+    } else {
+      puts "Error library $n not available"
+    }
+  }
+  # puts "set : $dz_target_link_library"
+  # puts ""
+ 
+  # add the library to the target and link library
+  set link_library   [concat $link_library   $dz_target_link_library]
+  set target_library [concat $target_library $dz_target_link_library]
+
+  #puts "\$link_library: $link_library"
+  #puts "\$target_library: $target_library"
+
+}

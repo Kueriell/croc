@@ -1,88 +1,79 @@
-# Copyright (c) 2022 ETH Zurich and University of Bologna.
+# Copyright (c) 2026 ETH Zurich and University of Bologna.
 # Licensed under the Apache License, Version 2.0, see LICENSE for details.
 # SPDX-License-Identifier: Apache-2.0
 #
 # Authors:
 # - Philippe Sauter <phsauter@iis.ee.ethz.ch>
+# - Optimized for AES-128 / SHAKE-256 Stability & Max Flattening
 
-# This flows assumes it is beign executed in the yosys/ directory
-# but just to be sure, we go there
 if {[info script] ne ""} {
     cd "[file dirname [info script]]/../"
 }
 
-# Configuration variables are in yosys_common
+# Konfigurationsvariablen laden
 source scripts/yosys_common.tcl
 
-# ABC logic optimization script
+# ABC Logik-Optimierungsskript laden
 set abc_script [processAbcScript scripts/abc-opt.script]
 
-# read liberty files and prepare some variables
+# Liberty-Dateien einlesen
 source scripts/init_tech.tcl
 
+# SystemVerilog via Slang einlesen
 yosys plugin -i slang.so
-# default from yosys_common.tcl: top_design=croc_chip; sv_flist=./croc.flist
 yosys read_slang --top $top_design -f $sv_flist \
         --compat-mode --keep-hierarchy \
         --allow-use-before-declare --ignore-unknown-modules
 
-# preserve hierarchy of selected modules/instances
-# 't' means type as in select all instances of this type/module
-# yosys-slang uniquifies all modules with the naming scheme:
-# <module-name>$<instance-name> -> match for t:<module-name>$$
-yosys setattr -set keep_hierarchy 1 "t:croc_soc$*"
-yosys setattr -set keep_hierarchy 1 "t:croc_domain$*"
-yosys setattr -set keep_hierarchy 1 "t:user_domain$*"
-yosys setattr -set keep_hierarchy 1 "t:core_wrap$*"
-yosys setattr -set keep_hierarchy 1 "t:cve2_register_file_ff$*"
-yosys setattr -set keep_hierarchy 1 "t:cve2_cs_registers$*"
-yosys setattr -set keep_hierarchy 1 "t:dmi_jtag$*"
-yosys setattr -set keep_hierarchy 1 "t:dm_top$*"
-yosys setattr -set keep_hierarchy 1 "t:gpio$*"
-yosys setattr -set keep_hierarchy 1 "t:clint$*"
-yosys setattr -set keep_hierarchy 1 "t:bootrom$*"
-yosys setattr -set keep_hierarchy 1 "t:obi_timer$*"
-yosys setattr -set keep_hierarchy 1 "t:croc_idma$*"
-yosys setattr -set keep_hierarchy 1 "t:obi_uart$*"
-yosys setattr -set keep_hierarchy 1 "t:soc_ctrl_regs$*"
-yosys setattr -set keep_hierarchy 1 "t:tc_clk*$*"
-yosys setattr -set keep_hierarchy 1 "t:tc_sram_impl$*"
+# -----------------------------------------------------------------------------
+# Schutz-Attribute setzen
+# -----------------------------------------------------------------------------
+
+# CRITICAL: Hierarchie NUR für CDC/Synchronizer schützen (Metastabilitäts-Schutz)
 yosys setattr -set keep_hierarchy 1 "t:cdc_reset*$*"
 yosys setattr -set keep_hierarchy 1 "t:cdc*phase_*$*"
 yosys setattr -set keep_hierarchy 1 "t:cdc*_src*$*"
 yosys setattr -set keep_hierarchy 1 "t:cdc*_dst*$*"
 yosys setattr -set keep_hierarchy 1 "t:sync$*"
 
-
-# blackbox modules (applies the *blackbox* attribute)
+# Blackbox für SRAM-Makros erhalten
 yosys blackbox "t:tc_sram_blackbox$*"
 
-# map dont_touch attribute commonly applied to output-nets of async regs to keep
+# dont_touch Attribute auf Netzen sichern und mappen
 yosys attrmap -rename dont_touch keep
 yosys attrmap -tocase keep -imap keep="true" keep=1
-# copy the keep attribute to their driving cells (retain on net for debugging)
 yosys attrmvcp -copy -attr keep
 
-
 # -----------------------------------------------------------------------------
-# this section heavily borrows from the yosys synth command:
-# synth - check
+# Elaboration & Hierarchische Voroptimierung (Verhindert den Keccak/AES Crash!)
+# -----------------------------------------------------------------------------
 yosys hierarchy -top $top_design
-yosys check
 yosys proc
-yosys tee -q -o "${rep_dir}/${proj_name}_elaborated.rpt" stat
-yosys write_verilog -norename -noexpr -attr2comment ${tmp_dir}/${proj_name}_yosys_elaborated.v
 
-# synth - coarse:
-# similar to yosys synth -run coarse -noalumacc
+# Vor-Optimierung bei intakter Hierarchie löst Array-Indizes & Init-Konflikte auf
 yosys opt_expr
-yosys opt -noff
-yosys fsm
+yosys opt_clean
+yosys check
 yosys wreduce 
 yosys peepopt
 yosys opt_clean
+
+# -----------------------------------------------------------------------------
+# FLATTEN (Jetzt sicher ausführbar für maximale Krypto-Optimierung)
+# -----------------------------------------------------------------------------
+yosys flatten
+yosys opt_clean
+
+yosys tee -q -o "${rep_dir}/${proj_name}_elaborated.rpt" stat
+
+# -----------------------------------------------------------------------------
+# Coarse Optimization Pipeline (Auf der flachen Netzliste)
+# -----------------------------------------------------------------------------
+yosys opt -noff
+yosys fsm
+yosys opt_clean
 yosys opt -full
-yosys booth
+yosys booth         ;# Extrem wichtig für Krypto-Arithmetik (AES/Keccak)
 yosys share
 yosys opt
 yosys memory -nomap
@@ -90,85 +81,60 @@ yosys memory_map
 yosys opt -fast
 
 yosys opt_dff -sat -nodffe -nosdff
-yosys share
-yosys opt -full
 yosys clean -purge
-
-yosys clean -purge
-yosys write_verilog -norename -noexpr ${tmp_dir}/${proj_name}_yosys_abstract.v
-yosys tee -q -o "${rep_dir}/${proj_name}_abstract.rpt" stat -width -tech cmos
 
 yosys techmap
 yosys opt -fast
 yosys clean -purge
 
-
+# -----------------------------------------------------------------------------
+# Vorbereitung & Namensbereinigung für OpenROAD
 # -----------------------------------------------------------------------------
 yosys tee -q -o "${rep_dir}/${proj_name}_generic.rpt" stat -tech cmos
 
-# flatten all hierarchy except marked modules
-yosys flatten
-
-# Flatten AES modules specifically
-yosys flatten "t:user_aes_de$*"
-yosys flatten "t:user_aes_en$*"
-
-yosys write_verilog -norename ${tmp_dir}/${proj_name}_flatten.v
-# yosys opt_hier
-
-yosys clean -purge
-
-
-# -----------------------------------------------------------------------------
-# Preserve flip-flop names as far as possible
-# split internal nets
+# Interne Netze aufspalten
 yosys splitnets -format __v
-# rename DFFs from the driven signal
+
+# DFFs anhand des getriebenen Signals sauber benennen (Wichtig für OpenROAD CTS)
 yosys rename -wire -suffix _reg t:*DFF*
-yosys write_verilog -norename ${tmp_dir}/${proj_name}_yosys_rename.v
-yosys select -write ${rep_dir}/${proj_name}_registers.rpt t:*DFF*
-# rename all other cells
 yosys autoname t:*DFF* %n
 yosys clean -purge
 
-# print paths to important instances (hierarchy and naming is final here)
+# Register-Reports schreiben
 yosys select -write ${rep_dir}/${proj_name}_registers.rpt t:*DFF*
 yosys tee -q -o ${rep_dir}/${proj_name}_instances.rpt  select -list "t:RM_IHPSG13_*"
 yosys tee -q -a ${rep_dir}/${proj_name}_instances.rpt  select -list "t:tc_sram_blackbox$*"
 
-
 # -----------------------------------------------------------------------------
-# mapping to technology
+# Technologie-Mapping
+# -----------------------------------------------------------------------------
 
-# first map flip-flops
+# 1. Flip-Flops mappen
 yosys dfflibmap {*}$tech_cells_args
 
-# then perform bit-level optimization and mapping on all combinational clouds in ABC
-# target period (per optimized block/module) in picoseconds
+# 2. Kombinatorische Logik-Clouds via ABC optimieren (Target: 10ns = 10000ps)
 set period_ps 10000
-# pre-process abc file (written to tmp directory)
-set abc_comb_script   [processAbcScript scripts/abc-opt.script]
-# call ABC
+set abc_comb_script [processAbcScript scripts/abc-opt.script]
 yosys abc {*}$tech_cells_args -D $period_ps -script $abc_comb_script -constr src/abc.constr {*}$dont_use_args -showtmp
 
 yosys clean -purge
 
-
 # -----------------------------------------------------------------------------
-# prep for openROAD
+# Übergabe-Vorbereitung an OpenROAD Physical Design
+# -----------------------------------------------------------------------------
 yosys write_verilog -norename -noexpr -attr2comment ${out_dir}/netlist_debug.v
 
 yosys splitnets -ports -format __v
 yosys setundef -zero
 yosys clean -purge
-# map constants to tie cells
+
+# Konstanten an Tie-Hi / Tie-Lo Zellen binden
 yosys hilomap -singleton -hicell {*}$tech_cell_tiehi -locell {*}$tech_cell_tielo
 
-# final reports
+# Finale Synthese-Reports
 yosys tee -q -o "${rep_dir}/${proj_name}_synth.rpt" check
 yosys tee -q -o "${rep_dir}/${proj_name}_area.rpt" stat -top $top_design {*}$liberty_args
 yosys tee -q -o "${rep_dir}/${proj_name}_area_logic.rpt" stat -top $top_design {*}$tech_cells_args
 
-# final netlist
+# Finale Gate-Level-Netzliste für OpenROAD exportieren
 yosys write_verilog -noattr -noexpr -nohex -nodec ${out_dir}/${proj_name}_yosys.v
-

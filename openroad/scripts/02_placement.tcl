@@ -77,7 +77,7 @@ set_thread_count 8
 utl::report "Global Placement (1)"
 global_placement -density 0.50 \
                  -timing_driven
-                 
+
 report_metrics "02-02_${proj_name}.gpl1"
 report_image "02-02_${proj_name}.gpl1" true true
 save_checkpoint 02-02_${proj_name}.gpl1
@@ -98,9 +98,10 @@ save_checkpoint 02-02_${proj_name}.gpl1_repaired
 
 # Actual global placement with routability and timing driven
 utl::report "Global Placement (2)"
-global_placement -density 0.50 \
+set_placement_padding -global -left 2 -right 2
+global_placement -density 0.48 \
                  -routability_driven \
-                 -routability_check_overflow 0.30 \
+                 -routability_check_overflow 0.28 \
                  -timing_driven
 
 report_metrics "02-02_${proj_name}.gpl2"

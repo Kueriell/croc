@@ -1,0 +1,97 @@
+##########################################################################
+#  Title      : Sample Common Power Format (cpf).file.
+#  Project    : ihp 130 dz flow
+##########################################################################
+#  File       : chip.cpf
+#  Author     : Beat Muheim  <muheim@ee.ethz.ch>
+#  Company    : Microelectronics Design Center (DZ), ETH Zurich
+##########################################################################
+#  Description : Sample file to create the power intent of a design,
+#                withe one default power domain,
+#                The power domain have do be linked to a delay corner withe
+#                'update_delay_corner' don in our case in to "mmmc.view.tcl".
+#
+#                Please note these are just for reference, adapt according
+#                to your design!
+#
+#                Perform:
+#                read_power_intent -cpf <cpf-file>
+#                commit_power_intent
+#
+#  Inputs      :
+#  Outputs     :
+#  Resources   :
+##########################################################################
+#  Copyright (c) 2016 Microelectronics Design Center, ETH Zurich
+##########################################################################
+# v0.1  - <muheim@ee.ethz.ch> - Mon Jun 19 13:28:08 CEST 2023
+#  - copy from tsmc 180 v0.2 and adapt 
+##########################################################################
+
+#-------------------------------------------------------------------------------
+# setting
+#-------------------------------------------------------------------------------
+set_cpf_version 1.1
+set_hierarchy_separator "/"
+
+#-------------------------------------------------------------------------------
+# design
+#-------------------------------------------------------------------------------
+set_design chip
+
+
+#-------------------------------------------------------------------------------
+# physical dmplementation
+#-------------------------------------------------------------------------------
+# create power domains
+create_power_domain -name PD_core -default
+create_power_domain -name PD_pad
+ 
+
+# declare power and ground nets
+create_power_nets  -nets VDD
+create_ground_nets -nets VSS
+update_power_domain -name PD_core -primary_power_net VDD -primary_ground_net VSS
+
+create_power_nets  -nets VDDPAD
+create_ground_nets -nets VSSPAD
+update_power_domain -name PD_pad -primary_power_net VDDPAD -primary_ground_net VSSPAD
+
+
+# create global connections
+## pads
+create_global_connection -net VSSPST  -pins VSSPAD
+create_global_connection -net VDDPST  -pins VDDPAD
+
+
+## rams
+#create_global_connection -net VSS  -pins VSSE
+#create_global_connection -net VDD  -pins VDDPE
+#create_global_connection -net VDD  -pins VDDCE
+#create_global_connection -net VDD  -pins VDDE
+
+
+# create nominal conditions
+create_nominal_condition -name 1V2 -state on  -voltage 1.2
+create_nominal_condition -name 3V3 -state on  -voltage 3.3
+#create_nominal_condition -name OFF -state off -voltage 0.0
+
+
+# create power mode
+# create_power_mode -name PM_default \
+#                   -domain_conditions { PD_core@1V2} \
+#                   -default
+
+create_power_mode -name PM_default \
+                  -domain_conditions { PD_core@1V2 PD_pad@3V3} \
+                  -default
+
+#-------------------------------------------------------------------------------
+# Rules
+#-------------------------------------------------------------------------------
+
+
+#-------------------------------------------------------------------------------
+#
+#-------------------------------------------------------------------------------
+end_design
