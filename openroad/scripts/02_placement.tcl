@@ -65,6 +65,7 @@ utl::report "# 02-02: Global Placement"
 utl::report "###############################################################################"
 
 set_thread_count 8
+set_placement_padding -global -left 1 -right 1
 
 # global_placement parameters:
 # density:            In every part of the chip, about N% of the area is occupied by standard cells

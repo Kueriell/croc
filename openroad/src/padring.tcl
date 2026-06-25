@@ -87,8 +87,8 @@ place_pad -row IO_SOUTH -location [expr {$southStart + 11*$southPitch}] "pad_gpi
 place_pad -row IO_SOUTH -location [expr {$southStart + 12*$southPitch}] "pad_gpio9_io"     ; # pin no: 13
 place_pad -row IO_SOUTH -location [expr {$southStart + 13*$southPitch}] "pad_gpio10_io"    ; # pin no: 14
 place_pad -row IO_SOUTH -location [expr {$southStart + 14*$southPitch}] "pad_gpio11_io"    ; # pin no: 15
-place_pad -row IO_SOUTH -location [expr {$southStart + 15*$southPitch}] "pad_vss1"         ; # pin no: 16
-place_pad -row IO_SOUTH -location [expr {$southStart + 16*$southPitch}] "pad_vdd1"         ; # pin no: 17
+place_pad -row IO_SOUTH -location [expr {$southStart + 15*$southPitch}] "pad_vdd1"         ; # pin no: 16
+place_pad -row IO_SOUTH -location [expr {$southStart + 16*$southPitch}] "pad_vss1"         ; # pin no: 17
 place_pad -row IO_SOUTH -location [expr {$southStart + 17*$southPitch}] "pad_vssio2"       ; # pin no: 18
 
 ##########################################################################
@@ -135,8 +135,8 @@ place_pad -row IO_NORTH -location [expr {$northStart - 11*$northPitch}] "pad_unu
 place_pad -row IO_NORTH -location [expr {$northStart - 12*$northPitch}] "pad_unused1_o"       ; # pin no: 13
 place_pad -row IO_NORTH -location [expr {$northStart - 13*$northPitch}] "pad_unused2_o"       ; # pin no: 14
 place_pad -row IO_NORTH -location [expr {$northStart - 14*$northPitch}] "pad_unused3_o"       ; # pin no: 15
-place_pad -row IO_NORTH -location [expr {$northStart - 15*$northPitch}] "pad_vss3"            ; # pin no: 16
-place_pad -row IO_NORTH -location [expr {$northStart - 16*$northPitch}] "pad_vdd3"            ; # pin no: 17
+place_pad -row IO_NORTH -location [expr {$northStart - 15*$northPitch}] "pad_vdd3"            ; # pin no: 16
+place_pad -row IO_NORTH -location [expr {$northStart - 16*$northPitch}] "pad_vss3"            ; # pin no: 17
 place_pad -row IO_NORTH -location [expr {$northStart - 17*$northPitch}] "pad_vssio0"          ; # pin no: 18
 
 # Fill in the rest of the padring

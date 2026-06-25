@@ -57,18 +57,18 @@ utl::report "###################################################################
 utl::report "# 01-02: Core and Die Area"
 utl::report "###############################################################################"
 # Dimensions:                          [um]
-#   final chip size (4sqmm) 2500.0 x 2000.0
+#   final chip size (5sqmm) 2500.0 x 2000.0
 #   seal ring thickness       42.0 ,   42.0 x2
 #   bonding pad               70.0 ,   70.0 x2
 #   io cell depth            180.0 ,  180.0 x2
 #   ---------------------------------------
-#   -> OR die area          1916.0 x 2416.0
-#   -> OR core area         1416.0 x 1916.0
+#   -> OR die area          2416.0 x 1916.0
+#   -> OR core area         1756.0 x 1256.0
 # The sealring is added after OpenROAD
 # hence the OR die area is the final chip size minus the sealring thickness on each side
 
-set chipH    1916; # OR die height (top to bottom)
-set chipW    2416; # OR die width (left to right)
+set chipH    1916; # OR die height = 2000 - 2*42 sealring
+set chipW    2416; # OR die width  = 2500 - 2*42 sealring
 set padD      180; # pad depth (edge to core)
 set padW       80; # pad width (beachfront)
 set padBond    70; # bonding pad size
@@ -129,80 +129,47 @@ source src/instances.tcl
 
 # Placing macros
 # use these for macro placement
-set floorPaddingX      55.0
-set floorPaddingY      45.0
+set floorPaddingX      20.0
+set floorPaddingY      20.0
 set floor_leftX       [expr $core_leftX + $floorPaddingX]
 set floor_bottomY     [expr $core_bottomY + $floorPaddingY]
 set floor_rightX      [expr $core_rightX - $floorPaddingX]
 set floor_topY        [expr $core_topY - $floorPaddingY]
 set floor_midpointX   [expr $floor_leftX + ($floor_rightX - $floor_leftX)/2]
 set floor_midpointY   [expr $floor_bottomY + ($floor_topY - $floor_bottomY)/2]
+set sramHaloX          20.0
+set sramHaloY          20.0
 
 utl::report "Place Macros"
 
-# TOP: LEFT & RIGHT
-# Definiere das Padding für die SRAMs (Abstand zum Core-Rand)
-set sramPaddingY 8.0
-set sramPaddingX 10.0
+# Bank0: top-left, pins facing down
+set bank0X $floor_leftX
+set bankY [expr $floor_topY - $RamSize1024x64_H - 40.0]
+placeInstance $bank0_sram0 $bank0X $bankY R0
 
-# Gemeinsame Y-Position (Oben im Core)
-# core_topY ist der obere Rand -> SRAM-Höhe abziehen -> Padding nach innen
-set Y_top [expr $core_topY - $RamSize1024x64_H - $sramPaddingY]
+# Bank1: top-right, pins facing down
+set bank1X [expr $floor_rightX - $RamSize1024x64_W]
+placeInstance $bank1_sram0 $bank1X $bankY R0
 
-# Bank0: Oben LINKS
-# Start bei linkem Core-Rand + Padding
-set X_left [expr $core_leftX + $sramPaddingX]
-placeInstance $bank0_sram0 $X_left $Y_top R0
-utl::report "Placed bank0_sram0 at ($X_left, $Y_top)"
-
-# Bank1: Oben RECHTS
-# Start bei rechtem Core-Rand - SRAM-Breite - Padding
-set X_right [expr $core_rightX - $RamSize1024x64_W - $sramPaddingX]
-placeInstance $bank1_sram0 $X_right $Y_top R0
-utl::report "Placed bank1_sram0 at ($X_right, $Y_top)"
-
-# **********************
-
-# Definiere ein minimales, gesundes Makro-Padding (nur für den Power-Grid-Anschluss)
-#set sramPaddingY 8.0
-#set sramPaddingX 10.0
-
-# Bank0 (Ganz oben an den echten Core-Rand klatschen)
-#set X [expr $floor_midpointX - $RamSize1024x64_W/2]
-#set Y [expr $core_topY - $RamSize1024x64_H - $sramPaddingY]
-#placeInstance $bank0_sram0 $X $Y R0
-
-# Bank1 (Ganz unten an den echten Core-Rand klatschen)
-#set X [expr $X]
-#set Y [expr $core_bottomY + $sramPaddingY]
-#placeInstance $bank1_sram0 $X $Y MX
-
-# LEFT and RIGHT
-# Definiere ein minimales Padding vom Rand
-#set sramPaddingX 5.0
-
-# Bank0 (An den linken Rand - vertikal zentriert)
-# Orientierung R90 dreht das Makro um 90 Grad
-#set X [expr $core_leftX + $sramPaddingX]
-#set Y [expr $floor_midpointY - $RamSize1024x64_W/2]
-#placeInstance $bank0_sram0 $X $Y R90
-
-# Bank1 (An den rechten Rand - vertikal zentriert)
-# Orientierung R270 dreht es um 270 Grad (bzw. -90 Grad)
-#set X [expr $core_rightX - $RamSize1024x64_H - $sramPaddingX]
-#set Y [expr $floor_midpointY - $RamSize1024x64_W/2]
-#placeInstance $bank1_sram0 $X $Y R270
-
+utl::report "SRAM macro box: width ${RamSize1024x64_W} height ${RamSize1024x64_H}"
+utl::report "SRAM bank0 bbox: ($bank0X, $bankY) - ([expr {$bank0X + $RamSize1024x64_W}], [expr {$bankY + $RamSize1024x64_H}]) R0"
+utl::report "SRAM bank1 bbox: ($bank1X, $bankY) - ([expr {$bank1X + $RamSize1024x64_W}], [expr {$bankY + $RamSize1024x64_H}]) R0"
+utl::report "SRAM horizontal gaps to core boundary: left [expr {$bank0X - $core_leftX}] between [expr {$bank1X - ($bank0X + $RamSize1024x64_W)}] right [expr {$core_rightX - ($bank1X + $RamSize1024x64_W)}]"
+utl::report "SRAM vertical gap to core boundary: top [expr {$core_topY - ($bankY + $RamSize1024x64_H)}]"
+utl::report "SRAM row-cut halo: x $sramHaloX y $sramHaloY"
 
 # defined in init_tech.tcl
 insertTapCells
 
-cut_rows -halo_width_x 1 -halo_width_y 1
+cut_rows -halo_width_x $sramHaloX -halo_width_y $sramHaloY
 global_connect
 
+# Save an image before PDN insertion. PDN channel-repair failures are easier to
+# debug from the pure floorplan with rows already cut around fixed macros.
+report_image "01-04_${proj_name}.pre_pdn" true
 
 utl::report "###############################################################################"
-utl::report "# 01-04: Power Grid"
+utl::report "# 01-05: Power Grid"
 utl::report "###############################################################################"
 source scripts/power_grid.tcl
 
@@ -210,10 +177,6 @@ source scripts/power_grid.tcl
 save_checkpoint 01_${proj_name}.floorplan
 report_image "01_${proj_name}.floorplan" true
 
-# Write Def
-write_def out/01${proj_name}_floorplan.def
-
 utl::report "###############################################################################"
 utl::report "# Stage 01 complete: Checkpoint saved to ${save_dir}/01_${proj_name}.floorplan.zip"
 utl::report "###############################################################################"
-

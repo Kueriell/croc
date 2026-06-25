@@ -1,6 +1,6 @@
 ###############################################################################
 # Created by write_sdc
-# Wed Jun 24 22:20:22 2026
+# Thu Jun 25 23:27:44 2026
 ###############################################################################
 current_design croc_chip
 ###############################################################################
@@ -291,8 +291,8 @@ set_max_delay -ignore_clock_latency\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.dmi_9__reg}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.error_q_0__reg}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.error_q_1__reg}]\
-           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_cdc_reset_ctrlr/i_cdc_reset_ctrlr_half_a/i_state_transition_cdc_src/_20_}]\
-           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_cdc_reset_ctrlr/i_cdc_reset_ctrlr_half_a/i_state_transition_cdc_src/_21_}]\
+           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_cdc_reset_ctrlr/i_cdc_reset_ctrlr_half_a/i_state_transition_cdc_src/_16_}]\
+           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_cdc_reset_ctrlr/i_cdc_reset_ctrlr_half_a/i_state_transition_cdc_src/_19_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_cdc_reset_ctrlr/i_cdc_reset_ctrlr_half_a/i_state_transition_cdc_src/async_data_o[0]_reg}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_cdc_reset_ctrlr/i_cdc_reset_ctrlr_half_a/i_state_transition_cdc_src/async_data_o[1]_reg}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_cdc_reset_ctrlr/i_cdc_reset_ctrlr_half_b/i_state_transition_cdc_dst/async_ack_o_reg}]\
@@ -300,7 +300,7 @@ set_max_delay -ignore_clock_latency\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_cdc_reset_ctrlr/i_cdc_reset_ctrlr_half_b/i_state_transition_cdc_dst/state_q_1__reg}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_cdc_reset_ctrlr/i_cdc_reset_ctrlr_half_b/receiver_phase_q_0__reg}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_cdc_reset_ctrlr/i_cdc_reset_ctrlr_half_b/receiver_phase_q_1__reg}]\
-           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_046_}]\
+           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_053_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_054_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_055_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_056_}]\
@@ -310,7 +310,7 @@ set_max_delay -ignore_clock_latency\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_060_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_061_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_062_}]\
-           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_063_}]\
+           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_064_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_065_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_066_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_067_}]\
@@ -320,7 +320,7 @@ set_max_delay -ignore_clock_latency\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_071_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_072_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_073_}]\
-           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_074_}]\
+           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_075_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_076_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_077_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_078_}]\
@@ -330,12 +330,12 @@ set_max_delay -ignore_clock_latency\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_082_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_083_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_084_}]\
-           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_085_}]\
+           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_086_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_087_}]\
-           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_088_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_089_}]\
-           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/_090_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/async_ack_o_reg}]\
+           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/data_o[32]_reg}]\
+           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/i_dst/data_o[9]_reg}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/s_dst_clear_ack_q_reg}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp/s_dst_isolate_ack_q_reg}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.state_q_0__reg}]\
@@ -505,6 +505,7 @@ set_max_delay -ignore_clock_latency\
            [get_cells {i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.cmderr_q_1__reg}]\
            [get_cells {i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.cmderr_q_2__reg}]\
            [get_cells {i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.havereset_q_reg}]\
+           [get_cells {i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.i_fifo.mem_q_0__reg}]\
            [get_cells {i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.i_fifo.mem_q_10__reg}]\
            [get_cells {i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.i_fifo.mem_q_11__reg}]\
            [get_cells {i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.i_fifo.mem_q_12__reg}]\
@@ -515,7 +516,6 @@ set_max_delay -ignore_clock_latency\
            [get_cells {i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.i_fifo.mem_q_17__reg}]\
            [get_cells {i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.i_fifo.mem_q_18__reg}]\
            [get_cells {i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.i_fifo.mem_q_19__reg}]\
-           [get_cells {i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.i_fifo.mem_q_1__reg}]\
            [get_cells {i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.i_fifo.mem_q_20__reg}]\
            [get_cells {i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.i_fifo.mem_q_21__reg}]\
            [get_cells {i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.i_fifo.mem_q_22__reg}]\
@@ -531,7 +531,7 @@ set_max_delay -ignore_clock_latency\
            [get_cells {i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.i_fifo.mem_q_31__reg}]\
            [get_cells {i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.i_fifo.mem_q_32__reg}]\
            [get_cells {i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.i_fifo.mem_q_33__reg}]\
-           [get_cells {i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.i_fifo.mem_q_35__reg}]\
+           [get_cells {i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.i_fifo.mem_q_34__reg}]\
            [get_cells {i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.i_fifo.mem_q_36__reg}]\
            [get_cells {i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.i_fifo.mem_q_37__reg}]\
            [get_cells {i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.i_fifo.mem_q_38__reg}]\
@@ -980,8 +980,8 @@ set_max_delay -ignore_clock_latency\
            [get_cells {i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_sba.state_q_0__reg}]\
            [get_cells {i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_sba.state_q_1__reg}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.core_clear_pending_q_reg}]\
-           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_cdc_reset_ctrlr/i_cdc_reset_ctrlr_half_a/i_state_transition_cdc_src/_20_}]\
-           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_cdc_reset_ctrlr/i_cdc_reset_ctrlr_half_a/i_state_transition_cdc_src/_21_}]\
+           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_cdc_reset_ctrlr/i_cdc_reset_ctrlr_half_a/i_state_transition_cdc_src/_16_}]\
+           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_cdc_reset_ctrlr/i_cdc_reset_ctrlr_half_a/i_state_transition_cdc_src/_19_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_cdc_reset_ctrlr/i_cdc_reset_ctrlr_half_a/i_state_transition_cdc_src/async_data_o[0]_reg}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_cdc_reset_ctrlr/i_cdc_reset_ctrlr_half_a/i_state_transition_cdc_src/async_data_o[1]_reg}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_cdc_reset_ctrlr/i_cdc_reset_ctrlr_half_b/i_state_transition_cdc_dst/async_ack_o_reg}]\
@@ -989,7 +989,7 @@ set_max_delay -ignore_clock_latency\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_cdc_reset_ctrlr/i_cdc_reset_ctrlr_half_b/i_state_transition_cdc_dst/state_q_1__reg}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_cdc_reset_ctrlr/i_cdc_reset_ctrlr_half_b/receiver_phase_q_0__reg}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_cdc_reset_ctrlr/i_cdc_reset_ctrlr_half_b/receiver_phase_q_1__reg}]\
-           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_055_}]\
+           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_062_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_063_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_064_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_065_}]\
@@ -999,7 +999,7 @@ set_max_delay -ignore_clock_latency\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_069_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_070_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_071_}]\
-           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_072_}]\
+           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_073_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_074_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_075_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_076_}]\
@@ -1009,7 +1009,7 @@ set_max_delay -ignore_clock_latency\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_080_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_081_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_082_}]\
-           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_083_}]\
+           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_084_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_085_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_086_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_087_}]\
@@ -1019,7 +1019,7 @@ set_max_delay -ignore_clock_latency\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_091_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_092_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_093_}]\
-           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_094_}]\
+           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_095_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_096_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_097_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_098_}]\
@@ -1028,10 +1028,10 @@ set_max_delay -ignore_clock_latency\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_101_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_102_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_103_}]\
-           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_104_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_105_}]\
-           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/_107_}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/async_ack_o_reg}]\
+           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/data_o[39]_reg}]\
+           [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/i_dst/data_o[9]_reg}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/s_dst_clear_ack_q_reg}]\
            [get_cells {i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req/s_dst_isolate_ack_q_reg}]] 3.0000
 set_max_delay\

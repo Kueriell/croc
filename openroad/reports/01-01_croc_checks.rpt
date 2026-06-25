@@ -18,14 +18,14 @@ max_delay/setup group asynchronous
                                      Required  Actual
 Endpoint                               Delay   Delay   Slack
 ------------------------------------------------------------
-i_croc_soc.i_croc.all_periph_obi_rsp_117__reg/RB (DFFRQX3)  -36.79   53.93  -90.73 (VIOLATED)
+i_croc_soc.i_croc.all_periph_obi_rsp_117__reg/RB (DFFRQX3)  -35.97   52.99  -88.96 (VIOLATED)
 
 max_delay/setup group path delay
 
                                      Required  Actual
 Endpoint                               Delay   Delay   Slack
 ------------------------------------------------------------
-i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.progbuf_o_108__reg/D (DFFRQX3)    2.92    2.54    0.38 (MET)
+i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.progbuf_o_163__reg/D (DFFRQX3)    2.92    2.46    0.46 (MET)
 
 max_delay/setup group clk_jtg
 
@@ -39,21 +39,21 @@ max_delay/setup group clk_sys
                                      Required  Actual
 Endpoint                               Delay   Delay   Slack
 ------------------------------------------------------------
-i_croc_soc.i_croc.all_periph_obi_rsp_117__reg/RB (DFFRQX3)  -36.79   56.75  -93.54 (VIOLATED)
+i_croc_soc.i_croc.all_periph_obi_rsp_117__reg/RB (DFFRQX3)  -35.97   55.81  -91.78 (VIOLATED)
 
 max_delay/setup group asynchronous
 
                                      Required  Actual
 Endpoint                               Delay   Delay   Slack
 ------------------------------------------------------------
-i_croc_soc.i_croc.all_periph_obi_rsp_117__reg/RB (DFFRQX3)  -36.79   53.93  -90.73 (VIOLATED)
+i_croc_soc.i_croc.all_periph_obi_rsp_117__reg/RB (DFFRQX3)  -35.97   52.99  -88.96 (VIOLATED)
 
 max_delay/setup group path delay
 
                                      Required  Actual
 Endpoint                               Delay   Delay   Slack
 ------------------------------------------------------------
-i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.progbuf_o_108__reg/D (DFFRQX3)    2.92    2.54    0.38 (MET)
+i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.progbuf_o_163__reg/D (DFFRQX3)    2.92    2.46    0.46 (MET)
 
 max_delay/setup group clk_jtg
 
@@ -67,21 +67,21 @@ max_delay/setup group clk_sys
                                      Required  Actual
 Endpoint                               Delay   Delay   Slack
 ------------------------------------------------------------
-i_croc_soc.i_croc.all_periph_obi_rsp_117__reg/RB (DFFRQX3)  -36.79   56.75  -93.54 (VIOLATED)
+i_croc_soc.i_croc.all_periph_obi_rsp_117__reg/RB (DFFRQX3)  -35.97   55.81  -91.78 (VIOLATED)
 
 max_delay/setup group asynchronous
 
                                      Required  Actual
 Endpoint                               Delay   Delay   Slack
 ------------------------------------------------------------
-i_croc_soc.i_croc.all_periph_obi_rsp_117__reg/RB (DFFRQX3)  -36.79   53.93  -90.73 (VIOLATED)
+i_croc_soc.i_croc.all_periph_obi_rsp_117__reg/RB (DFFRQX3)  -35.97   52.99  -88.96 (VIOLATED)
 
 max_delay/setup group path delay
 
                                      Required  Actual
 Endpoint                               Delay   Delay   Slack
 ------------------------------------------------------------
-i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.progbuf_o_108__reg/D (DFFRQX3)    2.92    2.54    0.38 (MET)
+i_croc_soc.i_croc.i_dm_top.i_dm_top.i_dm_csrs.progbuf_o_163__reg/D (DFFRQX3)    2.92    2.46    0.46 (MET)
 
 max_delay/setup group clk_jtg
 
@@ -95,5 +95,5 @@ max_delay/setup group clk_sys
                                      Required  Actual
 Endpoint                               Delay   Delay   Slack
 ------------------------------------------------------------
-i_croc_soc.i_croc.all_periph_obi_rsp_117__reg/RB (DFFRQX3)  -36.79   56.75  -93.54 (VIOLATED)
+i_croc_soc.i_croc.all_periph_obi_rsp_117__reg/RB (DFFRQX3)  -35.97   55.81  -91.78 (VIOLATED)
 

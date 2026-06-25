@@ -6,12 +6,12 @@
 // - Cyril Koenig <cykoenig@iis.ee.ethz.ch>
 // - Enrico Zelioli <ezelioli@iis.ee.ethz.ch>
 
-// Simple ROM with 2-Cycle Latency Pipeline Stage
+// Simple ROM
 module user_rom #(
   // The OBI configuration for all ports
   parameter obi_pkg::obi_cfg_t ObiCfg    = obi_pkg::ObiDefaultConfig,
-  parameter type                obi_req_t = logic,
-  parameter type                obi_rsp_t = logic
+  parameter type               obi_req_t = logic,
+  parameter type               obi_rsp_t = logic
 ) (
   input  logic     clk_i,
   input  logic     rst_ni,
@@ -19,17 +19,11 @@ module user_rom #(
   output obi_rsp_t obi_rsp_o
 );
 
-  // Define some registers to hold the requests fields (Pipeline Stage 1)
+  // Define some registers to hold the requests fields
   logic req_d, req_q;                           // Request valid
-  logic we_d, we_q;                             // Write enable
+  logic we_d, we_q;                              // Write enable
   logic [ObiCfg.AddrWidth-1:0] addr_d, addr_q; // Internal address of the word to read
-  logic [ObiCfg.IdWidth-1:0] id_d, id_q;        // Id of the request
-
-  // Pipeline Stage 2 to break the critical timing path
-  logic req_q2;
-  logic we_q2;
-  logic [ObiCfg.AddrWidth-1:0] addr_q2;
-  logic [ObiCfg.IdWidth-1:0] id_q2;
+  logic [ObiCfg.IdWidth-1:0] id_d, id_q;        // Id of the request, must be same for the response
 
   // Signals used to create the response
   logic [ObiCfg.DataWidth-1:0] rsp_data; // Data field of the obi response
@@ -41,42 +35,30 @@ module user_rom #(
   assign we_d   = obi_req_i.a.we;
   assign addr_d = obi_req_i.a.addr;
 
-  // Flip-flops for both pipeline stages
+  // Flip-flops
   always_ff @(posedge clk_i, negedge rst_ni) begin
     if (~rst_ni) begin
-      // Reset Stage 1
-      req_q   <= '0;
-      id_q    <= '0;
-      we_q    <= '0;
-      addr_q  <= '0;
-      // Reset Stage 2
-      req_q2  <= '0;
-      id_q2   <= '0;
-      we_q2   <= '0;
-      addr_q2 <= '0;
+      req_q  <= '0;
+      id_q   <= '0;
+      we_q   <= '0;
+      addr_q <= '0;
     end else begin
-      // Shift Stage 1
-      req_q   <= req_d;
-      id_q    <= id_d;
-      we_q    <= we_d;
-      addr_q  <= addr_d;
-      // Shift Stage 2
-      req_q2  <= req_q;
-      id_q2   <= id_q;
-      we_q2   <= we_q;
-      addr_q2 <= addr_q;
+      req_q  <= req_d;
+      id_q   <= id_d;
+      we_q   <= we_d;
+      addr_q <= addr_d;
     end
   end
 
-  // Assign the OBI response data based on Stage 2 registers
+  // // Assign the OBI response data
   logic [6:0] word_addr;
   always_comb begin
-    rsp_data  = '0;
-    rsp_err   = '0;
-    word_addr = addr_q2[6:2];
+    rsp_data = '0;
+    rsp_err  = '0;
+    word_addr = addr_q[6:2];
 
-    if(req_q2) begin
-      if(~we_q2) begin
+    if(req_q) begin
+      if(~we_q) begin
         case(word_addr)
           5'h00: rsp_data = 32'h69727943; // "C y r i"
           5'h01: rsp_data = 32'h49266C6C; // "l l & I"
@@ -93,13 +75,12 @@ module user_rom #(
   end
 
   // Assign the OBI response signals
-  // A channel (combinational grant to accept the request immediately)
+  // A channel
   assign obi_rsp_o.gnt = obi_req_i.req;
-  
-  // R channel (driven by the 2nd pipeline stage)
-  assign obi_rsp_o.rvalid       = req_q2;
+  // R channel
+  assign obi_rsp_o.rvalid       = req_q;
   assign obi_rsp_o.r.rdata      = rsp_data;
-  assign obi_rsp_o.r.rid        = id_q2;
+  assign obi_rsp_o.r.rid        = id_q;
   assign obi_rsp_o.r.err        = rsp_err;
   assign obi_rsp_o.r.r_optional = '0;
 

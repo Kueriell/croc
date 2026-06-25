@@ -28,7 +28,7 @@ if {[info exists power_grid_defined]} {
 # Power settings
 ##########################################################################
 # Core Power Ring
-## Space between pads and core -> used for power ring [old: 35]
+## Space between pads and core -> used for power ring
 set PowRingSpace  35
 ## Spacing must meet TM1 rules
 set pgcrSpacing 4
@@ -44,7 +44,7 @@ set tpg1Spacing  10; # big enough to skip over a pad
 set tpg1Offset   70; # offset from leftX of core
 
 set pg4Width      1; # two tracks on Metal4
-set pg4Pitch     90; # multiple of pad-pitch [old:90]
+set pg4Pitch     90; # multiple of pad-pitch
 
 # Macro Power Rings -> M3 and M2
 ## Spacing must be larger than pitch of M2/M3
@@ -96,7 +96,7 @@ add_pdn_ring -grid {core_grid} \
 add_pdn_stripe -grid {core_grid} -layer {Metal1} -width {0.32} -offset {0} \
                -followpins -extend_to_core_ring
 
-sram_power "sram_1024x32"  "RM_IHPSG13_1P_1024x32_c2_bm_bist"
+sram_power "sram1024_x64"  "RM_IHPSG13_1P_1024x64_c2_bm_bist"
 
 # Top power grid
 # Top 1 Stripe
@@ -116,11 +116,3 @@ add_pdn_connect -grid {core_grid} -layers {Metal4 Metal1}
 # Generate
 ##########################################################################
 pdngen -failed_via_report ${report_dir}/01_${proj_name}_pdngen.rpt
-
-# Check VDD
-set_pdnsim_net_voltage -net VDD -voltage 1.2
-analyze_power_grid -vsrc src/Vsrc_croc_vdd.loc -net VDD -corner tt
-
-# Check VSS
-set_pdnsim_net_voltage -net VSS -voltage 0
-analyze_power_grid -vsrc src/Vsrc_croc_vss.loc -net VSS -corner tt -error_file reports/vss_connectivity_errors_early.rpt

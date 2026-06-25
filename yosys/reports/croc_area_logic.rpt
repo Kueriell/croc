@@ -1,4 +1,4 @@
-47. Printing statistics.
+43. Printing statistics.
 
 === cdc_2phase_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req ===
 
@@ -49,58 +49,62 @@
         +----------Local Count, excluding submodules.
         |        +-Local Area, excluding submodules.
         |        | 
-      230        - wires
-      230        - wire bits
+      231        - wires
+      231        - wire bits
       175        - public wires
       175        - public wire bits
        89        - ports
        89        - port bits
-      141 2.29E+03 cells
-        9  203.213   BUFX24
+      142 2.28E+03 cells
+        1   15.523   BUFX16
+        8  180.634   BUFX24
        41  925.747   DFFQX1
         2   56.448   DFFRQX3
+        1    4.234   INVX1
        82 1.04E+03   MUX2X1
-        1    11.29   MUXI2X1
-        1    5.645   NAND2X3
-        1    9.878   NAND3BX2
-        2    11.29   NOR2X1
+        2    11.29   NAND2X1
+        1    7.056   NOR3X1
+        1    7.056   OAI21X2
+        1    9.878   OAOI211X1
         1    8.467   OR3BX2
         1   12.701   XOR2X1
         1        - submodules
         1        -   sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_dst.i_sync
 
-   Chip area for module '\cdc_2phase_dst_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_dst': 2286.144000
-     of which used for sequential elements: 982.195200 (42.96%)
+   Chip area for module '\cdc_2phase_dst_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_dst': 2280.499200
+     of which used for sequential elements: 982.195200 (43.07%)
 
 === cdc_2phase_dst_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_dst ===
 
         +----------Local Count, excluding submodules.
         |        +-Local Area, excluding submodules.
         |        | 
-      193        - wires
-      193        - wire bits
+      194        - wires
+      194        - wire bits
       147        - public wires
       147        - public wire bits
        75        - ports
        75        - port bits
-      118 1.83E+03 cells
-        1   15.523   BUFX16
+      119 1.82E+03 cells
+        1    11.29   BUFX12
         2   45.158   BUFX24
         4   22.579   BUFX3
        34  767.693   DFFQX1
         2   56.448   DFFRQX3
+        1    4.234   INVX1
        68  863.654   MUX2X1
-        1    11.29   MUXI2X1
-        1    9.878   NAND2X4
-        1    9.878   NAND3BX3
-        2    11.29   NOR2X1
+        1    5.645   NAND2X1
+        1    5.645   NAND2X1P5
+        1    7.056   NOR3X1
+        1    7.056   OAI21X2
+        1    9.878   OAOI211X1
         1    8.467   OR3BX2
         1    9.878   XOR2X2
         1        - submodules
         1        -   sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_dst.i_sync
 
-   Chip area for module '\cdc_2phase_dst_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_dst': 1831.737600
-     of which used for sequential elements: 824.140800 (44.99%)
+   Chip area for module '\cdc_2phase_dst_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_dst': 1824.681600
+     of which used for sequential elements: 824.140800 (45.17%)
 
 === cdc_2phase_src_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_src ===
 
@@ -113,20 +117,21 @@
       174        - public wire bits
        89        - ports
        89        - port bits
-      138  2140.79 cells
+      138 2.15E+03 cells
         1    11.29   AND3BX1
         1    8.467   AOI211X1
         9  101.606   BUFX12
        41  925.747   DFFQX1
         1   28.224   DFFRQX3
        82 1.04E+03   MUX2X1
-        2    11.29   NOR2X1
+        1    5.645   NOR2X1
+        1    11.29   NOR4BX1
         1   12.701   XNOR2X1
         1        - submodules
         1        -   sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_src.i_sync
 
-   Chip area for module '\cdc_2phase_src_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_src': 2140.790400
-     of which used for sequential elements: 953.971200 (44.56%)
+   Chip area for module '\cdc_2phase_src_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_src': 2146.435200
+     of which used for sequential elements: 953.971200 (44.44%)
 
 === cdc_2phase_src_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_src ===
 
@@ -147,13 +152,14 @@
        34  767.693   DFFQX1
         1   28.224   DFFRQX3
        68  863.654   MUX2X1
-        2    11.29   NOR2X1
+        1    5.645   NOR2X1
+        1    11.29   NOR4BX1
         1   12.701   XNOR2X2
         1        - submodules
         1        -   sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_src.i_sync
 
-   Chip area for module '\cdc_2phase_src_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_src': 1806.336000
-     of which used for sequential elements: 795.916800 (44.06%)
+   Chip area for module '\cdc_2phase_src_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_src': 1811.980800
+     of which used for sequential elements: 795.916800 (43.93%)
 
 === cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst ===
 
@@ -162,25 +168,24 @@
         |        | 
        22        - wires
        22        - wire bits
-       15        - public wires
-       15        - public wire bits
+       17        - public wires
+       17        - public wire bits
        10        - ports
        10        - port bits
-       12  145.354 cells
+       12  142.531 cells
+        1    7.056   AOI21X1
         3   84.672   DFFRQX3
         2    8.467   INVX1
+        1    7.056   NAND2BX1P5
         1    7.056   NAND2BX2
-        1    9.878   NAND3BX1
-        1    5.645   NOR2X1
-        1    5.645   NOR2X2
+        2    11.29   NOR2X1
         1    7.056   NOR3X1
-        1    7.056   OAI21X1
-        1    9.878   OAOI211X1
+        1    9.878   OAI22X1
         1        - submodules
         1        -   sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst.i_sync
 
-   Chip area for module '\cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst': 145.353600
-     of which used for sequential elements: 84.672000 (58.25%)
+   Chip area for module '\cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst': 142.531200
+     of which used for sequential elements: 84.672000 (59.41%)
 
 === cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst ===
 
@@ -189,25 +194,24 @@
         |        | 
        22        - wires
        22        - wire bits
-       15        - public wires
-       15        - public wire bits
+       17        - public wires
+       17        - public wire bits
        10        - ports
        10        - port bits
-       12  145.354 cells
+       12  142.531 cells
+        1    7.056   AOI21X1
         3   84.672   DFFRQX3
         2    8.467   INVX1
+        1    7.056   NAND2BX1P5
         1    7.056   NAND2BX2
-        1    9.878   NAND3BX1
-        1    5.645   NOR2X1
-        1    5.645   NOR2X2
+        2    11.29   NOR2X1
         1    7.056   NOR3X1
-        1    7.056   OAI21X1
-        1    9.878   OAOI211X1
+        1    9.878   OAI22X1
         1        - submodules
         1        -   sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst.i_sync
 
-   Chip area for module '\cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst': 145.353600
-     of which used for sequential elements: 84.672000 (58.25%)
+   Chip area for module '\cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst': 142.531200
+     of which used for sequential elements: 84.672000 (59.41%)
 
 === cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst ===
 
@@ -216,25 +220,24 @@
         |        | 
        22        - wires
        22        - wire bits
-       15        - public wires
-       15        - public wire bits
+       17        - public wires
+       17        - public wire bits
        10        - ports
        10        - port bits
-       12  145.354 cells
+       12  142.531 cells
+        1    7.056   AOI21X1
         3   84.672   DFFRQX3
         2    8.467   INVX1
+        1    7.056   NAND2BX1P5
         1    7.056   NAND2BX2
-        1    9.878   NAND3BX1
-        1    5.645   NOR2X1
-        1    5.645   NOR2X2
+        2    11.29   NOR2X1
         1    7.056   NOR3X1
-        1    7.056   OAI21X1
-        1    9.878   OAOI211X1
+        1    9.878   OAI22X1
         1        - submodules
         1        -   sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst.i_sync
 
-   Chip area for module '\cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst': 145.353600
-     of which used for sequential elements: 84.672000 (58.25%)
+   Chip area for module '\cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst': 142.531200
+     of which used for sequential elements: 84.672000 (59.41%)
 
 === cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst ===
 
@@ -243,141 +246,140 @@
         |        | 
        22        - wires
        22        - wire bits
-       15        - public wires
-       15        - public wire bits
+       17        - public wires
+       17        - public wire bits
        10        - ports
        10        - port bits
-       12  145.354 cells
+       12  142.531 cells
+        1    7.056   AOI21X1
         3   84.672   DFFRQX3
         2    8.467   INVX1
+        1    7.056   NAND2BX1P5
         1    7.056   NAND2BX2
-        1    9.878   NAND3BX1
-        1    5.645   NOR2X1
-        1    5.645   NOR2X2
+        2    11.29   NOR2X1
         1    7.056   NOR3X1
-        1    7.056   OAI21X1
-        1    9.878   OAOI211X1
+        1    9.878   OAI22X1
         1        - submodules
         1        -   sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst.i_sync
 
-   Chip area for module '\cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst': 145.353600
-     of which used for sequential elements: 84.672000 (58.25%)
+   Chip area for module '\cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst': 142.531200
+     of which used for sequential elements: 84.672000 (59.41%)
 
 === cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src ===
 
         +----------Local Count, excluding submodules.
         |        +-Local Area, excluding submodules.
         |        | 
-       30        - wires
-       30        - wire bits
-       19        - public wires
-       19        - public wire bits
+       29        - wires
+       29        - wire bits
+       21        - public wires
+       21        - public wire bits
        10        - ports
        10        - port bits
-       20  275.184 cells
+       19  269.539 cells
         1    7.056   AND2X1
-        1    9.878   AO21X2
-        2   14.112   AOI21X1
+        1    9.878   AO211X2
+        2   16.934   AOI211X1
         5   141.12   DFFRQX3
         2    8.467   INVX1
         3   38.102   MUX2X1
         1    11.29   MUXI2X1
-        2   14.112   NAND2BX1
+        1    5.645   NOR2X1
         1    8.467   NOR3BX1
         1    9.878   NOR3BX3
         1   12.701   XOR2X1
         1        - submodules
         1        -   sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src.i_sync
 
-   Chip area for module '\cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src': 275.184000
-     of which used for sequential elements: 141.120000 (51.28%)
+   Chip area for module '\cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src': 269.539200
+     of which used for sequential elements: 141.120000 (52.36%)
 
 === cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src ===
 
         +----------Local Count, excluding submodules.
         |        +-Local Area, excluding submodules.
         |        | 
-       30        - wires
-       30        - wire bits
-       19        - public wires
-       19        - public wire bits
+       29        - wires
+       29        - wire bits
+       21        - public wires
+       21        - public wire bits
        10        - ports
        10        - port bits
-       20  275.184 cells
+       19  269.539 cells
         1    7.056   AND2X1
-        1    9.878   AO21X2
-        2   14.112   AOI21X1
+        1    9.878   AO211X2
+        2   16.934   AOI211X1
         5   141.12   DFFRQX3
         2    8.467   INVX1
         3   38.102   MUX2X1
         1    11.29   MUXI2X1
-        2   14.112   NAND2BX1
+        1    5.645   NOR2X1
         1    8.467   NOR3BX1
         1    9.878   NOR3BX3
         1   12.701   XOR2X1
         1        - submodules
         1        -   sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src.i_sync
 
-   Chip area for module '\cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src': 275.184000
-     of which used for sequential elements: 141.120000 (51.28%)
+   Chip area for module '\cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src': 269.539200
+     of which used for sequential elements: 141.120000 (52.36%)
 
 === cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src ===
 
         +----------Local Count, excluding submodules.
         |        +-Local Area, excluding submodules.
         |        | 
-       30        - wires
-       30        - wire bits
-       19        - public wires
-       19        - public wire bits
+       29        - wires
+       29        - wire bits
+       21        - public wires
+       21        - public wire bits
        10        - ports
        10        - port bits
-       20  275.184 cells
+       19  269.539 cells
         1    7.056   AND2X1
-        1    9.878   AO21X2
-        2   14.112   AOI21X1
+        1    9.878   AO211X2
+        2   16.934   AOI211X1
         5   141.12   DFFRQX3
         2    8.467   INVX1
         3   38.102   MUX2X1
         1    11.29   MUXI2X1
-        2   14.112   NAND2BX1
+        1    5.645   NOR2X1
         1    8.467   NOR3BX1
         1    9.878   NOR3BX3
         1   12.701   XOR2X1
         1        - submodules
         1        -   sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src.i_sync
 
-   Chip area for module '\cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src': 275.184000
-     of which used for sequential elements: 141.120000 (51.28%)
+   Chip area for module '\cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src': 269.539200
+     of which used for sequential elements: 141.120000 (52.36%)
 
 === cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src ===
 
         +----------Local Count, excluding submodules.
         |        +-Local Area, excluding submodules.
         |        | 
-       30        - wires
-       30        - wire bits
-       19        - public wires
-       19        - public wire bits
+       29        - wires
+       29        - wire bits
+       21        - public wires
+       21        - public wire bits
        10        - ports
        10        - port bits
-       20  275.184 cells
+       19  269.539 cells
         1    7.056   AND2X1
-        1    9.878   AO21X2
-        2   14.112   AOI21X1
+        1    9.878   AO211X2
+        2   16.934   AOI211X1
         5   141.12   DFFRQX3
         2    8.467   INVX1
         3   38.102   MUX2X1
         1    11.29   MUXI2X1
-        2   14.112   NAND2BX1
+        1    5.645   NOR2X1
         1    8.467   NOR3BX1
         1    9.878   NOR3BX3
         1   12.701   XOR2X1
         1        - submodules
         1        -   sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src.i_sync
 
-   Chip area for module '\cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src': 275.184000
-     of which used for sequential elements: 141.120000 (51.28%)
+   Chip area for module '\cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src': 269.539200
+     of which used for sequential elements: 141.120000 (52.36%)
 
 === cdc_reset_ctrlr$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr ===
 
@@ -426,44 +428,44 @@
        28        - public wire bits
        15        - ports
        15        - port bits
-       68   659.03 cells
-        2   19.757   AO211X2
+       68  664.675 cells
+        1    9.878   AO21X2
         1    11.29   AO31X1
-        4   39.514   AOAI211X1
+        2   19.757   AOAI211X1
         2   14.112   AOI21X1
         2   14.112   AOI21X2
-        1    11.29   AOI221X2
-        1    8.467   AOI2B1X1
+        1    9.878   AOI221X1
+        4   33.869   AOI2B1X1
         1   14.112   AOI2BB2X1
         1    11.29   BUFX12
-        3   21.168   BUFX6
+        2    11.29   BUFX3
+        1    7.056   BUFX6
         6  169.344   DFFRQX3
-        6   25.402   INVX1
+        3   12.701   INVX1
         1    4.234   INVX2
-        1    9.878   MIN3X1
         3   38.102   MUX2X1
-        4   22.579   NAND2X1
-        1    5.645   NAND2X1P5
-        1    9.878   NAND3BX1
-        2   14.112   NAND3X1
-        1    7.056   NAND3X2
-        2   14.112   NOR2BX1
-        5   28.224   NOR2X1
-        1    8.467   NOR3BX1
-        4   28.224   NOR3X1
+        1    11.29   MUXI2X1
+        2   14.112   NAND2BX1
+        3   16.934   NAND2X1
+        1    9.878   NAND3BX2
+        3   21.168   NOR2BX1
+        6   33.869   NOR2X1
+        3   21.168   NOR3X1
+        1    8.467   OA21X2
         2   16.934   OAI211X1
-        2   14.112   OAI21X1
+        6   42.336   OAI21X1
         1    7.056   OAI21X2
-        1    9.878   OAI31X1
+        1   12.701   OAI221X1
         1    9.878   OAOI211X1
+        1    7.056   OR2X2
         3   25.402   OR3BX1
         2   25.402   XOR2X1
         2        - submodules
         1        -   cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst
         1        -   cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src
 
-   Chip area for module '\cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a': 659.030400
-     of which used for sequential elements: 169.344000 (25.70%)
+   Chip area for module '\cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a': 664.675200
+     of which used for sequential elements: 169.344000 (25.48%)
 
 === cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b ===
 
@@ -476,94 +478,93 @@
        28        - public wire bits
        15        - ports
        15        - port bits
-       68   659.03 cells
-        2   19.757   AO211X2
+       68  664.675 cells
+        1    9.878   AO21X2
         1    11.29   AO31X1
-        4   39.514   AOAI211X1
+        2   19.757   AOAI211X1
         2   14.112   AOI21X1
         2   14.112   AOI21X2
-        1    11.29   AOI221X2
-        1    8.467   AOI2B1X1
+        1    9.878   AOI221X1
+        4   33.869   AOI2B1X1
         1   14.112   AOI2BB2X1
         1    11.29   BUFX12
-        3   21.168   BUFX6
+        2    11.29   BUFX3
+        1    7.056   BUFX6
         6  169.344   DFFRQX3
-        6   25.402   INVX1
+        3   12.701   INVX1
         1    4.234   INVX2
-        1    9.878   MIN3X1
         3   38.102   MUX2X1
-        4   22.579   NAND2X1
-        1    5.645   NAND2X1P5
-        1    9.878   NAND3BX1
-        2   14.112   NAND3X1
-        1    7.056   NAND3X2
-        2   14.112   NOR2BX1
-        5   28.224   NOR2X1
-        1    8.467   NOR3BX1
-        4   28.224   NOR3X1
+        1    11.29   MUXI2X1
+        2   14.112   NAND2BX1
+        3   16.934   NAND2X1
+        1    9.878   NAND3BX2
+        3   21.168   NOR2BX1
+        6   33.869   NOR2X1
+        3   21.168   NOR3X1
+        1    8.467   OA21X2
         2   16.934   OAI211X1
-        2   14.112   OAI21X1
+        6   42.336   OAI21X1
         1    7.056   OAI21X2
-        1    9.878   OAI31X1
+        1   12.701   OAI221X1
         1    9.878   OAOI211X1
+        1    7.056   OR2X2
         3   25.402   OR3BX1
         2   25.402   XOR2X1
         2        - submodules
         1        -   cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst
         1        -   cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src
 
-   Chip area for module '\cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b': 659.030400
-     of which used for sequential elements: 169.344000 (25.70%)
+   Chip area for module '\cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b': 664.675200
+     of which used for sequential elements: 169.344000 (25.48%)
 
 === cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a ===
 
         +----------Local Count, excluding submodules.
         |        +-Local Area, excluding submodules.
         |        | 
-       85        - wires
-       85        - wire bits
+       84        - wires
+       84        - wire bits
        28        - public wires
        28        - public wire bits
        15        - ports
        15        - port bits
-       68   659.03 cells
-        2   19.757   AO211X2
-        1    11.29   AO31X1
+       67  677.376 cells
+        1    11.29   AND3BX1
+        1    9.878   AO211X2
+        1    11.29   AO31X2
         4   39.514   AOAI211X1
-        2   14.112   AOI21X1
-        2   14.112   AOI21X2
-        1    11.29   AOI221X2
-        1    8.467   AOI2B1X1
-        1   14.112   AOI2BB2X1
-        1    11.29   BUFX12
+        1    7.056   AOI21X1
+        3   25.402   AOI2B1X1
+        4   22.579   BUFX3
         3   21.168   BUFX6
         6  169.344   DFFRQX3
-        6   25.402   INVX1
-        1    4.234   INVX2
+        5   21.168   INVX1
         1    9.878   MIN3X1
-        3   38.102   MUX2X1
-        4   22.579   NAND2X1
-        1    5.645   NAND2X1P5
-        1    9.878   NAND3BX1
-        2   14.112   NAND3X1
+        2   25.402   MUX2X1
+        2   22.579   MUXI2X1
+        3   21.168   NAND2BX1
+        1    5.645   NAND2X1
+        3   29.635   NAND3BX1
         1    7.056   NAND3X2
         2   14.112   NOR2BX1
-        5   28.224   NOR2X1
-        1    8.467   NOR3BX1
-        4   28.224   NOR3X1
-        2   16.934   OAI211X1
-        2   14.112   OAI21X1
-        1    7.056   OAI21X2
-        1    9.878   OAI31X1
-        1    9.878   OAOI211X1
+        1    5.645   NOR2X1
+        2   16.934   NOR3BX1
+        2   14.112   NOR3X1
+        2   22.579   NOR4BX2
+        1    9.878   NOR4X1
+        3   25.402   OAI211X1
+        3   21.168   OAI21X1
+        1    9.878   OAI22X1
+        3   29.635   OAOI211X1
         3   25.402   OR3BX1
-        2   25.402   XOR2X1
+        1   12.701   XOR2X1
+        1    9.878   XOR2X2
         2        - submodules
         1        -   cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst
         1        -   cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src
 
-   Chip area for module '\cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a': 659.030400
-     of which used for sequential elements: 169.344000 (25.70%)
+   Chip area for module '\cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a': 677.376000
+     of which used for sequential elements: 169.344000 (25.00%)
 
 === cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b ===
 
@@ -576,180 +577,177 @@
        28        - public wire bits
        15        - ports
        15        - port bits
-       68   659.03 cells
-        2   19.757   AO211X2
+       68  664.675 cells
+        1    9.878   AO21X2
         1    11.29   AO31X1
-        4   39.514   AOAI211X1
+        2   19.757   AOAI211X1
         2   14.112   AOI21X1
         2   14.112   AOI21X2
-        1    11.29   AOI221X2
-        1    8.467   AOI2B1X1
+        1    9.878   AOI221X1
+        4   33.869   AOI2B1X1
         1   14.112   AOI2BB2X1
         1    11.29   BUFX12
-        3   21.168   BUFX6
+        2    11.29   BUFX3
+        1    7.056   BUFX6
         6  169.344   DFFRQX3
-        6   25.402   INVX1
+        3   12.701   INVX1
         1    4.234   INVX2
-        1    9.878   MIN3X1
         3   38.102   MUX2X1
-        4   22.579   NAND2X1
-        1    5.645   NAND2X1P5
-        1    9.878   NAND3BX1
-        2   14.112   NAND3X1
-        1    7.056   NAND3X2
-        2   14.112   NOR2BX1
-        5   28.224   NOR2X1
-        1    8.467   NOR3BX1
-        4   28.224   NOR3X1
+        1    11.29   MUXI2X1
+        2   14.112   NAND2BX1
+        3   16.934   NAND2X1
+        1    9.878   NAND3BX2
+        3   21.168   NOR2BX1
+        6   33.869   NOR2X1
+        3   21.168   NOR3X1
+        1    8.467   OA21X2
         2   16.934   OAI211X1
-        2   14.112   OAI21X1
+        6   42.336   OAI21X1
         1    7.056   OAI21X2
-        1    9.878   OAI31X1
+        1   12.701   OAI221X1
         1    9.878   OAOI211X1
+        1    7.056   OR2X2
         3   25.402   OR3BX1
         2   25.402   XOR2X1
         2        - submodules
         1        -   cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst
         1        -   cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src
 
-   Chip area for module '\cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b': 659.030400
-     of which used for sequential elements: 169.344000 (25.70%)
+   Chip area for module '\cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b': 664.675200
+     of which used for sequential elements: 169.344000 (25.48%)
 
 === croc_chip ===
 
         +----------Local Count, excluding submodules.
         |        +-Local Area, excluding submodules.
         |        | 
-    37600        - wires
-    37600        - wire bits
-     6484        - public wires
-     6484        - public wire bits
+    37434        - wires
+    37434        - wire bits
+     6639        - public wires
+     6639        - public wire bits
        52        - ports
        52        - port bits
-    37517 4.44E+05 cells
-      196        -   $scopeinfo
-      518 3.66E+03   AND2X1
-        4   28.224   AND2X2
-       42  474.163   AND3BX1
-        1    11.29   AND3BX2
-        7    59.27   AND3X1
-      115  973.728   AND3X2
-        9   88.906   AND4X1
-       86  849.542   AND4X2
-       20  197.568   AO211X1
-      186 1.84E+03   AO211X2
-      268 2.65E+03   AO21X2
-       96 1.22E+03   AO22X2
-        3   33.869   AO31X1
-       26   293.53   AO31X2
-      648  6.4E+03   AOAI211X1
-       29  286.474   AOAI211X2
-      578 4.89E+03   AOI211X1
-       12  101.606   AOI211X2
-      111  939.859   AOI21BX1
-        1    9.878   AOI21BX2
-     1184 8.35E+03   AOI21X1
-       21  148.176   AOI21X2
-      517 5.11E+03   AOI221X1
-        5   56.448   AOI221X2
-        7   79.027   AOI221X3
-      447 4.42E+03   AOI22X1
-        3   29.635   AOI22X1P5
-        8   79.027   AOI22X2
-      298 2.52E+03   AOI2B1X1
-        1    9.878   AOI2B1X2
-        3    46.57   AOI2B2BX1
-      115  1.3E+03   AOI2B2X1
+    37161  4.4E+05 cells
+      537 3.79E+03   AND2X1
+        1    7.056   AND2X1P5
+        3   21.168   AND2X2
+        3   21.168   AND2X3
+       24   270.95   AND3BX1
+        1    8.467   AND3X1
+      129 1.09E+03   AND3X2
+        5   49.392   AND4X1
+       83  819.907   AND4X2
+       21  207.446   AO211X1
+      211 2.08E+03   AO211X2
+      315 3.11E+03   AO21X2
+        1   12.701   AO22X1
+      172 2.18E+03   AO22X2
+        6   67.738   AO31X1
+       65  733.824   AO31X2
+      605 5.98E+03   AOAI211X1
+       18  177.811   AOAI211X2
+      682  5774.63   AOI211X1
+       13  110.074   AOI211X2
+      113  956.794   AOI21BX1
+     1187 8.38E+03   AOI21X1
+       29  204.624   AOI21X2
+      689 6.81E+03   AOI221X1
+        1    11.29   AOI221X2
+        2   22.579   AOI221X3
+      350  3457.44   AOI22X1
+       13  128.419   AOI22X1P5
+      315 2.67E+03   AOI2B1X1
+        8   79.027   AOI2B1X2
+       33  512.266   AOI2B2BX1
+      121 1.37E+03   AOI2B2X1
         2   25.402   AOI2B2X2
-        1   14.112   AOI2BB2X1
-        2   28.224   AOI2BB2X2
+        5    70.56   AOI2BB2X1
+        1   14.112   AOI2BB2X2
         1    5.645   BUFX1
-        7   79.027   BUFX12
-        8   45.158   BUFX2
-     2554 1.44E+04   BUFX3
-       26  183.456   BUFX6
-     5451 1.54E+05   DFFRQX3
-      777 3.29E+03   INVX1
-       38  160.877   INVX2
-        1    4.234   INVX3
-      116 1.15E+03   MIN3X1
-        2   19.757   MIN3X2
-     3691 4.69E+04   MUX2X1
-        4   50.803   MUX2X2
-     2049 2.31E+04   MUXI2X1
-        4   50.803   MUXI2X2
-       17  479.808   MUXT4X1
-       19  536.256   MUXT4X1P5
-        1   28.224   MUXT4X2
-      587 1.66E+04   MUXT4X3
-      403 2.84E+03   NAND2BX1
-        8   56.448   NAND2BX1P5
-        3   21.168   NAND2BX2
-        4   28.224   NAND2BX3
-     2473  1.4E+04   NAND2X1
-       48   270.95   NAND2X1P5
-        6   33.869   NAND2X2
-        6   33.869   NAND2X3
-       59  582.826   NAND3BX1
-        2   19.757   NAND3BX2
-        1    9.878   NAND3BX3
-      518 3.66E+03   NAND3X1
-       11   77.616   NAND3X2
-        1   14.112   NAND4BBX1
-        1   14.112   NAND4BBX2
-       14  158.054   NAND4BX1
-        4   45.158   NAND4BX2
-       64  632.218   NAND4X2
-      570  4021.92   NOR2BX1
-       20   141.12   NOR2BX2
-     1852 1.05E+04   NOR2X1
-       69  389.491   NOR2X2
-       20  112.896   NOR2X3
-      343  2904.25   NOR3BX1
-        9   76.205   NOR3BX1P5
+        2   22.579   BUFX12
+       12   67.738   BUFX2
+     2561 1.45E+04   BUFX3
+        9   63.504   BUFX6
+     5356 1.51E+05   DFFRQX3
+      805 3.41E+03   INVX1
+       31  131.242   INVX2
+      113 1.12E+03   MIN3X1
+     3610 4.58E+04   MUX2X1
+        6   76.205   MUX2X2
+     2134 2.41E+04   MUXI2X1
+        1   12.701   MUXI2X2
+        2   56.448   MUXT4X1
+        1   28.224   MUXT4X1P5
+      562 1.59E+04   MUXT4X3
+      361 2.55E+03   NAND2BX1
+       10    70.56   NAND2BX1P5
+        5    35.28   NAND2BX2
+        1    7.056   NAND2BX3
+     2395 1.35E+04   NAND2X1
+       29  163.699   NAND2X1P5
+       13   73.382   NAND2X2
+        7   39.514   NAND2X3
+       49  484.042   NAND3BX1
+        1    9.878   NAND3BX2
+        2   19.757   NAND3BX3
+      573 4.04E+03   NAND3X1
+       16  112.896   NAND3X2
+        2   28.224   NAND4BBX1
+        3   42.336   NAND4BBX2
+       23  259.661   NAND4BX1
+        3   33.869   NAND4BX2
+       73  721.123   NAND4X2
+      513 3.62E+03   NOR2BX1
+       23  162.288   NOR2BX2
+     2087 1.18E+04   NOR2X1
+       52   293.53   NOR2X2
+       11   62.093   NOR2X3
+      295  2.5E+03   NOR3BX1
+       15  127.008   NOR3BX1P5
         2   19.757   NOR3BX3
-      460  3245.76   NOR3X1
-       26  183.456   NOR3X2
-       15  190.512   NOR4BBX1
-        2   28.224   NOR4BBX2
-       15  169.344   NOR4BX1
-        7   79.027   NOR4BX2
-       79  780.394   NOR4X1
-        5   49.392   NOR4X2
+      397  2.8E+03   NOR3X1
+       23  162.288   NOR3X2
+        7   88.906   NOR4BBX1
+        3   42.336   NOR4BBX2
+       13  146.765   NOR4BX1
+        4   45.158   NOR4BX2
+       76  750.758   NOR4X1
+        6    59.27   NOR4X2
         2   19.757   OA211X1
-      165 1.63E+03   OA211X2
-      302 2.56E+03   OA21X2
-      760 6.44E+03   OAI211X1
-       16  135.475   OAI211X2
-     1419    1E+04   OAI21X1
-       28  197.568   OAI21X2
-      139 1.77E+03   OAI221X1
-        3   38.102   OAI221X2
-      374 3.69E+03   OAI22X1
-        2   19.757   OAI22X2
-       28  395.136   OAI2B2BX1
-       11  139.709   OAI2BB2X2
-      161 1.59E+03   OAI31X1
-       41  405.014   OAI31X2
-      558 5.51E+03   OAOI211X1
-       15  148.176   OAOI211X2
-        1    7.056   OR2X1
-      211 1.49E+03   OR2X2
+      204 2.02E+03   OA211X2
+      261 2.21E+03   OA21X2
+      653 5.53E+03   OAI211X1
+       10   84.672   OAI211X2
+     1216 8.58E+03   OAI21X1
+       23  162.288   OAI21X2
+       77  977.962   OAI221X1
+        8  101.606   OAI221X2
+      366 3.62E+03   OAI22X1
+       11  108.662   OAI22X2
+       19  268.128   OAI2B2BX1
+        1   14.112   OAI2B2BX2
+       34  431.827   OAI2BB2X2
+      130 1.28E+03   OAI31X1
+        9   88.906   OAI31X2
+      569  5620.81   OAOI211X1
+       18  177.811   OAOI211X2
+        4   28.224   OR2X1
+      152 1.07E+03   OR2X2
         1    7.056   OR2X3
-      189  1.6E+03   OR3BX1
-       19  160.877   OR3BX2
-        2   16.934   OR3X1
-       78  660.442   OR3X2
-       45  444.528   OR4X1
+      245 2.07E+03   OR3BX1
+        6   50.803   OR3BX2
+       48  406.426   OR3X2
+       59  582.826   OR4X1
+        2   19.757   OR4X2
         2        -   RM_IHPSG13_1P_1024x64_c2_bm_bist
         1    4.234   TIEHI
         1    4.234   TIELO
-      294 3.73E+03   XNOR2X1
-        5   63.504   XNOR2X2
-      265  5609.52   XNOR3X1
-        1   21.168   XNOR3X2
+      311 3.95E+03   XNOR2X1
+        8  101.606   XNOR2X2
+      231 4.89E+03   XNOR3X1
+        3   63.504   XNOR3X2
         2   25.402   XOR2X1
-     4269 4.22E+04   XOR2X2
+     4347 4.29E+04   XOR2X2
         4        -   sg13cmos5l_IOPadIOVdd
         4        -   sg13cmos5l_IOPadIOVss
         9        -   sg13cmos5l_IOPadIn
@@ -799,7 +797,6 @@
         1        -   sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_modem.i_sync_ri
         1        -   sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_rx.i_sync
 
-   Area for cell type $scopeinfo is unknown!
    Area for cell type \RM_IHPSG13_1P_1024x64_c2_bm_bist is unknown!
    Area for cell type \sg13cmos5l_IOPadIOVdd is unknown!
    Area for cell type \sg13cmos5l_IOPadIOVss is unknown!
@@ -809,8 +806,8 @@
    Area for cell type \sg13cmos5l_IOPadVdd is unknown!
    Area for cell type \sg13cmos5l_IOPadVss is unknown!
 
-   Chip area for module '\croc_chip': 444158.265600
-     of which used for sequential elements: 153849.024000 (34.64%)
+   Chip area for module '\croc_chip': 440017.804800
+     of which used for sequential elements: 151167.744000 (34.35%)
 
 === sync$croc_chip.i_croc_soc.i_croc.i_clint.i_sync ===
 
@@ -1667,36 +1664,36 @@
         +----------Count including submodules.
         |        +-Area including submodules.
         |        | 
-    38550  4.6E+05 croc_chip
+    38191 4.56E+05 croc_chip
         8   141.12 cdc_2phase_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req
-      141 2.29E+03   cdc_2phase_dst_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_dst
+      142 2.28E+03   cdc_2phase_dst_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_dst
         3   84.672     sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_dst.i_sync
-      138  2140.79   cdc_2phase_src_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_src
+      138 2.15E+03   cdc_2phase_src_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_src
         3   84.672     sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_src.i_sync
-       68   659.03     cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a
-       12  145.354       cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst
+       68  664.675     cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a
+       12  142.531       cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst
         2   56.448         sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst.i_sync
-       20  275.184       cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src
+       19  269.539       cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src
         2   56.448         sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src.i_sync
-       68   659.03     cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b
-       12  145.354       cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst
+       68  664.675     cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b
+       12  142.531       cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst
         2   56.448         sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst.i_sync
-       20  275.184       cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src
+       19  269.539       cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src
         2   56.448         sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src.i_sync
         8   141.12 cdc_2phase_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp
-      118 1.83E+03   cdc_2phase_dst_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_dst
+      119 1.82E+03   cdc_2phase_dst_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_dst
         3   84.672     sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_dst.i_sync
       116 1.81E+03   cdc_2phase_src_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_src
         3   84.672     sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_src.i_sync
-       68   659.03     cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a
-       12  145.354       cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst
+       67  677.376     cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a
+       12  142.531       cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst
         2   56.448         sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst.i_sync
-       20  275.184       cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src
+       19  269.539       cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src
         2   56.448         sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src.i_sync
-       68   659.03     cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b
-       12  145.354       cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst
+       68  664.675     cdc_reset_ctrlr_half$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b
+       12  142.531       cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst
         2   56.448         sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst.i_sync
-       20  275.184       cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src
+       19  269.539       cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src
         2   56.448         sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src.i_sync
         2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_clint.i_sync
         2   56.448 sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[0].i_sync
@@ -1740,143 +1737,139 @@
         +----------Count including submodules.
         |        +-Area including submodules.
         |        | 
-    39610        - wires
-    39610        - wire bits
-     7995        - public wires
-     7995        - public wire bits
+    39441        - wires
+    39441        - wire bits
+     8166        - public wires
+     8166        - public wire bits
       922        - ports
       922        - port bits
         -        - memories
         -        - memory bits
         -        - processes
-    38550  4.6E+05 cells
-      196        -   $scopeinfo
-      522 3.68E+03   AND2X1
-        4   28.224   AND2X2
-       44  496.742   AND3BX1
-        1    11.29   AND3BX2
-        7    59.27   AND3X1
-      115  973.728   AND3X2
-        9   88.906   AND4X1
-       86  849.542   AND4X2
-       20  197.568   AO211X1
-      194  1916.41   AO211X2
-      272 2.69E+03   AO21X2
-       96 1.22E+03   AO22X2
-        7   79.027   AO31X1
-       26   293.53   AO31X2
-      664 6.56E+03   AOAI211X1
-       29  286.474   AOAI211X2
-      580 4.91E+03   AOI211X1
-       12  101.606   AOI211X2
-      111  939.859   AOI21BX1
-        1    9.878   AOI21BX2
-     1200   8467.2   AOI21X1
-       29  204.624   AOI21X2
-      517 5.11E+03   AOI221X1
-        9  101.606   AOI221X2
-        7   79.027   AOI221X3
-      447 4.42E+03   AOI22X1
-        3   29.635   AOI22X1P5
-        8   79.027   AOI22X2
-      302 2.56E+03   AOI2B1X1
-        1    9.878   AOI2B1X2
-        3    46.57   AOI2B2BX1
-      115  1.3E+03   AOI2B2X1
+    38191 4.56E+05 cells
+      541 3.82E+03   AND2X1
+        1    7.056   AND2X1P5
+        3   21.168   AND2X2
+        3   21.168   AND2X3
+       27  304.819   AND3BX1
+        1    8.467   AND3X1
+      129 1.09E+03   AND3X2
+        5   49.392   AND4X1
+       83  819.907   AND4X2
+       21  207.446   AO211X1
+      216 2.13E+03   AO211X2
+      318 3.14E+03   AO21X2
+        1   12.701   AO22X1
+      172 2.18E+03   AO22X2
+        9  101.606   AO31X1
+       66  745.114   AO31X2
+      615 6.08E+03   AOAI211X1
+       18  177.811   AOAI211X2
+      692 5.86E+03   AOI211X1
+       13  110.074   AOI211X2
+      113  956.794   AOI21BX1
+     1198 8.45E+03   AOI21X1
+       35   246.96   AOI21X2
+      692 6.84E+03   AOI221X1
+        1    11.29   AOI221X2
+        2   22.579   AOI221X3
+      350  3457.44   AOI22X1
+       13  128.419   AOI22X1P5
+      330 2.79E+03   AOI2B1X1
+        8   79.027   AOI2B1X2
+       33  512.266   AOI2B2BX1
+      121 1.37E+03   AOI2B2X1
         2   25.402   AOI2B2X2
-        5    70.56   AOI2BB2X1
-        2   28.224   AOI2BB2X2
+        8  112.896   AOI2BB2X1
+        1   14.112   AOI2BB2X2
         1    5.645   BUFX1
-       20  225.792   BUFX12
+       15  169.344   BUFX12
         1   15.523   BUFX16
-        8   45.158   BUFX2
-       14  316.109   BUFX24
-     2558 1.44E+04   BUFX3
-       43  303.408   BUFX6
+       12   67.738   BUFX2
+       13   293.53   BUFX24
+     2575 1.45E+04   BUFX3
+       20   141.12   BUFX6
       150  3386.88   DFFQX1
-     5625   158760   DFFRQX3
-      817 3.46E+03   INVX1
-       42  177.811   INVX2
-        1    4.234   INVX3
-      120 1.19E+03   MIN3X1
-        2   19.757   MIN3X2
-     4015  5.1E+04   MUX2X1
-        4   50.803   MUX2X2
-     2055 2.32E+04   MUXI2X1
-        4   50.803   MUXI2X2
-       17  479.808   MUXT4X1
-       19  536.256   MUXT4X1P5
-        1   28.224   MUXT4X2
-      587 1.66E+04   MUXT4X3
-      411  2.9E+03   NAND2BX1
-        8   56.448   NAND2BX1P5
-        7   49.392   NAND2BX2
-        4   28.224   NAND2BX3
-     2489  1.4E+04   NAND2X1
-       52   293.53   NAND2X1P5
-        6   33.869   NAND2X2
+     5530 1.56E+05   DFFRQX3
+      837 3.54E+03   INVX1
+       34  143.942   INVX2
+      114 1.13E+03   MIN3X1
+     3933    5E+04   MUX2X1
+        6   76.205   MUX2X2
+     2143 2.42E+04   MUXI2X1
+        1   12.701   MUXI2X2
+        2   56.448   MUXT4X1
+        1   28.224   MUXT4X1P5
+      562 1.59E+04   MUXT4X3
+      370  2610.72   NAND2BX1
+       14   98.784   NAND2BX1P5
+        9   63.504   NAND2BX2
+        1    7.056   NAND2BX3
+     2408 1.36E+04   NAND2X1
+       30  169.344   NAND2X1P5
+       13   73.382   NAND2X2
         7   39.514   NAND2X3
-        1    9.878   NAND2X4
-       67  661.853   NAND3BX1
-        3   29.635   NAND3BX2
+       52  513.677   NAND3BX1
+        4   39.514   NAND3BX2
         2   19.757   NAND3BX3
-      526 3.71E+03   NAND3X1
-       15   105.84   NAND3X2
-        1   14.112   NAND4BBX1
-        1   14.112   NAND4BBX2
-       14  158.054   NAND4BX1
-        4   45.158   NAND4BX2
-       64  632.218   NAND4X2
-      586 4.13E+03   NOR2BX1
-       20   141.12   NOR2BX2
-     1884 1.06E+04   NOR2X1
-       73   412.07   NOR2X2
-       20  112.896   NOR2X3
-      351 2.97E+03   NOR3BX1
-        9   76.205   NOR3BX1P5
+      573 4.04E+03   NAND3X1
+       17  119.952   NAND3X2
+        2   28.224   NAND4BBX1
+        3   42.336   NAND4BBX2
+       23  259.661   NAND4BX1
+        3   33.869   NAND4BX2
+       73  721.123   NAND4X2
+      532 3.75E+03   NOR2BX1
+       23  162.288   NOR2BX2
+     2120  1.2E+04   NOR2X1
+       52   293.53   NOR2X2
+       11   62.093   NOR2X3
+      301 2.55E+03   NOR3BX1
+       15  127.008   NOR3BX1P5
         6    59.27   NOR3BX3
-      480  3386.88   NOR3X1
-       26  183.456   NOR3X2
-       15  190.512   NOR4BBX1
-        2   28.224   NOR4BBX2
+      414 2.92E+03   NOR3X1
+       23  162.288   NOR3X2
+        7   88.906   NOR4BBX1
+        3   42.336   NOR4BBX2
        15  169.344   NOR4BX1
-        7   79.027   NOR4BX2
-       79  780.394   NOR4X1
-        5   49.392   NOR4X2
+        6   67.738   NOR4BX2
+       77  760.637   NOR4X1
+        6    59.27   NOR4X2
         2   19.757   OA211X1
-      165 1.63E+03   OA211X2
-      302 2.56E+03   OA21X2
-      768  6502.81   OAI211X1
-       16  135.475   OAI211X2
-     1431 1.01E+04   OAI21X1
-       32  225.792   OAI21X2
-      139 1.77E+03   OAI221X1
-        3   38.102   OAI221X2
-      374 3.69E+03   OAI22X1
-        2   19.757   OAI22X2
-       28  395.136   OAI2B2BX1
-       11  139.709   OAI2BB2X2
-      165 1.63E+03   OAI31X1
-       41  405.014   OAI31X2
-      566 5.59E+03   OAOI211X1
-       15  148.176   OAOI211X2
-        1    7.056   OR2X1
-      211 1.49E+03   OR2X2
+      204 2.02E+03   OA211X2
+      264 2.24E+03   OA21X2
+      662 5.61E+03   OAI211X1
+       10   84.672   OAI211X2
+     1237 8.73E+03   OAI21X1
+       28  197.568   OAI21X2
+       80 1.02E+03   OAI221X1
+        8  101.606   OAI221X2
+      371 3.66E+03   OAI22X1
+       11  108.662   OAI22X2
+       19  268.128   OAI2B2BX1
+        1   14.112   OAI2B2BX2
+       34  431.827   OAI2BB2X2
+      130 1.28E+03   OAI31X1
+        9   88.906   OAI31X2
+      577  5.7E+03   OAOI211X1
+       18  177.811   OAOI211X2
+        4   28.224   OR2X1
+      155  1093.68   OR2X2
         1    7.056   OR2X3
-      201  1.7E+03   OR3BX1
-       21  177.811   OR3BX2
-        2   16.934   OR3X1
-       78  660.442   OR3X2
-       45  444.528   OR4X1
+      257  2176.07   OR3BX1
+        8   67.738   OR3BX2
+       48  406.426   OR3X2
+       59  582.826   OR4X1
+        2   19.757   OR4X2
         2        -   RM_IHPSG13_1P_1024x64_c2_bm_bist
         1    4.234   TIEHI
         1    4.234   TIELO
-      295 3.75E+03   XNOR2X1
-        6   76.205   XNOR2X2
-      265  5609.52   XNOR3X1
-        1   21.168   XNOR3X2
-       15  190.512   XOR2X1
-     4270 4.22E+04   XOR2X2
+      312  3962.65   XNOR2X1
+        9  114.307   XNOR2X2
+      231 4.89E+03   XNOR3X1
+        3   63.504   XNOR3X2
+       14  177.811   XOR2X1
+     4349  4.3E+04   XOR2X2
         4        -   sg13cmos5l_IOPadIOVdd
         4        -   sg13cmos5l_IOPadIOVss
         9        -   sg13cmos5l_IOPadIn
@@ -1886,7 +1879,7 @@
         4        -   sg13cmos5l_IOPadVss
        40 1.56E+04 submodules
         1 7.12E+03   cdc_2phase_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req
-        1 6.33E+03   cdc_2phase_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp
+        1  6339.11   cdc_2phase_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp
         1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_clint.i_sync
         1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[0].i_sync
         1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[10].i_sync
@@ -1926,7 +1919,6 @@
         1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_modem.i_sync_ri
         1   56.448   sync$croc_chip.i_croc_soc.i_croc.i_uart.i_uart_rx.i_sync
 
-   Area for cell type $scopeinfo is unknown!
    Area for cell type \RM_IHPSG13_1P_1024x64_c2_bm_bist is unknown!
    Area for cell type \sg13cmos5l_IOPadIOVdd is unknown!
    Area for cell type \sg13cmos5l_IOPadIOVss is unknown!
@@ -1936,6 +1928,6 @@
    Area for cell type \sg13cmos5l_IOPadVdd is unknown!
    Area for cell type \sg13cmos5l_IOPadVss is unknown!
 
-   Chip area for top module '\croc_chip': 459759.081600
-     of which used for sequential elements: 162146.880000 (35.27%)
+   Chip area for top module '\croc_chip': 455618.620800
+     of which used for sequential elements: 159465.600000 (35.00%)
 

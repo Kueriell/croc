@@ -81,7 +81,7 @@ int main() {
     uart_write_flush();
 
     printf("\nSW Output:\n");
-    for (int i = 0; i < 16; i++) printf("%x", sw_out[i]);
+    for (int i = 0; i < 16; i++) printf("%x ", sw_out[i]);
     printf("\n");
 
     printf("HW Output:\n");

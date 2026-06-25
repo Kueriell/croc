@@ -360,3 +360,28 @@ Jun 25 13:37:00   move ./klayout/def2gds-example to ./klayout/def2gds-example.20
 Jun 25 13:37:00   copy klayout/4EUi7UvQPW (generated data dumped to tempfile) to ./klayout/def2gds-example
 Jun 25 13:37:00   move /home/vlsi2_35fs26/.cockpit_loc.ihp13 to /home/vlsi2_35fs26/.cockpit_loc.ihp13~
 Jun 25 13:37:00   copy /home/vlsi2_35fs26/WWUBziZBAo (generated data dumped to tempfile) to /home/vlsi2_35fs26/.cockpit_loc.ihp13
+Jun 25 20:34:40   -------------------------------------------------------------------------------------
+Jun 25 20:34:40   -- ihp13 v0.2
+Jun 25 20:34:40   -- call: ihp13 -update all -nogui
+Jun 25 20:34:40   -------------------------------------------------------------------------------------
+Jun 25 20:34:40   load db/config from /usr/pack/designkits-1.0-ma/startup/db/software.ascii
+Jun 25 20:34:40   load db/config from /usr/pack/ihp-sg13-kgf/dz/cockpit_ihp13/db/kit.ascii
+Jun 25 20:34:40   load db/config from /usr/pack/ihp-sg13-kgf/dz/cockpit_ihp13/conf/default.ascii
+Jun 25 20:34:40   load db/config from .cockpitrc
+Jun 25 20:34:40   create directory synopsys/DDC
+Jun 25 20:34:40   create directory synopsys/WORK
+Jun 25 20:34:40   create directory synopsys/scripts
+Jun 25 20:34:40   create directory synopsys/out
+Jun 25 20:34:40   create directory synopsys/reports
+Jun 25 20:34:40   create directory tetramax/reports
+Jun 25 20:34:40   create directory tmp
+Jun 25 20:34:40   create directory innovus/reports
+Jun 25 20:34:40   create directory innovus/save
+Jun 25 20:34:40   create directory innovus/out
+Jun 25 20:34:40   create directory technology/cl
+Jun 25 20:34:40   create directory technology/qrc
+Jun 25 20:34:40   create directory calibre/drc
+Jun 25 20:34:40   create directory calibre/fill
+Jun 25 20:34:40   extract userlibs from ./dfii/cds.lib
+Jun 25 20:34:40   move /home/sem26f42/.cockpit_loc.ihp13 to /home/sem26f42/.cockpit_loc.ihp13~
+Jun 25 20:34:40   copy /home/sem26f42/Arll8RV5mB (generated data dumped to tempfile) to /home/sem26f42/.cockpit_loc.ihp13

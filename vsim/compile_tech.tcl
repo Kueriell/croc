@@ -15,7 +15,7 @@ if {[catch { vlog -incr -sv \
     +define+FUNCTIONAL \
     "$ROOT/technology/verilog/ez130_8t.v" \
     "$ROOT/technology/verilog/RM_IHPSG13_1P_core_behavioral_bm_bist.v" \
-    "$ROOT/technology/verilog/RM_IHPSG13_1P_512x32_c2_bm_bist.v" \
+    "$ROOT/technology/verilog/RM_IHPSG13_1P_1024x64_c2_bm_bist.v" \
     "$ROOT/ihp13/tc_sram_impl.sv" \
     "$ROOT/ihp13/tc_clk.sv" \
 }]} {return 1}
