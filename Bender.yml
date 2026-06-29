@@ -70,7 +70,7 @@ sources:
       - rtl/user_domain/AES_decryption/inv_key_expansion_round.sv
       - rtl/user_domain/AES_decryption/top_aes_de.sv
       - rtl/user_domain/user_aes_de.sv
-  - target: not(fpga)
+  - target: any(not(fpga), netlist_yosys)
     files:
       # Level 0
       - rtl/croc_chip.sv
